@@ -87,7 +87,7 @@
                 "@type": "DeliveryChargeSpecification",
                 "appliesToDeliveryMethod": "http://purl.org/goodrelations/v1#DeliveryModeOwnFleet",
                 "priceCurrency": "THB",
-                "price": 42.5
+                "price": 148.33
             }
         }
     }
@@ -347,73 +347,7 @@ View
     </div>
 
     <div class="order-components">
-                    <script type="text/template" id="template-day-picker-component">
-    <% var slideClass = days.length > 3 ? 'slidable' : ''; %>
-
-    <div class="day-picker <%- slideClass %>">
-        <div class="day-picker-holder">
-            <ul>
-                <% _.forEach(days, function(day) { %>
-                    <li>
-                        <label class="button-toggle-wrapper">
-                            <input type="radio" value="<%- day.date %>" name="day-picker" />
-                            <span class="day-value button-toggle"><%- day.text %> <span class="day-number"><%- day.number %></span></span>
-                        </label>
-                    </li>
-                <% }); %>
-            </ul>
-        </div>
-        <button class="nav-scroller prev hide">
-            <svg width="12" height="14" xmlns="http://www.w3.org/2000/svg">
-    <path class="svg-stroke-container" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd" fill="none" stroke="#D70F64" d="m3.5,1.5l5,5.5l-5,5.5"/>
-</svg>
-        </button>
-        <button class="nav-scroller next hide">
-            <svg width="12" height="14" xmlns="http://www.w3.org/2000/svg">
-    <path class="svg-stroke-container" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd" fill="none" stroke="#D70F64" d="m3.5,1.5l5,5.5l-5,5.5"/>
-</svg>
-        </button>
-    </div>
-</script>
-<script type="text/template" id="template-time-picker-component">
-    <div class="time-picker">
-        <ul>
-            <% _.forEach(times, function(time) { %>
-                <li>
-                  <label class="time-picker-toggle-wrapper">
-                    <input type="radio" value="<%- time.time %>" name="time-picker" />
-                    <span class="time-name"><%- time.text %></span>
-                  </label>
-                </li>
-            <% }); %>
-        </ul>
-    </div>
-</script>
-
-<div class="when-wrapper hide">
-    <div class="time-picker-button header-order-button">
-    <span class="header-order-button-title">When</span>
-    <span class="header-order-button-content"></span>
-    </div>
-    <div class="modal fade time-picker-component" data-time-picker-component tabindex="-1" role="dialog" aria-hidden="true"  data-now-translation="ASAP">
-        <div class="modal-wrapper">
-            <header class="picker-header">
-                <a class="close-button" data-dismiss="modal"></a>
-                <h2 class="picker-title">When</h2>
-            </header>
-            <div class="picker-container">
-                <div class="day-picker-container"></div>
-                <div class="time-picker-container"></div>
-            </div>
-            <footer class="picker-footer">
-                <button class="picker-confirm button full">Confirm</button>
-            </footer>
-        </div>
-    </div>
-
-    </div>
-
-    
+            
 
                     <div class="where-wrapper">
     <div class="location-search-button header-order-button" data-vendorID="144587">
@@ -635,7 +569,7 @@ View
       data-server-errors="&quot;{}&quot;"
       novalidate
 >
-    <input type="hidden" name="_csrf_token" value="1602908578:W1K8SxOViFeKTxRYQ0PD8kS8DnasvHifWJ44AnmM93HuQdQWNQ1TkE8fByG2dMQgeQ31IF9ErZDH0v+Y/UwgnA==:cX4Ofp57IDDq5AopLgq6NU/XCaDoWDLNuvpiYNOGRKEELJRj1jiW9fGihUAe67foqazRTZeaH77eUASHFaryZg==" >
+    <input type="hidden" name="_csrf_token" value="1603012505:jxU82r9tmVf00BH683ATRPMg5kYP3micHjagB0Y6EOV4CBeYSczjS4GOD+d2LMZcJH+bFsqZTFnkD2zEU8JA2A==:Zejy5zFkgjtnkN4j5YFnf9oJpn4LQGcNbM9PW/GSYMyPxc2gpZ+IeYJC9k2vgNtLeFt4VXfIbZbTcZizLtlgcw==" >
     <input type="hidden" name="_target_path" value="/restaurant/r9oz/kamoo-yaek-5" >
 
     
@@ -1104,7 +1038,7 @@ View
     <div class="page-container">
         <section 
             class="vendor-section"
-            data-vendor='{"id":144587,"name":"Kamoo Yaek 5","code":"r9oz","category":"Thai","is_active":true,"timezone":"Asia\/Bangkok","available_in":null,"city_id":983099,"latitude":13.7184648,"longitude":100.6122208,"is_pickup_available":true,"is_delivery_available":true,"url_key":"kamoo-yaek-5","ddt":0,"chain":{"id":0,"name":null,"url_key":null,"is_accepting_global_vouchers":false,"code":null,"main_vendor_code":""},"rating":5,"review_number":1,"minOrder":0,"deliveryFee":0,"is_promoted":false,"is_premium":false,"toppings":{"26453569":{"id":26453569,"name":"Choices of serving","description":"","quantity_minimum":1,"quantity_maximum":1,"options":[{"id":34477322,"product_id":9391578,"name":"Extar","description":"","price":10,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""},{"id":34477323,"product_id":9391579,"name":"Regular","description":"","price":0,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""}]},"26453576":{"id":26453576,"name":"Topping","description":"","quantity_minimum":0,"quantity_maximum":2,"options":[{"id":34477347,"product_id":9391615,"name":"Rice","description":"","price":15,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""},{"id":34477348,"product_id":9391616,"name":"Medium Boiled Egg","description":"","price":15,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""}]}},"accepts_instructions":true,"category_quantity":3,"loyalty_program_enabled":false,"loyalty_percentage_amount":0,"has_delivery_provider":true,"vertical":"restaurants","is_preorder_enabled":false,"is_vat_visible":true}'
+            data-vendor='{"id":144587,"name":"Kamoo Yaek 5","code":"r9oz","category":"Thai","is_active":true,"timezone":"Asia\/Bangkok","available_in":"2020-10-19T07:00:00+0700","city_id":983099,"latitude":13.7184648,"longitude":100.6122208,"is_pickup_available":true,"is_delivery_available":true,"url_key":"kamoo-yaek-5","ddt":0,"chain":{"id":0,"name":null,"url_key":null,"is_accepting_global_vouchers":false,"code":null,"main_vendor_code":""},"rating":5,"review_number":3,"minOrder":0,"deliveryFee":0,"is_promoted":false,"is_premium":false,"toppings":{"26453569":{"id":26453569,"name":"Choices of serving","description":"","quantity_minimum":1,"quantity_maximum":1,"options":[{"id":34477322,"product_id":9391578,"name":"Extar","description":"","price":10,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""},{"id":34477323,"product_id":9391579,"name":"Regular","description":"","price":0,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""}]},"26453576":{"id":26453576,"name":"Topping","description":"","quantity_minimum":0,"quantity_maximum":2,"options":[{"id":34477347,"product_id":9391615,"name":"Rice","description":"","price":15,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""},{"id":34477348,"product_id":9391616,"name":"Medium Boiled Egg","description":"","price":15,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""}]}},"accepts_instructions":true,"category_quantity":4,"loyalty_program_enabled":false,"loyalty_percentage_amount":0,"has_delivery_provider":true,"vertical":"restaurants","is_preorder_enabled":false,"is_vat_visible":true}'
         >
                             <aside class="top-skinny-banner-container">
                     <div id="skinny-banner-react-root-vendor-page"></div>
@@ -1223,6 +1157,9 @@ View
 
                                             </div>
                 </div>
+                                    <div class="vendor-closed-image-overlay">
+                        <div class="vendor-closed-until"><span class="vendor-closed">CLOSED</span> until Mon 07:00 AM</div>
+                    </div>
                                 <div class="postal-index-form-overlay"></div>
                 
 <div class="vendor-info-container">
@@ -1231,6 +1168,9 @@ View
         <div class="vendor-tag-ratings-percentage">
             <div class="vendor-tag-ratings">
                                                                 
+                                    <div class="closed-tag-container" data-toggle="modal" data-target="#rich-description">
+                        <span class="closed-tag">CLOSED</span>
+                    </div>
                 
                                             <div class="ratings-component" data-toggle="modal" data-target="#rich-description">
         <span class="stars">
@@ -1239,8 +1179,8 @@ View
 </svg>
         </span>
         <span class="rating"><strong>5</strong>/5</span>
-        <span class="count" data-count="(1)">
-            1
+        <span class="count" data-count="(3)">
+            3
         </span>
     </div>
                             </div>
@@ -1289,11 +1229,8 @@ View
                 <div class="menu__blocks">
                     <div class="menu__list-wrapper"
                          data-user-id='anonymous'
-                         data-vendor-is-open="open"
-                         data-vendor-next-available="Sat 11:22 AM">
-                                                     <section class="vendor-lane-section" id="vendor-quick-reorder"></section>
-                            <div id="quick-reorder-overview-provider"></div>
-                            <div id="quick-reorder-modal"></div>
+                         data-vendor-is-open="closed"
+                         data-vendor-next-available="Mon 07:00 AM">
                                                      <nav class="dish-menu-category-list hide">
         <div class="dish-control-holder">
             <div class="nav-holder">
@@ -1306,6 +1243,16 @@ View
                                data-anchor-nav=""	
                                title= "A La Carte">	
                                 A La Carte	
+                            </a>	
+                        </li>	
+                    	
+                        <li>	
+                            <a href="#menu__category-id-1137728"	
+                               data-id="1137728"	
+                               data-master-category-id=""	
+                               data-anchor-nav=""	
+                               title= "Main">	
+                                Main	
                             </a>	
                         </li>	
                     	
@@ -1368,6 +1315,114 @@ View
                             
                     
 <li class="dish-card h-product menu__item "
+     data-object='{"is_half_type_available":false,"id":9391582,"name":"Stewed Pork Leg with Rice","code":"823983af-5035-4a1b-a7f0-b4cb13b4e5bf","description":"With choices of serving and topping available","file_path":"https:\/\/images.deliveryhero.io\/image\/fd-th\/Products\/9391582.jpg?width=%s","logo_path":"https:\/\/images.deliveryhero.io\/image\/fd-th\/Products\/9391582.jpg?width=%s","half_type":"","is_alcoholic_item":false,"product_variations":[{"id":10576136,"code":"00140d5b-d5b2-44cd-8cea-ac3ba838c523","name":null,"price":60,"price_before_discount":null,"container_price":0,"choices":[],"toppings":[],"topping_ids":[26453569,26453576]}],"master_category_id":4,"is_prepacked_item":false,"exclude_dish_information":false,"has_dish_information":null,"is_sold_out":false,"additives":[],"sold_out_options":[{"default":true,"option":"REFUND","text":"NEXTGEN_SoldOutOptions_Refund"},{"default":false,"option":"CANCEL","text":"NEXTGEN_SoldOutOptions_Cancel"},{"default":false,"option":"CALL_CUSTOMER","text":"NEXTGEN_SoldOutOptions_CALL_CUSTOMER"}]}'
+     data-menu-category='A La Carte'
+     data-variation-id='10576136'
+     data-product-id='9391582'
+     data-has-priced-topping='true'
+     ontouchstart=""
+     data-menu-id='223473'
+     data-menu-category-id='1137723'
+     >
+    <div class="item-react-root">
+        <div class='dish-info-container with-image'>
+            <div class="dish-info">
+                <h3 class="dish-name fn p-name">
+                    <span>Stewed Pork Leg with Rice</span>
+
+                    
+                                    </h3>
+
+                                    <p class="dish-description e-description">
+                        With choices of serving and topping available
+                    </p>
+                            </div>
+                            <picture>
+                                        <div class="photo u-photo b-lazy" data-src="https://images.deliveryhero.io/image/fd-th/Products/9391582.jpg?width=302"></div>
+                </picture>
+                    </div>
+        <section class="action-bar" data="Original" ff="closed">
+            <div class='action-bar-content'>
+                                                                                                                                                                    <span class="price p-price">
+                                                    from                                                                             à¸¿60.00
+                                            </span>
+                
+                            </div>
+                    </section>
+            </div>
+</li>
+                            
+                    
+<li class="dish-card h-product menu__item "
+     data-object='{"is_half_type_available":false,"id":9632831,"name":"Pork Knuckle","code":"767ae4a2-8032-4ecb-89c8-d40e7426f2fd","description":"","file_path":"https:\/\/images.deliveryhero.io\/image\/fd-th\/Products\/9632831.jpg?width=%s","logo_path":"https:\/\/images.deliveryhero.io\/image\/fd-th\/Products\/9632831.jpg?width=%s","half_type":"","is_alcoholic_item":false,"product_variations":[{"id":10822255,"code":"431e121e-9045-4ee5-9c27-6b3278977a77","name":null,"price":550,"price_before_discount":null,"container_price":0,"choices":[],"toppings":[],"topping_ids":[]}],"master_category_id":4,"is_prepacked_item":false,"exclude_dish_information":false,"has_dish_information":null,"is_sold_out":false,"additives":[],"sold_out_options":[{"default":true,"option":"REFUND","text":"NEXTGEN_SoldOutOptions_Refund"},{"default":false,"option":"CANCEL","text":"NEXTGEN_SoldOutOptions_Cancel"},{"default":false,"option":"CALL_CUSTOMER","text":"NEXTGEN_SoldOutOptions_CALL_CUSTOMER"}]}'
+     data-menu-category='A La Carte'
+     data-variation-id='10822255'
+     data-product-id='9632831'
+     data-has-priced-topping='false'
+     ontouchstart=""
+     data-menu-id='223473'
+     data-menu-category-id='1137723'
+     >
+    <div class="item-react-root">
+        <div class='dish-info-container with-image'>
+            <div class="dish-info">
+                <h3 class="dish-name fn p-name">
+                    <span>Pork Knuckle</span>
+
+                    
+                                    </h3>
+
+                            </div>
+                            <picture>
+                                        <div class="photo u-photo b-lazy" data-src="https://images.deliveryhero.io/image/fd-th/Products/9632831.jpg?width=302"></div>
+                </picture>
+                    </div>
+        <section class="action-bar" data="Original" ff="closed">
+            <div class='action-bar-content'>
+                                                                                                                                                                    <span class="price p-price">
+                                                                            à¸¿550.00
+                                            </span>
+                
+                            </div>
+                    </section>
+            </div>
+</li>
+                            
+                    
+<li class="dish-card h-product menu__item "
+     data-object='{"is_half_type_available":false,"id":10324429,"name":"Stewed Pork Trotters","code":"09f1c640-1c60-48fa-b9fa-637b9be5e4ed","description":"","file_path":"","logo_path":"","half_type":"","is_alcoholic_item":false,"product_variations":[{"id":11535568,"code":"a53403b9-f0f9-433a-be09-8a52825a6236","name":null,"price":60,"price_before_discount":null,"container_price":0,"choices":[],"toppings":[],"topping_ids":[]}],"master_category_id":4,"is_prepacked_item":false,"exclude_dish_information":false,"has_dish_information":null,"is_sold_out":false,"additives":[],"sold_out_options":[{"default":true,"option":"REFUND","text":"NEXTGEN_SoldOutOptions_Refund"},{"default":false,"option":"CANCEL","text":"NEXTGEN_SoldOutOptions_Cancel"},{"default":false,"option":"CALL_CUSTOMER","text":"NEXTGEN_SoldOutOptions_CALL_CUSTOMER"}]}'
+     data-menu-category='A La Carte'
+     data-variation-id='11535568'
+     data-product-id='10324429'
+     data-has-priced-topping='false'
+     ontouchstart=""
+     data-menu-id='223473'
+     data-menu-category-id='1137723'
+     >
+    <div class="item-react-root">
+        <div class='dish-info-container '>
+            <div class="dish-info">
+                <h3 class="dish-name fn p-name">
+                    <span>Stewed Pork Trotters</span>
+
+                    
+                                    </h3>
+
+                            </div>
+                    </div>
+        <section class="action-bar" data="Original" ff="closed">
+            <div class='action-bar-content'>
+                                                                                                                                                                    <span class="price p-price">
+                                                                            à¸¿60.00
+                                            </span>
+                
+                            </div>
+                    </section>
+            </div>
+</li>
+                            
+                    
+<li class="dish-card h-product menu__item "
      data-object='{"is_half_type_available":false,"id":10324788,"name":"1 Hock","code":"fb52f2f8-44ad-4a88-8a12-1e9bf59115ce","description":"","file_path":"https:\/\/images.deliveryhero.io\/image\/fd-th\/Products\/10324788.jpg?width=%s","logo_path":"https:\/\/images.deliveryhero.io\/image\/fd-th\/Products\/10324788.jpg?width=%s","half_type":"","is_alcoholic_item":false,"product_variations":[{"id":11535897,"code":"84161c43-616c-44ef-9bd2-8b5671711109","name":null,"price":60,"price_before_discount":null,"container_price":0,"choices":[],"toppings":[],"topping_ids":[]}],"master_category_id":4,"is_prepacked_item":false,"exclude_dish_information":false,"has_dish_information":null,"is_sold_out":false,"additives":[],"sold_out_options":[{"default":true,"option":"REFUND","text":"NEXTGEN_SoldOutOptions_Refund"},{"default":false,"option":"CANCEL","text":"NEXTGEN_SoldOutOptions_Cancel"},{"default":false,"option":"CALL_CUSTOMER","text":"NEXTGEN_SoldOutOptions_CALL_CUSTOMER"}]}'
      data-menu-category='A La Carte'
      data-variation-id='11535897'
@@ -1391,10 +1446,57 @@ View
                                         <div class="photo u-photo b-lazy" data-src="https://images.deliveryhero.io/image/fd-th/Products/10324788.jpg?width=302"></div>
                 </picture>
                     </div>
-        <section class="action-bar" data="Original" ff="open">
+        <section class="action-bar" data="Original" ff="closed">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                                             à¸¿60.00
+                                            </span>
+                
+                            </div>
+                    </section>
+            </div>
+</li>
+    </ul>
+        </div>
+    </div>
+    <div class="dish-category-section hide">
+        <div class="dish-category-section__inner-wrapper" id="menu__category-id-1137728">
+
+            <h2 class="dish-category-title">Main</h2>
+            <ul class="dish-list">
+                            
+                    
+<li class="dish-card h-product menu__item "
+     data-object='{"is_half_type_available":false,"id":9391598,"name":"Stewed Pork Leg","code":"7d1b5d47-dc6d-4fbd-a2a3-e50655dd5a81","description":"With choices of serving available","file_path":"https:\/\/images.deliveryhero.io\/image\/fd-th\/Products\/9391598.jpg?width=%s","logo_path":"https:\/\/images.deliveryhero.io\/image\/fd-th\/Products\/9391598.jpg?width=%s","half_type":"","is_alcoholic_item":false,"product_variations":[{"id":10576152,"code":"ef4931e3-d960-40a3-adbb-ee452b869aea","name":null,"price":80,"price_before_discount":null,"container_price":0,"choices":[],"toppings":[],"topping_ids":[26453569]}],"master_category_id":4,"is_prepacked_item":false,"exclude_dish_information":false,"has_dish_information":null,"is_sold_out":false,"additives":[],"sold_out_options":[{"default":true,"option":"REFUND","text":"NEXTGEN_SoldOutOptions_Refund"},{"default":false,"option":"CANCEL","text":"NEXTGEN_SoldOutOptions_Cancel"},{"default":false,"option":"CALL_CUSTOMER","text":"NEXTGEN_SoldOutOptions_CALL_CUSTOMER"}]}'
+     data-menu-category='Main'
+     data-variation-id='10576152'
+     data-product-id='9391598'
+     data-has-priced-topping='true'
+     ontouchstart=""
+     data-menu-id='223473'
+     data-menu-category-id='1137728'
+     >
+    <div class="item-react-root">
+        <div class='dish-info-container with-image'>
+            <div class="dish-info">
+                <h3 class="dish-name fn p-name">
+                    <span>Stewed Pork Leg</span>
+
+                    
+                                    </h3>
+
+                                    <p class="dish-description e-description">
+                        With choices of serving available
+                    </p>
+                            </div>
+                            <picture>
+                                        <div class="photo u-photo b-lazy" data-src="https://images.deliveryhero.io/image/fd-th/Products/9391598.jpg?width=302"></div>
+                </picture>
+                    </div>
+        <section class="action-bar" data="Original" ff="closed">
+            <div class='action-bar-content'>
+                                                                                                                                                                    <span class="price p-price">
+                                                    from                                                                             à¸¿80.00
                                             </span>
                 
                             </div>
@@ -1435,7 +1537,7 @@ View
                                         <div class="photo u-photo b-lazy" data-src="https://images.deliveryhero.io/image/fd-th/Products/9391602.jpg?width=302"></div>
                 </picture>
                     </div>
-        <section class="action-bar" data="Original" ff="open">
+        <section class="action-bar" data="Original" ff="closed">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                                             à¸¿80.00
@@ -1476,7 +1578,7 @@ View
 
                             </div>
                     </div>
-        <section class="action-bar" data="Original" ff="open">
+        <section class="action-bar" data="Original" ff="closed">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                                             à¸¿15.00
@@ -1512,7 +1614,7 @@ View
                                         <div class="photo u-photo b-lazy" data-src="https://images.deliveryhero.io/image/fd-th/Products/9391608.jpg?width=302"></div>
                 </picture>
                     </div>
-        <section class="action-bar" data="Original" ff="open">
+        <section class="action-bar" data="Original" ff="closed">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                                             à¸¿15.00
@@ -1569,6 +1671,9 @@ View
                                 </div>
                             </section>
                         </div>
+                                                    <div class="menu-disabled"></div>
+                            <div id="vendor-closed-root"></div>
+                            <div id="vendor-closed-modal"></div>
                                                 <div id="alcohol-disclaimer-root"></div>
                         <div id="alcohol-disclaimer-modal"></div>
                         <div id="react-cart-modal"></div>
@@ -1715,7 +1820,7 @@ View
                  data-is-vat-included-in-product-price="">
                 <div class="desktop-cart mobile-cart__hidden"
                      data-minimum_order_amount="0"
-                     data-vendor-is-open="open"
+                     data-vendor-is-open="closed"
                      data-vendor-master-category-ids="[]">
                                     </div>
             </div>
@@ -1926,7 +2031,7 @@ View
                         <h3 class="desktop-cart__title" data-testid="cartlib-cart-title">
                 Your order from <span>Kamoo Yaek 5</span>            </h3>
                                     <p class="desktop-cart_order__message">
-                                    You havenât added anything to your cart yet! Start adding your favourite dishes 
+                                    The restaurant is closed
                             </p>
         </div>
         <!-- Actual Cart -->
@@ -2116,24 +2221,9 @@ View
 </script>
 
 <script type="text/template" id="template-cart-checkout-button">
-            
-<button class="button full btn-upsell btn-checkout hide" data-vendor-code="r9oz">Go to checkout</button>
-
-        
-<button class="button full btn-confirm-below-minimum-amount btn-checkout hide" data-vendor-code="r9oz">Go to checkout</button>
-
-        
-<button class="button full btn-checkout btn-to-checkout hide" data-vendor-code="r9oz"data-captcha-container=captcha-container-cart>Go to checkout</button>
-
-        
-<button class="button full btn-below-minimum-amount button--disabled btn-checkout disabled hide" data-vendor-code="r9oz"data-captcha-container=captcha-container-cart>Go to checkout</button>
-
-        
-<button class="button full btn-confirm-preorder btn-checkout hide" data-vendor-code="r9oz"data-captcha-container=captcha-container-cart>Go to checkout</button>
-
-        
-<button class="button full js-payment-disabled button--disabled btn-checkout disabled hide" data-vendor-code="r9oz"data-captcha-container=captcha-container-cart>Go to checkout</button>
-            <div class="error-message full desktop-cart__error__below-minimum-amount hide" id="" >
+                
+<button class="button full button--disabled disabled" data-vendor-code="r9oz">CURRENTLY UNAVAILABLE</button>
+        <div class="error-message full desktop-cart__error__below-minimum-amount hide" id="" >
     You need to add more items to be able to checkout
 </div>
 
@@ -3181,8 +3271,8 @@ Write comments in case you are allergic to ingredients or want to exclude some."
 </svg>
         </span>
         <span class="rating"><strong>5</strong>/5</span>
-        <span class="count" data-count="(1)">
-            1
+        <span class="count" data-count="(3)">
+            3
         </span>
     </div>
                                             </div>
@@ -3199,7 +3289,8 @@ Write comments in case you are allergic to ingredients or want to exclude some."
                     <div class="opening-time">
                         
     
-            <span class="green-class">Open</span>
+            <span class="line-wrapper">Available for preorder</span>
+        <span>Monday</span>
     
 <span class="schedule-times">
            7:00 AM - 4:00 PM    </span>
@@ -3256,9 +3347,25 @@ Write comments in case you are allergic to ingredients or want to exclude some."
     <hr class="target-tab" id="vendor-reviews" />
     <div class="tab-panel">
                     <h2 class="review-count-title">
-                1 Reviews
+                2 Reviews
             </h2>
                                         
+
+<div class="review-component hreview">
+    <div class="reviewer vcard">
+        <span class="fn"></span><br />
+        <abbr class="review-date dtreviewed" title="2020-10-18">
+            Oct 18, 2020 AD
+        </abbr>
+    </div>
+    <div class="vendor-name vcard item">
+        <span class="fn">Kamoo Yaek 5</span>
+    </div>
+        <div class="description">
+        à¹à¸«à¹à¹à¸¢à¸­à¸°à¸à¸µà¸à¹à¸° à¹à¸à¹à¸à¸²à¸«à¸¡à¸¹à¸«à¸§à¸²à¸à¹à¸à¸à¸´à¸à¸à¸¶à¸à¸à¹à¸° à¸­à¸£à¹à¸­à¸¢à¸à¸µà¸à¹à¸°
+    </div>
+    </div>
+                            
 
 <div class="review-component hreview">
     <div class="reviewer vcard">
@@ -3464,7 +3571,7 @@ Write comments in case you are allergic to ingredients or want to exclude some."
             error: false
         },
         onError: function (payload, error) {
-            var requestId = '1f694868457e18da661ad531dd5d144a';
+            var requestId = '0983cf6ef8e117c1d675a83ded13978b';
             var appVersion = '6ce6fbe';
             var appVersionName = 'master';
             var featureFlags;
@@ -3878,5 +3985,5 @@ Write comments in case you are allergic to ingredients or want to exclude some."
     </span>
 </script>
 
-        <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam-cell.nr-data.net","licenseKey":"f77b1abc66","applicationID":"66674442,97495756,49764655","transactionName":"bldXNUJYXhAABxBZDVcddhRDTV8OTjILXA1ldEcOXk1VDQUmEV4GVVdpIl9XRBEOCAhVEGVkUA9UVkIgDgoQQg1VXlATCgNGBg8AC0IjWkZcDl4=","queueTime":1,"applicationTime":2645,"atts":"QhBUQwpCTR4=","errorBeacon":"bam-cell.nr-data.net","agent":""}</script></body>
+        <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam-cell.nr-data.net","licenseKey":"f77b1abc66","applicationID":"66674442,97495756,49764655","transactionName":"bldXNUJYXhAABxBZDVcddhRDTV8OTjILXA1ldEcOXk1VDQUmEV4GVVdpIl9XRBEOCAhVEGVkUA9UVkIgDgoQQg1VXlATCgNGBg8AC0IjWkZcDl4=","queueTime":1,"applicationTime":355,"atts":"QhBUQwpCTR4=","errorBeacon":"bam-cell.nr-data.net","agent":""}</script></body>
 </html>

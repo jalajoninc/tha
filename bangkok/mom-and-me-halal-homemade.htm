@@ -87,7 +87,7 @@
                 "@type": "DeliveryChargeSpecification",
                 "appliesToDeliveryMethod": "http://purl.org/goodrelations/v1#DeliveryModeOwnFleet",
                 "priceCurrency": "THB",
-                "price": 56.9
+                "price": 58.74
             }
         }
     }
@@ -347,73 +347,7 @@ View
     </div>
 
     <div class="order-components">
-                    <script type="text/template" id="template-day-picker-component">
-    <% var slideClass = days.length > 3 ? 'slidable' : ''; %>
-
-    <div class="day-picker <%- slideClass %>">
-        <div class="day-picker-holder">
-            <ul>
-                <% _.forEach(days, function(day) { %>
-                    <li>
-                        <label class="button-toggle-wrapper">
-                            <input type="radio" value="<%- day.date %>" name="day-picker" />
-                            <span class="day-value button-toggle"><%- day.text %> <span class="day-number"><%- day.number %></span></span>
-                        </label>
-                    </li>
-                <% }); %>
-            </ul>
-        </div>
-        <button class="nav-scroller prev hide">
-            <svg width="12" height="14" xmlns="http://www.w3.org/2000/svg">
-    <path class="svg-stroke-container" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd" fill="none" stroke="#D70F64" d="m3.5,1.5l5,5.5l-5,5.5"/>
-</svg>
-        </button>
-        <button class="nav-scroller next hide">
-            <svg width="12" height="14" xmlns="http://www.w3.org/2000/svg">
-    <path class="svg-stroke-container" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd" fill="none" stroke="#D70F64" d="m3.5,1.5l5,5.5l-5,5.5"/>
-</svg>
-        </button>
-    </div>
-</script>
-<script type="text/template" id="template-time-picker-component">
-    <div class="time-picker">
-        <ul>
-            <% _.forEach(times, function(time) { %>
-                <li>
-                  <label class="time-picker-toggle-wrapper">
-                    <input type="radio" value="<%- time.time %>" name="time-picker" />
-                    <span class="time-name"><%- time.text %></span>
-                  </label>
-                </li>
-            <% }); %>
-        </ul>
-    </div>
-</script>
-
-<div class="when-wrapper hide">
-    <div class="time-picker-button header-order-button">
-    <span class="header-order-button-title">When</span>
-    <span class="header-order-button-content"></span>
-    </div>
-    <div class="modal fade time-picker-component" data-time-picker-component tabindex="-1" role="dialog" aria-hidden="true"  data-now-translation="ASAP">
-        <div class="modal-wrapper">
-            <header class="picker-header">
-                <a class="close-button" data-dismiss="modal"></a>
-                <h2 class="picker-title">When</h2>
-            </header>
-            <div class="picker-container">
-                <div class="day-picker-container"></div>
-                <div class="time-picker-container"></div>
-            </div>
-            <footer class="picker-footer">
-                <button class="picker-confirm button full">Confirm</button>
-            </footer>
-        </div>
-    </div>
-
-    </div>
-
-    
+            
 
                     <div class="where-wrapper">
     <div class="location-search-button header-order-button" data-vendorID="143796">
@@ -635,7 +569,7 @@ View
       data-server-errors="&quot;{}&quot;"
       novalidate
 >
-    <input type="hidden" name="_csrf_token" value="1602908577:2RbrO7hPVG2ckLU/dlBtFwcq1Tn+BEuyMxIHzDnsGME8uQAWeO39NbsVAikcK3CLwYl1wFiQ4udess3wG1sRpQ==:jOYVppgqNARBtzALkcMsdkjaxmVNhCp4AmWXVFE6D3dBCNpE8M0Xs5NzCJqRpZUdqiJRyikFQghbPWBWDiYsng==" >
+    <input type="hidden" name="_csrf_token" value="1603012504:Cc4Go/8JsdL5ImE7Br/VYed9g3YgC5Q9pDx1yg+KAOCs8eTVSpgl2VnVjX/mRlNvYeTP52mByLwD8Kp13bz6yw==:3ri9Aed5leEaWNVTpHd/e/YMD+JK/5bvNPboIc1840lsTAearL3qiQPUfmAROCZr4oGMRxtLtZVYqfz7t/mYFg==" >
     <input type="hidden" name="_target_path" value="/restaurant/m8uj/mom-and-me-halal-homemade" >
 
     
@@ -1104,7 +1038,7 @@ View
     <div class="page-container">
         <section 
             class="vendor-section"
-            data-vendor='{"id":143796,"name":"Mom and Me Halal Homemade","code":"m8uj","category":"Halal,Thai","is_active":true,"timezone":"Asia\/Bangkok","available_in":null,"city_id":983099,"latitude":13.73198348,"longitude":100.60984939,"is_pickup_available":true,"is_delivery_available":true,"url_key":"mom-and-me-halal-homemade","ddt":0,"chain":{"id":0,"name":null,"url_key":null,"is_accepting_global_vouchers":false,"code":null,"main_vendor_code":""},"rating":1,"review_number":0,"minOrder":0,"deliveryFee":0,"is_promoted":false,"is_premium":false,"toppings":{"26452899":{"id":26452899,"name":"Choose sauce","description":"","quantity_minimum":1,"quantity_maximum":1,"options":[{"id":34473628,"product_id":9377877,"name":"Roasted Chili Paste Sauce","description":"","price":0,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""},{"id":34473629,"product_id":9377878,"name":"Original Sauce","description":"","price":0,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""}]},"26452900":{"id":26452900,"name":"Choose size","description":"","quantity_minimum":1,"quantity_maximum":1,"options":[{"id":34473654,"product_id":9377865,"name":"Small","description":"","price":0,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""},{"id":34473655,"product_id":9377879,"name":"Large","description":"","price":48.8,"price_before_discount":61,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""}]}},"accepts_instructions":true,"category_quantity":5,"loyalty_program_enabled":false,"loyalty_percentage_amount":0,"has_delivery_provider":true,"vertical":"restaurants","is_preorder_enabled":false,"is_vat_visible":true}'
+            data-vendor='{"id":143796,"name":"Mom and Me Halal Homemade","code":"m8uj","category":"Halal,Thai","is_active":true,"timezone":"Asia\/Bangkok","available_in":"2020-10-20T08:30:00+0700","city_id":983099,"latitude":13.73198348,"longitude":100.60984939,"is_pickup_available":true,"is_delivery_available":true,"url_key":"mom-and-me-halal-homemade","ddt":0,"chain":{"id":0,"name":null,"url_key":null,"is_accepting_global_vouchers":false,"code":null,"main_vendor_code":""},"rating":1,"review_number":0,"minOrder":0,"deliveryFee":0,"is_promoted":false,"is_premium":false,"toppings":{"26452899":{"id":26452899,"name":"Choose sauce","description":"","quantity_minimum":1,"quantity_maximum":1,"options":[{"id":34473628,"product_id":9377877,"name":"Roasted Chili Paste Sauce","description":"","price":0,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""},{"id":34473629,"product_id":9377878,"name":"Original Sauce","description":"","price":0,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""}]},"26452900":{"id":26452900,"name":"Choose size","description":"","quantity_minimum":1,"quantity_maximum":1,"options":[{"id":34473654,"product_id":9377865,"name":"Small","description":"","price":0,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""},{"id":34473655,"product_id":9377879,"name":"Large","description":"","price":48.8,"price_before_discount":61,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""}]}},"accepts_instructions":true,"category_quantity":4,"loyalty_program_enabled":false,"loyalty_percentage_amount":0,"has_delivery_provider":true,"vertical":"restaurants","is_preorder_enabled":false,"is_vat_visible":true}'
         >
                             <aside class="top-skinny-banner-container">
                     <div id="skinny-banner-react-root-vendor-page"></div>
@@ -1223,6 +1157,9 @@ View
 
                                             </div>
                 </div>
+                                    <div class="vendor-closed-image-overlay">
+                        <div class="vendor-closed-until"><span class="vendor-closed">CLOSED</span> until Tue 08:30 AM</div>
+                    </div>
                                 <div class="postal-index-form-overlay"></div>
                 
 <div class="vendor-info-container">
@@ -1235,6 +1172,9 @@ View
                                                                                                             <span class="multi-tag">New</span>
                                             </div>
                                 
+                                    <div class="closed-tag-container" data-toggle="modal" data-target="#rich-description">
+                        <span class="closed-tag">CLOSED</span>
+                    </div>
                 
                                                                 </div>
 
@@ -1291,11 +1231,8 @@ View
                 <div class="menu__blocks">
                     <div class="menu__list-wrapper"
                          data-user-id='anonymous'
-                         data-vendor-is-open="open"
-                         data-vendor-next-available="Sat 11:22 AM">
-                                                     <section class="vendor-lane-section" id="vendor-quick-reorder"></section>
-                            <div id="quick-reorder-overview-provider"></div>
-                            <div id="quick-reorder-modal"></div>
+                         data-vendor-is-open="closed"
+                         data-vendor-next-available="Tue 08:30 AM">
                                                      <nav class="dish-menu-category-list hide">
         <div class="dish-control-holder">
             <div class="nav-holder">
@@ -1338,16 +1275,6 @@ View
                                data-anchor-nav=""	
                                title= "Milk">	
                                 Milk	
-                            </a>	
-                        </li>	
-                    	
-                        <li>	
-                            <a href="#menu__category-id-1136610"	
-                               data-id="1136610"	
-                               data-master-category-id=""	
-                               data-anchor-nav=""	
-                               title= "Other Beverages">	
-                                Other Beverages	
                             </a>	
                         </li>	
                     	
@@ -1416,7 +1343,7 @@ View
                                         <div class="photo u-photo b-lazy" data-src="https://images.deliveryhero.io/image/fd-th/Products/9835966.jpg?width=302"></div>
                 </picture>
                     </div>
-        <section class="action-bar" data="Original" ff="open">
+        <section class="action-bar" data="Original" ff="closed">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                                             à¸¿80.00
@@ -1456,7 +1383,7 @@ View
                                         <div class="photo u-photo b-lazy" data-src="https://images.deliveryhero.io/image/fd-th/Products/9377836.jpg?width=302"></div>
                 </picture>
                     </div>
-        <section class="action-bar" data="Original" ff="open">
+        <section class="action-bar" data="Original" ff="closed">
             <div class='action-bar-content'>
                                                                                                                                                                                                                                         <span class="price p-price">
                                                     from                                                                             à¸¿39.20
@@ -1504,7 +1431,7 @@ View
                                         <div class="photo u-photo b-lazy" data-src="https://images.deliveryhero.io/image/fd-th/Products/9697286.jpg?width=302"></div>
                 </picture>
                     </div>
-        <section class="action-bar" data="Original" ff="open">
+        <section class="action-bar" data="Original" ff="closed">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                                             à¸¿68.00
@@ -1544,7 +1471,7 @@ View
                                         <div class="photo u-photo b-lazy" data-src="https://images.deliveryhero.io/image/fd-th/Products/9874124.jpg?width=302"></div>
                 </picture>
                     </div>
-        <section class="action-bar" data="Original" ff="open">
+        <section class="action-bar" data="Original" ff="closed">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                                             à¸¿68.00
@@ -1584,7 +1511,7 @@ View
                                         <div class="photo u-photo b-lazy" data-src="https://images.deliveryhero.io/image/fd-th/Products/9874125.jpg?width=302"></div>
                 </picture>
                     </div>
-        <section class="action-bar" data="Original" ff="open">
+        <section class="action-bar" data="Original" ff="closed">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                                             à¸¿68.00
@@ -1629,7 +1556,7 @@ View
                                         <div class="photo u-photo b-lazy" data-src="https://images.deliveryhero.io/image/fd-th/Products/9377837.jpg?width=302"></div>
                 </picture>
                     </div>
-        <section class="action-bar" data="Original" ff="open">
+        <section class="action-bar" data="Original" ff="closed">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                                             à¸¿44.00
@@ -1666,44 +1593,7 @@ View
                                         <div class="photo u-photo b-lazy" data-src="https://images.deliveryhero.io/image/fd-th/Products/9377857.jpg?width=302"></div>
                 </picture>
                     </div>
-        <section class="action-bar" data="Original" ff="open">
-            <div class='action-bar-content'>
-                                                                                                                                                                    <span class="price p-price">
-                                                                            à¸¿44.00
-                            <span class="price-discount">à¸¿55.00</span>
-                                            </span>
-                
-                            </div>
-                    </section>
-            </div>
-</li>
-                            
-                    
-<li class="dish-card h-product menu__item "
-     data-object='{"is_half_type_available":false,"id":9377858,"name":"Thai Tea","code":"6eb6c639-83aa-4c8d-af41-fa663493adb4","description":"","file_path":"https:\/\/images.deliveryhero.io\/image\/fd-th\/Products\/9377858.jpg?width=%s","logo_path":"https:\/\/images.deliveryhero.io\/image\/fd-th\/Products\/9377858.jpg?width=%s","half_type":"","is_alcoholic_item":false,"product_variations":[{"id":10561977,"code":"b5ff97ad-1148-4741-9759-f6521ef09a30","name":null,"price":44,"price_before_discount":55,"container_price":0,"choices":[],"toppings":[],"topping_ids":[]}],"master_category_id":11,"is_prepacked_item":false,"exclude_dish_information":false,"has_dish_information":null,"is_sold_out":false,"additives":[],"sold_out_options":[{"default":true,"option":"REFUND","text":"NEXTGEN_SoldOutOptions_Refund"},{"default":false,"option":"CANCEL","text":"NEXTGEN_SoldOutOptions_Cancel"},{"default":false,"option":"CALL_CUSTOMER","text":"NEXTGEN_SoldOutOptions_CALL_CUSTOMER"}]}'
-     data-menu-category='Tea'
-     data-variation-id='10561977'
-     data-product-id='9377858'
-     data-has-priced-topping='false'
-     ontouchstart=""
-     data-menu-id='223272'
-     data-menu-category-id='1136608'
-     >
-    <div class="item-react-root">
-        <div class='dish-info-container with-image'>
-            <div class="dish-info">
-                <h3 class="dish-name fn p-name">
-                    <span>Thai Tea</span>
-
-                    
-                                    </h3>
-
-                            </div>
-                            <picture>
-                                        <div class="photo u-photo b-lazy" data-src="https://images.deliveryhero.io/image/fd-th/Products/9377858.jpg?width=302"></div>
-                </picture>
-                    </div>
-        <section class="action-bar" data="Original" ff="open">
+        <section class="action-bar" data="Original" ff="closed">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                                             à¸¿44.00
@@ -1751,7 +1641,7 @@ View
                                         <div class="photo u-photo b-lazy" data-src="https://images.deliveryhero.io/image/fd-th/Products/9377862.jpg?width=302"></div>
                 </picture>
                     </div>
-        <section class="action-bar" data="Original" ff="open">
+        <section class="action-bar" data="Original" ff="closed">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                                             à¸¿44.00
@@ -1791,7 +1681,7 @@ View
                                         <div class="photo u-photo b-lazy" data-src="https://images.deliveryhero.io/image/fd-th/Products/9377863.jpg?width=302"></div>
                 </picture>
                     </div>
-        <section class="action-bar" data="Original" ff="open">
+        <section class="action-bar" data="Original" ff="closed">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                                             à¸¿44.00
@@ -1831,56 +1721,11 @@ View
                                         <div class="photo u-photo b-lazy" data-src="https://images.deliveryhero.io/image/fd-th/Products/9874786.jpg?width=302"></div>
                 </picture>
                     </div>
-        <section class="action-bar" data="Original" ff="open">
+        <section class="action-bar" data="Original" ff="closed">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                                             à¸¿44.00
                             <span class="price-discount">à¸¿55.00</span>
-                                            </span>
-                
-                            </div>
-                    </section>
-            </div>
-</li>
-    </ul>
-        </div>
-    </div>
-    <div class="dish-category-section hide">
-        <div class="dish-category-section__inner-wrapper" id="menu__category-id-1136610">
-
-            <h2 class="dish-category-title">Other Beverages</h2>
-            <ul class="dish-list">
-                            
-                    
-<li class="dish-card h-product menu__item "
-     data-object='{"is_half_type_available":false,"id":9377864,"name":"Punch","code":"cb461ff6-c2ef-4f79-aaef-bc6cdb667783","description":"","file_path":"https:\/\/images.deliveryhero.io\/image\/fd-th\/Products\/9377864.jpg?width=%s","logo_path":"https:\/\/images.deliveryhero.io\/image\/fd-th\/Products\/9377864.jpg?width=%s","half_type":"","is_alcoholic_item":false,"product_variations":[{"id":10561984,"code":"dd95fc33-5e14-487e-af46-f43e0dc23713","name":null,"price":40,"price_before_discount":50,"container_price":0,"choices":[],"toppings":[],"topping_ids":[]}],"master_category_id":11,"is_prepacked_item":false,"exclude_dish_information":false,"has_dish_information":null,"is_sold_out":false,"additives":[],"sold_out_options":[{"default":true,"option":"REFUND","text":"NEXTGEN_SoldOutOptions_Refund"},{"default":false,"option":"CANCEL","text":"NEXTGEN_SoldOutOptions_Cancel"},{"default":false,"option":"CALL_CUSTOMER","text":"NEXTGEN_SoldOutOptions_CALL_CUSTOMER"}]}'
-     data-menu-category='Other Beverages'
-     data-variation-id='10561984'
-     data-product-id='9377864'
-     data-has-priced-topping='false'
-     ontouchstart=""
-     data-menu-id='223272'
-     data-menu-category-id='1136610'
-     >
-    <div class="item-react-root">
-        <div class='dish-info-container with-image'>
-            <div class="dish-info">
-                <h3 class="dish-name fn p-name">
-                    <span>Punch</span>
-
-                    
-                                    </h3>
-
-                            </div>
-                            <picture>
-                                        <div class="photo u-photo b-lazy" data-src="https://images.deliveryhero.io/image/fd-th/Products/9377864.jpg?width=302"></div>
-                </picture>
-                    </div>
-        <section class="action-bar" data="Original" ff="open">
-            <div class='action-bar-content'>
-                                                                                                                                                                    <span class="price p-price">
-                                                                            à¸¿40.00
-                            <span class="price-discount">à¸¿50.00</span>
                                             </span>
                 
                             </div>
@@ -1934,6 +1779,9 @@ View
                                 </div>
                             </section>
                         </div>
+                                                    <div class="menu-disabled"></div>
+                            <div id="vendor-closed-root"></div>
+                            <div id="vendor-closed-modal"></div>
                                                 <div id="alcohol-disclaimer-root"></div>
                         <div id="alcohol-disclaimer-modal"></div>
                         <div id="react-cart-modal"></div>
@@ -2080,7 +1928,7 @@ View
                  data-is-vat-included-in-product-price="">
                 <div class="desktop-cart mobile-cart__hidden"
                      data-minimum_order_amount="0"
-                     data-vendor-is-open="open"
+                     data-vendor-is-open="closed"
                      data-vendor-master-category-ids="[]">
                                     </div>
             </div>
@@ -2291,7 +2139,7 @@ View
                         <h3 class="desktop-cart__title" data-testid="cartlib-cart-title">
                 Your order from <span>Mom and Me Halal Homemade</span>            </h3>
                                     <p class="desktop-cart_order__message">
-                                    You havenât added anything to your cart yet! Start adding your favourite dishes 
+                                    The restaurant is closed
                             </p>
         </div>
         <!-- Actual Cart -->
@@ -2487,24 +2335,9 @@ View
 </script>
 
 <script type="text/template" id="template-cart-checkout-button">
-            
-<button class="button full btn-upsell btn-checkout hide" data-vendor-code="m8uj">Go to checkout</button>
-
-        
-<button class="button full btn-confirm-below-minimum-amount btn-checkout hide" data-vendor-code="m8uj">Go to checkout</button>
-
-        
-<button class="button full btn-checkout btn-to-checkout hide" data-vendor-code="m8uj"data-captcha-container=captcha-container-cart>Go to checkout</button>
-
-        
-<button class="button full btn-below-minimum-amount button--disabled btn-checkout disabled hide" data-vendor-code="m8uj"data-captcha-container=captcha-container-cart>Go to checkout</button>
-
-        
-<button class="button full btn-confirm-preorder btn-checkout hide" data-vendor-code="m8uj"data-captcha-container=captcha-container-cart>Go to checkout</button>
-
-        
-<button class="button full js-payment-disabled button--disabled btn-checkout disabled hide" data-vendor-code="m8uj"data-captcha-container=captcha-container-cart>Go to checkout</button>
-            <div class="error-message full desktop-cart__error__below-minimum-amount hide" id="" >
+                
+<button class="button full button--disabled disabled" data-vendor-code="m8uj">CURRENTLY UNAVAILABLE</button>
+        <div class="error-message full desktop-cart__error__below-minimum-amount hide" id="" >
     You need to add more items to be able to checkout
 </div>
 
@@ -3560,10 +3393,11 @@ Write comments in case you are allergic to ingredients or want to exclude some."
                     <div class="opening-time">
                         
     
-            <span class="green-class">Open</span>
+            <span class="line-wrapper">Available for preorder</span>
+        <span>Sunday</span>
     
 <span class="schedule-times">
-           6:45 AM - 6:00 PM    </span>
+           7:00 AM - 4:30 PM    </span>
 
                     </div>
 
@@ -3811,7 +3645,7 @@ Write comments in case you are allergic to ingredients or want to exclude some."
             error: false
         },
         onError: function (payload, error) {
-            var requestId = 'f4fefee30d4b70118de7e67ec6db393f';
+            var requestId = '837603dfefccaf65b76dde0b223f6d9a';
             var appVersion = '6ce6fbe';
             var appVersionName = 'master';
             var featureFlags;
@@ -4225,5 +4059,5 @@ Write comments in case you are allergic to ingredients or want to exclude some."
     </span>
 </script>
 
-        <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam-cell.nr-data.net","licenseKey":"f77b1abc66","applicationID":"66674442,97495756,49764655","transactionName":"bldXNUJYXhAABxBZDVcddhRDTV8OTjILXA1ldEcOXk1VDQUmEV4GVVdpIl9XRBEOCAhVEGVkUA9UVkIgDgoQQg1VXlATCgNGBg8AC0IjWkZcDl4=","queueTime":2,"applicationTime":1938,"atts":"QhBUQwpCTR4=","errorBeacon":"bam-cell.nr-data.net","agent":""}</script></body>
+        <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam-cell.nr-data.net","licenseKey":"f77b1abc66","applicationID":"66674442,97495756,49764655","transactionName":"bldXNUJYXhAABxBZDVcddhRDTV8OTjILXA1ldEcOXk1VDQUmEV4GVVdpIl9XRBEOCAhVEGVkUA9UVkIgDgoQQg1VXlATCgNGBg8AC0IjWkZcDl4=","queueTime":1,"applicationTime":344,"atts":"QhBUQwpCTR4=","errorBeacon":"bam-cell.nr-data.net","agent":""}</script></body>
 </html>
