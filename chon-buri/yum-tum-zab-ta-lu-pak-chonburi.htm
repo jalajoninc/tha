@@ -87,7 +87,7 @@
                 "@type": "DeliveryChargeSpecification",
                 "appliesToDeliveryMethod": "http://purl.org/goodrelations/v1#DeliveryModeOwnFleet",
                 "priceCurrency": "THB",
-                "price": 121.65
+                "price": 121.92
             }
         }
     }
@@ -347,73 +347,7 @@ View
     </div>
 
     <div class="order-components">
-                    <script type="text/template" id="template-day-picker-component">
-    <% var slideClass = days.length > 3 ? 'slidable' : ''; %>
-
-    <div class="day-picker <%- slideClass %>">
-        <div class="day-picker-holder">
-            <ul>
-                <% _.forEach(days, function(day) { %>
-                    <li>
-                        <label class="button-toggle-wrapper">
-                            <input type="radio" value="<%- day.date %>" name="day-picker" />
-                            <span class="day-value button-toggle"><%- day.text %> <span class="day-number"><%- day.number %></span></span>
-                        </label>
-                    </li>
-                <% }); %>
-            </ul>
-        </div>
-        <button class="nav-scroller prev hide">
-            <svg width="12" height="14" xmlns="http://www.w3.org/2000/svg">
-    <path class="svg-stroke-container" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd" fill="none" stroke="#D70F64" d="m3.5,1.5l5,5.5l-5,5.5"/>
-</svg>
-        </button>
-        <button class="nav-scroller next hide">
-            <svg width="12" height="14" xmlns="http://www.w3.org/2000/svg">
-    <path class="svg-stroke-container" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd" fill="none" stroke="#D70F64" d="m3.5,1.5l5,5.5l-5,5.5"/>
-</svg>
-        </button>
-    </div>
-</script>
-<script type="text/template" id="template-time-picker-component">
-    <div class="time-picker">
-        <ul>
-            <% _.forEach(times, function(time) { %>
-                <li>
-                  <label class="time-picker-toggle-wrapper">
-                    <input type="radio" value="<%- time.time %>" name="time-picker" />
-                    <span class="time-name"><%- time.text %></span>
-                  </label>
-                </li>
-            <% }); %>
-        </ul>
-    </div>
-</script>
-
-<div class="when-wrapper hide">
-    <div class="time-picker-button header-order-button">
-    <span class="header-order-button-title">When</span>
-    <span class="header-order-button-content"></span>
-    </div>
-    <div class="modal fade time-picker-component" data-time-picker-component tabindex="-1" role="dialog" aria-hidden="true"  data-now-translation="ASAP">
-        <div class="modal-wrapper">
-            <header class="picker-header">
-                <a class="close-button" data-dismiss="modal"></a>
-                <h2 class="picker-title">When</h2>
-            </header>
-            <div class="picker-container">
-                <div class="day-picker-container"></div>
-                <div class="time-picker-container"></div>
-            </div>
-            <footer class="picker-footer">
-                <button class="picker-confirm button full">Confirm</button>
-            </footer>
-        </div>
-    </div>
-
-    </div>
-
-    
+            
 
                     <div class="where-wrapper">
     <div class="location-search-button header-order-button" data-vendorID="147691">
@@ -635,7 +569,7 @@ View
       data-server-errors="&quot;{}&quot;"
       novalidate
 >
-    <input type="hidden" name="_csrf_token" value="1602909115:FsBSXNtTN1D69dEYl8azwszQ+5ZlnBy1rDR6e4ugzvobm4pqHy1bp0jcitTfVLLnYoO0ixKcEDyeme+XYsZhfA==:rNRT3kv5oah/7UvYTiGibSpllWYjh3NfX26EfBg19PgPfRY/5w9dGhrFaKj4XamzXu4RwGrKQIWZfRGNpYC3FQ==" >
+    <input type="hidden" name="_csrf_token" value="1603117448:2NEOWS0bdelxjj6JzFR3q8qoEx/Hq5C6k6ojapuq84obku8x6I2T6BhseS9+XX09NsdSg1bGpVq0MoTofJhrlw==:HJN+hf9MkGF2ATP/fBClBsD6ekOvi2mJzjttly/i1zzJdAww+lhEPnCyUX9Pnxy3z7HOMXlKvjoHji/Yh34BSw==" >
     <input type="hidden" name="_target_path" value="/restaurant/q2qp/yum-tum-zab-ta-lu-pak-chonburi" >
 
     
@@ -987,8 +921,8 @@ View
 
         VOLO.configuration = VOLO.configuration || {};
         VOLO.configuration.features = {
-            user: {"key":"184.22.146.94","ip":"184.22.146.94","custom":{"country_code":"th","platform":"b2c","cookie_key":"184.22.146.94"},"anonymous":true},
-            flags: {"reviews":"On","yum":"na","self-service":true,"verticals":"[      {          \u0022id\u0022: \u0022restaurants\u0022,          \u0022title_key\u0022: \u0022NEXTGEN_RESTAURANT_ENTRY_TAB\u0022, \t\t          \u0022title_key_web\u0022: \u0022restaurants.entry_tab\u0022,           \u0022vertical_types\u0022: [\u0022restaurants\u0022],         \t          \u0022title_icon_res\u0022: \u0022ic_vert_restaurants\u0022      \t                },            {          \u0022id\u0022: \u0022shop\u0022,          \u0022title_key\u0022: \u0022NEXTGEN_SHOPS_ENTRY_TAB\u0022, \t          \u0022title_key_web\u0022: \u0022shops.entry_tab\u0022,                 \u0022vertical_types\u0022: [\u0022shop\u0022],                   \u0022title_icon_res\u0022: \u0022ic_vert_shops\u0022      \t           }  ]","best-price":false,"sameday-preorder-popup":true,"df":"On","react-map":"yes","use-optimizely":false,"show-darkstore-tile":true,"address-snapping-tooltip":"na","cashier-sdk":false,"global-search-rdp":false,"cs-menu":"On","restaurant-chat":false,"always-display-item-modifier":false,"rider-map":false,"subPlans":true,"login-registration-tabs":true,"preorder-popup-on-rdp":false,"otp-horizontal-progressbar":2,"subscriptions":"NA","check-2":true,"payment-tokens":true,"rating":"On","time-range-on-otp":false,"vendor-tile-extra-info":true,"verticals-feed-config":"config-1","voucher-wallet":true,"ratings-reviews":true,"search-suggests":"On","mc":"Variant","quick-reorder-in-rdp":"quick-reorder-off","where-component":true,"cartapi":true,"ab-test-flags":"cs-cart,alan-hc,search-config,self-service,verticals,react-map,show-wallet,apple-login,otp-time-format","no-delivery-time-on-rlp-rdp-checkout":false,"subscriptions-new-card":true,"verticals-fork":"Variant1","otp-rewards":false,"new-vendor-tile":"Variant","when-component":true,"item-counter":false,"darkstores-web-ui":false,"show-price-from-with-non-zero-topping-price":true,"perimeterx":true,"should-check-for-app-updates":false,"newcart":false,"delay-gmap":"after-load","rdp-recommendation":"Variant","otp-audience":false,"menu-platform-specific-products":false,"promo-banner":true,"vendor-sorting":true,"autocomplete-config":"Variant2","add-address":"n\/a","time-range":"NA","show-subtitles-on-otp":false,"show-cutlery-toggle":true,"always-map":"n\/a","ignore-events":true,"new-search-flow":"NA","disable-rider-banner":false,"checkout_map":"Variant","should-use-mapped-toppings":true,"tracking-card-web":true,"challenges":false,"enable-alfred":false,"wsb":"On","mov":"Off","sold-out-items":false,"rectify-where-component":true,"reward-challenge-enabled":false,"showIM":"Original","should-confirm-preorder":"2","cs-cart":"all-items","vendor-dh-recommendation":"recommendations-off","welcome-to-verticals":false,"establishment-as-building":true,"deals":true,"eta-range-otp":0,"brand":"foodpanda","tr-card-revamp":"true","index-secondary-language":true,"help-center-access":false,"separate-vendor-chain-meta":true,"using-sherlock-as-api":true,"search-config":"Variant6","group-order-split-allowance":true,"mbl-google-address-variant":"Variant","cs-backend":"default","dd-logs":false,"otp-revamp":true,"favorites":"Original","redirect-chain-vendors":true,"multi-tags":"2","mbl-google-address":false,"dish-detailed-information":false,"rewards-back-office-write-access":false,"use-atlas-proxy-get-by-id-endpoint":false,"cookies-banner":false,"klarna-in-microfrontend":false,"city-page-limit":500,"ds":"vendors_only","cancellation-button":false,"bottom-bar":"NA","characteristics":"Variant","new-payment-selector":true,"check-1":true,"verticals-autocomplete-config":"config-1","archimedes-fwf-enabled":false,"free-scroll-in-swimlanes":true,"address-tooltip":2,"out-of-stock-verticals":[],"new-city-page":true,"variations-line-rdp":false,"get-direction":true,"product-listing-verticals":false,"ios-hs":"On","saved-address":true,"dps":"Original","new-credit-card-form-react":false,"show-vipps":false,"sorting":"Original","cselling":"multiple-variations","rlp-to-mf":"Variant","ios-app-reviews":true,"preorder":true,"item-modifier-redesign":"v1","alcohol-verticals":true,"mBanner":1,"upsell-drinks":true,"cancel-cap-limit":5,"parallel-calls-rlp":"NA","x-sell-otp-nv":"off","mbl-dynamic-fields":"Original","timed-menus":true,"swimlanes":"Original","vendor-dh-reco":false,"new-nav-flow":"Control","location-lib":false,"alco-rest":true,"distance-on-pickup":true,"zopim-chat":true,"rewards-feature-variation":"na","hero-image":false,"campaign-service":"campaign-service","loyalty":true,"shadow":"NA","cuisines":"Original","download-personal-data":false,"darkstores-landing-page-config":"dark-stores-config-2","rdp-dialog":"1","ios-app-reviews-not-after-first":true,"x-sell-placement":"control","raf-migration":true,"payios":false,"react-cart":true,"chained-place-order":false,"exposed-filters":"Off","closed-on-rlp":"Label_center","additional-information-on-checkout":false,"override-flags":false,"get-direction-otp":true,"ab_test_flags":"vendor-tile-extra-info,swimlanes,upsell-drinks,self-service,when-component,apple-pay-inline-setup,rider-map,ds","organicList":"Variant1","verticals-out-of-stock":"[{\u0022text\u0022:\u0022NEXTGEN_SoldOutOptions_Refund\u0022,\u0022option\u0022:\u0022REFUND\u0022,\u0022default\u0022:true},{\u0022text\u0022:\u0022NEXTGEN_SoldOutOptions_Cancel\u0022,\u0022option\u0022:\u0022CANCEL\u0022,\u0022default\u0022:false}]","apple-pay-inline-setup":false,"flexiadd":true,"nv-entry-point-config":1,"joker":"on","quick-filters":true,"df-info-icon":false,"always-open-item-modifier-foo":false,"new-authentication-flow":true,"px":true,"address-snapping-tooltip-radius":200,"show-restaurant-contact-information":false,"challenge-special-provider-enabled":["pickup","vendor_delivery"],"self-reference-canonical":true,"od-vd-rlp":"NA","x-sell-discounts":"variant","auto-apply":true,"variations":true,"groupie":true,"show-wallet":false,"alan-hc":true,"disable-migration-banner":true,"web-lists":"Variant1","pagination":true,"out-of-stock-component":"Off","disable-smartphone-banner":false,"budget":"Variant","rdp-reco":true,"global-search-rlp":false,"aggregate-regions":false,"customer-rider-chat":{"apiKey":"FF804081-D96C-48F4-ADCE-C3BB82782434","isEnabled":true,"localesMapping":{"en":"en","ja":"ja","th":"th"}},"address-book-mf":true,"address-snapping-tooltip-a":"Variation1","address-snapping-tooltip-b":"Variation1","address-snapping-tooltip-d":"Variation1","address-svc-use-geolocator-find-city":false,"alfred-performance-adjustment":true,"allergenspdf":false,"apple-login":false,"archimedes-enable-offer-voucher-validation":true,"archimedes-use-discount-data-from-watson":true,"b2b-landing":false,"block-preorders":"disabled","cache-vendor-from-watson":true,"campaign-shop-carousel":false,"carousel-ui-style":"carousel_listview","cart-service-circuit-breaker-enabled":true,"cart-service-enable-djini":false,"cart-to-checkout-cta":"Control","cashier-token-sync":false,"catalog-service-disable-database-writes":false,"catalog-service-enable-new-db-sync":true,"catalog-service-enable-rdp-call-customer-option":true,"catalog-service-out-of-stock":false,"catalog-service-rdp-use-circuit-breaker":true,"checkout-during-events":"Allow if shrinking","checkout-request-invoice":false,"city-in-checkout":true,"closing-soon":"Control","contactless-delivery":false,"corporate-self-signup":true,"custom-rider-icon":"true","customer-active-consent":"Control","darkstore-category-discovery1":"Control","darkstore-category-scroll1":"Control","darkstore-limit-items-per-sku":"Control","darkstore-past-order":"Control","darkstore-search-entry1":"Variation1","darkstore-search-redesign1":"Variation1","darkstore-tile-variant":"variant","darkstores-show-low-in-stock":false,"disable-cutlery-for-vd":false,"discount-title-as-tag":true,"dynamic-pricing-indicator":"Original","enable-archimedes-request-logging":false,"enable-cod-with-rider-tip":false,"enable-df-address-notifier":true,"enable-df-address-svc-worker":true,"enable-search-populator-long-closure":true,"expose-current-location":"Original","favorites-shops":false,"filter-ux-revamp":"Control","filters-shops":false,"first-name-last-name-order":true,"force-enroll-internal-users":false,"fork-dismiss-btn":"Original","geolocator-enable-df-ingest":true,"geolocator-enable-tpl-cache":true,"geolocator-providers-ab-testing-experimental":"Control","geolocator-use-city-service":true,"geolocator-use-country-service":true,"gps-timeout":"3000","help-center":"global-hc","is-beta-enabled":true,"is-internal-beta-enabled":true,"locate-me":"Variant2","location-read-city-from-vendor-in-checkout":false,"max-change-country-address-svc-worker":"2000","mbl_google_address":true,"merge-cashback":"Control","modular-subscription":"NA","nested-products":"Off","nested-products-ab":"Control","nested-products-shops":"Variation1","new-authentication-web":false,"new-checkout-flow-ab":"Control","new-customer-validation":true,"new-homepage":"Control","open-sans":"Control","organic-list":"Original","otp-microfrontend":"Variation1","otp-time-format":"Variation2","out-of-stock":false,"passwordless-account":false,"payment_code_adyen_applepay":false,"payment_code_adyen_creditcard":true,"payment_code_adyen_googlepay":false,"payment_code_antfinancial_bkash":true,"payment_code_antfinancial_gcash":false,"payment_code_antfinancial_truemoney":false,"payment_code_cybersource_creditcard":false,"payment_code_paypal":true,"payment_code_spreedly_creditcard":true,"pickup-awareness-on-checkout":false,"pickup-map-config":"{\u0022isEnabled\u0022:false}","pickup-radius":5,"pickup-rlp-banner-config":{"backgroundColor":"#F7BDD1","description":"NEXTGEN_PICKUP_BANNER_DESCRIPTION","imageUrl":"https:\/\/images.deliveryhero.io\/image\/fd-th\/pickup\/pickup_banner.png","isEnabled":true,"title":"NEXTGEN_PICKUP_BANNER_TITLE"},"pickup-swimlane":"pickup-control","prevent-duplicated-orders":true,"process-by-country-address-svc-worker":true,"promoted-on-rlp":true,"quantity_stepper_animation":"Control","recent-searches":"Variation1","referral-flow":"Control","referral-links":"Variant2","return-closed-vendors":true,"rewards-back-office-global-user":false,"rewards-communication-challenge-rewarded":false,"rewards-data-stream":true,"rewards-feature":"Control","rewards-flash-challenges":"Control","rewards-multi-step-challenges":false,"rider-chat-alert":"Variation1","rider-chat-new-msg":true,"rider-tip":false,"rlp-address-map":"Variation1","search-closed-vendor-restaurants":"Control","search-closed-vendor-shops":"Control","search-populator-process-events":true,"search-suggests-shops":"Off","share-rdp":false,"shops-swimlanes":"shops-original","show-free-delivery-tag-on-zero-delivery-fee":true,"show-pickup-tooltip":true,"show-skinny-banner":false,"showim":"Original","simplify-cart-calculation":{"*":2,"auto-apply-voucher_delivery":2,"auto-apply-voucher_delivery_rider-tip":2,"auto-apply-voucher_delivery_voucher":2,"auto-apply-voucher_pickup":2,"auto-apply-voucher_pickup_voucher":2,"delivery":2,"delivery_rider-tip":2,"delivery_rider-tip_voucher":2,"delivery_voucher":2,"pickup":2,"pickup_voucher":2},"static-map-checkout":"Control","stm-on-otp":"Control","subscribe-with-new-card":true,"subscription-payment-through-saved-card":true,"two-factor-authentication":false,"use-midas-boost-on-watson":false,"use-new-sorting":false,"use-tes-for-ddt":true,"use-watson-integration":true,"uxcam-sdk":false,"vcb-rlp":"Control","vendor-service-block-db-writes":true,"vendor-service-enable-logistics-offset":true,"vertical-inline-add-to-cart":"Control","verticals-dish-portal":false,"verticals-listing-search-filters":"Control","verticals-new-cart":false,"verticals-oos-default":"refund","verticals-shop-categories":"original","verticals-show-delivery-fee":false,"verticals-vendor-disclaimers":true,"watson-apply-discounts-on-watson":true,"watson-dynamodb-rdp":true,"watson-forward-listing-to-disco":true,"watson-show-vendor-legal-information":false,"watson-use-dynamic-pricing":true,"watson-use-offers-service-to-fetch-discount":true,"watson-use-vendor-service-timepicker":true,"x-sell-pdp-dmarts":"Control"},
+            user: {"key":"184.22.178.158","ip":"184.22.178.158","custom":{"country_code":"th","platform":"b2c","cookie_key":"184.22.146.94"},"anonymous":true},
+            flags: {"reviews":"On","yum":"na","self-service":true,"verticals":"[      {          \u0022id\u0022: \u0022restaurants\u0022,          \u0022title_key\u0022: \u0022NEXTGEN_RESTAURANT_ENTRY_TAB\u0022, \t\t          \u0022title_key_web\u0022: \u0022restaurants.entry_tab\u0022,           \u0022vertical_types\u0022: [\u0022restaurants\u0022],         \t          \u0022title_icon_res\u0022: \u0022ic_vert_restaurants\u0022      \t                },            {          \u0022id\u0022: \u0022shop\u0022,          \u0022title_key\u0022: \u0022NEXTGEN_SHOPS_ENTRY_TAB\u0022, \t          \u0022title_key_web\u0022: \u0022shops.entry_tab\u0022,                 \u0022vertical_types\u0022: [\u0022shop\u0022],                   \u0022title_icon_res\u0022: \u0022ic_vert_shops\u0022      \t           }  ]","best-price":false,"sameday-preorder-popup":true,"df":"On","react-map":"yes","use-optimizely":false,"show-darkstore-tile":true,"address-snapping-tooltip":"na","cashier-sdk":false,"global-search-rdp":false,"cs-menu":"On","restaurant-chat":false,"always-display-item-modifier":false,"rider-map":true,"subPlans":true,"login-registration-tabs":true,"preorder-popup-on-rdp":false,"otp-horizontal-progressbar":2,"subscriptions":"NA","check-2":true,"payment-tokens":true,"rating":"On","time-range-on-otp":false,"vendor-tile-extra-info":true,"verticals-feed-config":"config-1","voucher-wallet":true,"ratings-reviews":true,"search-suggests":"On","mc":"Variant","quick-reorder-in-rdp":"quick-reorder-off","where-component":true,"cartapi":true,"ab-test-flags":"cs-cart,alan-hc,search-config,self-service,verticals,react-map,show-wallet,apple-login,otp-time-format","no-delivery-time-on-rlp-rdp-checkout":false,"subscriptions-new-card":true,"verticals-fork":"Variant1","otp-rewards":false,"new-vendor-tile":"Variant","when-component":true,"item-counter":false,"darkstores-web-ui":false,"show-price-from-with-non-zero-topping-price":true,"perimeterx":true,"should-check-for-app-updates":false,"newcart":false,"delay-gmap":"after-load","rdp-recommendation":"Variant","otp-audience":false,"menu-platform-specific-products":false,"promo-banner":true,"vendor-sorting":true,"autocomplete-config":"Variant2","add-address":"n\/a","time-range":"NA","show-subtitles-on-otp":false,"show-cutlery-toggle":true,"always-map":"n\/a","ignore-events":true,"new-search-flow":"NA","disable-rider-banner":false,"checkout_map":"Variant","should-use-mapped-toppings":true,"tracking-card-web":true,"challenges":false,"enable-alfred":false,"wsb":"On","mov":"Off","sold-out-items":false,"rectify-where-component":true,"reward-challenge-enabled":false,"showIM":"Original","should-confirm-preorder":"2","cs-cart":"off","vendor-dh-recommendation":"recommendations-off","welcome-to-verticals":false,"establishment-as-building":true,"deals":true,"eta-range-otp":0,"brand":"foodpanda","tr-card-revamp":"true","index-secondary-language":true,"help-center-access":false,"separate-vendor-chain-meta":true,"using-sherlock-as-api":true,"search-config":"Variant6","group-order-split-allowance":true,"mbl-google-address-variant":"Variant","cs-backend":"default","dd-logs":false,"otp-revamp":true,"favorites":"Original","redirect-chain-vendors":true,"multi-tags":"2","mbl-google-address":false,"dish-detailed-information":false,"rewards-back-office-write-access":false,"use-atlas-proxy-get-by-id-endpoint":false,"cookies-banner":false,"klarna-in-microfrontend":false,"city-page-limit":500,"ds":"vendors_only","cancellation-button":false,"bottom-bar":"NA","characteristics":"Variant","new-payment-selector":true,"check-1":true,"verticals-autocomplete-config":"config-1","archimedes-fwf-enabled":false,"free-scroll-in-swimlanes":true,"address-tooltip":2,"out-of-stock-verticals":[],"new-city-page":true,"variations-line-rdp":false,"get-direction":true,"product-listing-verticals":false,"ios-hs":"On","saved-address":true,"dps":"Original","new-credit-card-form-react":false,"show-vipps":false,"sorting":"Original","cselling":"multiple-variations","rlp-to-mf":"Variant","ios-app-reviews":true,"preorder":true,"item-modifier-redesign":"v1","alcohol-verticals":true,"mBanner":1,"upsell-drinks":true,"cancel-cap-limit":5,"parallel-calls-rlp":"NA","x-sell-otp-nv":"off","mbl-dynamic-fields":"Original","timed-menus":true,"swimlanes":"Original","vendor-dh-reco":false,"new-nav-flow":"Control","location-lib":false,"alco-rest":true,"distance-on-pickup":true,"zopim-chat":true,"rewards-feature-variation":"na","hero-image":false,"campaign-service":"campaign-service","loyalty":true,"shadow":"NA","cuisines":"Original","download-personal-data":false,"darkstores-landing-page-config":"dark-stores-config-2","rdp-dialog":"1","ios-app-reviews-not-after-first":true,"x-sell-placement":"control","raf-migration":true,"payios":false,"react-cart":true,"chained-place-order":false,"exposed-filters":"Off","closed-on-rlp":"Label_center","additional-information-on-checkout":false,"override-flags":false,"get-direction-otp":true,"ab_test_flags":"vendor-tile-extra-info,swimlanes,upsell-drinks,self-service,when-component,apple-pay-inline-setup,rider-map,ds","organicList":"Variant1","verticals-out-of-stock":"[{\u0022text\u0022:\u0022NEXTGEN_SoldOutOptions_Refund\u0022,\u0022option\u0022:\u0022REFUND\u0022,\u0022default\u0022:true},{\u0022text\u0022:\u0022NEXTGEN_SoldOutOptions_Cancel\u0022,\u0022option\u0022:\u0022CANCEL\u0022,\u0022default\u0022:false}]","apple-pay-inline-setup":false,"flexiadd":true,"nv-entry-point-config":1,"joker":"on","quick-filters":true,"df-info-icon":false,"always-open-item-modifier-foo":false,"new-authentication-flow":true,"px":true,"address-snapping-tooltip-radius":200,"show-restaurant-contact-information":false,"challenge-special-provider-enabled":["pickup","vendor_delivery"],"self-reference-canonical":true,"od-vd-rlp":"NA","x-sell-discounts":"variant","auto-apply":true,"variations":true,"groupie":true,"show-wallet":false,"alan-hc":true,"disable-migration-banner":true,"web-lists":"Variant1","pagination":true,"out-of-stock-component":"Off","disable-smartphone-banner":false,"budget":"Variant","rdp-reco":true,"global-search-rlp":false,"aggregate-regions":false,"customer-rider-chat":{"apiKey":"FF804081-D96C-48F4-ADCE-C3BB82782434","isEnabled":true,"localesMapping":{"en":"en","ja":"ja","th":"th"}},"address-book-mf":true,"address-snapping-tooltip-a":"Variation1","address-snapping-tooltip-b":"Variation1","address-snapping-tooltip-d":"Variation1","address-svc-use-geolocator-find-city":false,"alfred-performance-adjustment":true,"allergenspdf":false,"apple-login":false,"archimedes-enable-offer-voucher-validation":true,"archimedes-use-discount-data-from-watson":true,"b2b-landing":false,"block-preorders":"disabled","cache-vendor-from-watson":true,"campaign-shop-carousel":false,"carousel-ui-style":"carousel_listview","cart-service-circuit-breaker-enabled":true,"cart-service-enable-djini":false,"cart-to-checkout-cta":"Control","cashier-token-sync":false,"catalog-service-disable-database-writes":false,"catalog-service-enable-new-db-sync":true,"catalog-service-enable-rdp-call-customer-option":true,"catalog-service-out-of-stock":false,"catalog-service-rdp-use-circuit-breaker":true,"checkout-during-events":"Allow if shrinking","checkout-request-invoice":false,"city-in-checkout":true,"closing-soon":"Control","contactless-delivery":false,"corporate-self-signup":true,"custom-rider-icon":"true","customer-active-consent":"Control","darkstore-category-discovery1":"Control","darkstore-category-scroll1":"Control","darkstore-limit-items-per-sku":"Control","darkstore-past-order":"Control","darkstore-search-entry1":"Variation1","darkstore-search-redesign1":"Variation1","darkstore-tile-variant":"variant","darkstores-show-low-in-stock":false,"disable-cutlery-for-vd":false,"discount-title-as-tag":true,"dynamic-pricing-indicator":"Original","enable-archimedes-request-logging":false,"enable-cod-with-rider-tip":false,"enable-df-address-notifier":true,"enable-df-address-svc-worker":true,"enable-search-populator-long-closure":true,"expose-current-location":"Original","favorites-shops":false,"filter-ux-revamp":"Control","filters-shops":false,"first-name-last-name-order":true,"force-enroll-internal-users":false,"fork-dismiss-btn":"Original","geolocator-enable-df-ingest":true,"geolocator-enable-tpl-cache":true,"geolocator-providers-ab-testing-experimental":"Variation2","geolocator-use-city-service":true,"geolocator-use-country-service":true,"gps-timeout":"3000","help-center":"global-hc","is-beta-enabled":true,"is-internal-beta-enabled":true,"locate-me":"Variant2","location-read-city-from-vendor-in-checkout":false,"max-change-country-address-svc-worker":"2000","mbl_google_address":true,"merge-cashback":"Control","modular-subscription":"NA","nested-products":"Off","nested-products-ab":"Control","nested-products-shops":"Variation1","new-authentication-web":false,"new-checkout-flow-ab":"Control","new-customer-validation":true,"new-homepage":"Control","open-sans":"Control","organic-list":"Original","otp-microfrontend":"Variation1","otp-time-format":"Variation3","out-of-stock":false,"passwordless-account":false,"payment_code_adyen_applepay":false,"payment_code_adyen_creditcard":true,"payment_code_adyen_googlepay":false,"payment_code_antfinancial_bkash":true,"payment_code_antfinancial_gcash":false,"payment_code_antfinancial_truemoney":false,"payment_code_cybersource_creditcard":false,"payment_code_paypal":true,"payment_code_spreedly_creditcard":true,"pickup-awareness-on-checkout":false,"pickup-map-config":"{\u0022isEnabled\u0022:false}","pickup-radius":20,"pickup-rlp-banner-config":{"backgroundColor":"#F7BDD1","description":"NEXTGEN_PICKUP_BANNER_DESCRIPTION","imageUrl":"https:\/\/images.deliveryhero.io\/image\/fd-th\/pickup\/pickup_banner.png","isEnabled":true,"title":"NEXTGEN_PICKUP_BANNER_TITLE"},"pickup-swimlane":"pickup-control","prevent-duplicated-orders":true,"process-by-country-address-svc-worker":true,"promoted-on-rlp":true,"quantity_stepper_animation":"Control","recent-searches":"Variation1","referral-flow":"Control","referral-links":"Variant2","return-closed-vendors":true,"rewards-back-office-global-user":false,"rewards-communication-challenge-rewarded":false,"rewards-data-stream":true,"rewards-feature":"Control","rewards-flash-challenges":"Control","rewards-multi-step-challenges":false,"rider-chat-alert":"Variation1","rider-chat-new-msg":true,"rider-tip":false,"rlp-address-map":"Variation1","search-closed-vendor-restaurants":"Control","search-closed-vendor-shops":"Control","search-populator-process-events":true,"search-suggests-shops":"Off","share-rdp":false,"shops-swimlanes":"shops-variant","show-free-delivery-tag-on-zero-delivery-fee":true,"show-pickup-tooltip":true,"show-skinny-banner":false,"showim":"Original","simplify-cart-calculation":{"*":2,"auto-apply-voucher_delivery":2,"auto-apply-voucher_delivery_rider-tip":2,"auto-apply-voucher_delivery_voucher":2,"auto-apply-voucher_pickup":2,"auto-apply-voucher_pickup_voucher":2,"delivery":2,"delivery_rider-tip":2,"delivery_rider-tip_voucher":2,"delivery_voucher":2,"pickup":2,"pickup_voucher":2},"static-map-checkout":"Control","stm-on-otp":"Control","subscribe-with-new-card":true,"subscription-payment-through-saved-card":true,"two-factor-authentication":false,"use-midas-boost-on-watson":false,"use-new-sorting":false,"use-tes-for-ddt":true,"use-watson-integration":true,"uxcam-sdk":false,"vcb-rlp":"Control","vendor-service-block-db-writes":true,"vendor-service-enable-logistics-offset":true,"verticals-dish-portal":false,"verticals-listing-search-filters":"Control","verticals-new-cart":false,"verticals-oos-default":"refund","verticals-shop-categories":"original","verticals-show-delivery-fee":false,"verticals-vendor-disclaimers":true,"watson-apply-discounts-on-watson":true,"watson-dynamodb-rdp":true,"watson-forward-listing-to-disco":true,"watson-show-vendor-legal-information":false,"watson-use-dynamic-pricing":true,"watson-use-offers-service-to-fetch-discount":true,"watson-use-vendor-service-timepicker":true,"x-sell-pdp-dmarts":"Control"},
             clientId: "588b668dd61cf00908688c6f"
         };
 
@@ -1007,7 +941,7 @@ View
         VOLO.configuration.sessionId = '';
         VOLO.configuration.dpsSessionIdCookieName = "dps-session-id";
         VOLO.configuration.dpsSessionIdDelimiter = "_";
-        VOLO.configuration.dpsClientIP = '184.22.146.94';
+        VOLO.configuration.dpsClientIP = '184.22.178.158';
         VOLO.configuration.isDpsEnabled = 0;
         VOLO.configuration.dpsSessionExpiry = '1800';
         VOLO.configuration.googleTagManagerContainerId = 'GTM-N9RJXV';
@@ -1104,7 +1038,7 @@ View
     <div class="page-container">
         <section 
             class="vendor-section"
-            data-vendor='{"id":147691,"name":"Yum Tum Zab Ta Lu Pak (Chonburi)","code":"q2qp","category":"","is_active":true,"timezone":"Asia\/Bangkok","available_in":null,"city_id":4192,"latitude":12.9432222,"longitude":100.9391111,"is_pickup_available":true,"is_delivery_available":true,"url_key":"yum-tum-zab-ta-lu-pak-chonburi","ddt":0,"chain":{"id":0,"name":null,"url_key":null,"is_accepting_global_vouchers":false,"code":null,"main_vendor_code":""},"rating":0,"review_number":0,"minOrder":0,"deliveryFee":0,"is_promoted":false,"is_premium":false,"toppings":{"26481093":{"id":26481093,"name":"Choose topping","description":"","quantity_minimum":1,"quantity_maximum":1,"options":[{"id":34623153,"product_id":9726433,"name":"Omelette","description":"With choices of topping available","price":15,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""},{"id":34623154,"product_id":9726475,"name":"Fried Egg","description":"","price":15,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""}]},"26481096":{"id":26481096,"name":"Choose topping lotus stem","description":"","quantity_minimum":1,"quantity_maximum":1,"options":[{"id":34623157,"product_id":9726472,"name":"Raw Shrimp","description":"","price":0,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""},{"id":34623158,"product_id":9726491,"name":"Blue Crab","description":"","price":0,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""}]},"26481097":{"id":26481097,"name":"Choose topping corn som tum","description":"","quantity_minimum":0,"quantity_maximum":1,"options":[{"id":34623167,"product_id":9726470,"name":"Salted Egg","description":"","price":20,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""}]},"26481103":{"id":26481103,"name":"Choice of meat","description":"","quantity_minimum":1,"quantity_maximum":1,"options":[{"id":34623070,"product_id":9726488,"name":"Pork","description":"","price":0,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""},{"id":34623071,"product_id":9726489,"name":"Chicken ","description":"","price":0,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""}]},"26481111":{"id":26481111,"name":"Choose meat fried rice","description":"","quantity_minimum":1,"quantity_maximum":1,"options":[{"id":34623086,"product_id":9726479,"name":"Squid","description":"","price":14,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""},{"id":34623087,"product_id":9726488,"name":"Pork","description":"","price":0,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""},{"id":34623088,"product_id":9726489,"name":"Chicken ","description":"","price":0,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""},{"id":34623103,"product_id":9726878,"name":"Shrimp","description":"","price":14,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""}]},"26481113":{"id":26481113,"name":"Choose topping omelette","description":"","quantity_minimum":1,"quantity_maximum":1,"options":[{"id":34623173,"product_id":9726469,"name":"Minced Shirmp","description":"","price":20,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""},{"id":34623174,"product_id":9726476,"name":"Minced Pork   ","description":"","price":0,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""}]},"26481117":{"id":26481117,"name":"Choose meat basil with rice","description":"","quantity_minimum":1,"quantity_maximum":1,"options":[{"id":34623115,"product_id":9726477,"name":"Crispy Pork","description":"","price":14,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""},{"id":34623116,"product_id":9726479,"name":"Squid","description":"","price":14,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""},{"id":34623117,"product_id":9726488,"name":"Pork","description":"","price":0,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""},{"id":34623118,"product_id":9726489,"name":"Chicken ","description":"","price":0,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""},{"id":34623119,"product_id":9726490,"name":"Seafood","description":"Squid and shrimp","price":14,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""},{"id":34623120,"product_id":9726878,"name":"Shrimp","description":"","price":14,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""}]},"26481118":{"id":26481118,"name":"Choose meat","description":"","quantity_minimum":1,"quantity_maximum":1,"options":[{"id":34623121,"product_id":9726488,"name":"Pork","description":"","price":0,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""},{"id":34623122,"product_id":9726489,"name":"Chicken ","description":"","price":0,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""},{"id":34623123,"product_id":9726490,"name":"Seafood","description":"Squid and shrimp","price":30,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""}]},"26481125":{"id":26481125,"name":"Choose meat fried noodles","description":"","quantity_minimum":1,"quantity_maximum":1,"options":[{"id":34623126,"product_id":9726488,"name":"Pork","description":"","price":0,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""},{"id":34623127,"product_id":9726490,"name":"Seafood","description":"Squid and shrimp","price":0,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""}]},"26481136":{"id":26481136,"name":"Choose meat spicy salad with herbs","description":"","quantity_minimum":1,"quantity_maximum":1,"options":[{"id":34623135,"product_id":9726488,"name":"Pork","description":"","price":0,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""},{"id":34623136,"product_id":9726489,"name":"Chicken ","description":"","price":0,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""},{"id":34623137,"product_id":9726490,"name":"Seafood","description":"Squid and shrimp","price":20,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""}]},"26481153":{"id":26481153,"name":"Choose serving","description":"","quantity_minimum":1,"quantity_maximum":1,"options":[{"id":34623138,"product_id":9726483,"name":"Extra","description":"","price":15,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""},{"id":34623139,"product_id":9726484,"name":"Regular","description":"","price":0,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""}]},"26481163":{"id":26481163,"name":"Choice of serving","description":"","quantity_minimum":1,"quantity_maximum":1,"options":[{"id":34623146,"product_id":9726483,"name":"Extra","description":"","price":30,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""},{"id":34623145,"product_id":9726484,"name":"Regular","description":"","price":0,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""}]},"26481170":{"id":26481170,"name":"Choose meat large fried rice","description":"","quantity_minimum":1,"quantity_maximum":1,"options":[{"id":34623183,"product_id":9726488,"name":"Pork","description":"","price":0,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""},{"id":34623184,"product_id":9726490,"name":"Seafood","description":"Squid and shrimp","price":60,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""}]},"26481173":{"id":26481173,"name":"Choose topping spicy mango salad","description":"","quantity_minimum":1,"quantity_maximum":1,"options":[{"id":34623197,"product_id":9726468,"name":"Giant Mud Crab","description":"","price":0,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""},{"id":34623198,"product_id":9726471,"name":"Salmon","description":"","price":90,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""},{"id":34623199,"product_id":9726472,"name":"Raw Shrimp","description":"","price":30,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""},{"id":34623200,"product_id":9726473,"name":"Oyster","description":"","price":30,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""},{"id":34623201,"product_id":9726474,"name":"Sausage","description":"","price":0,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""},{"id":34623202,"product_id":9726478,"name":"Corn and Salted Egg","description":"","price":0,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""},{"id":34623203,"product_id":9726479,"name":"Squid","description":"","price":30,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""},{"id":34623204,"product_id":9726480,"name":"Crispy Fish","description":"","price":0,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""},{"id":34623205,"product_id":9726481,"name":"Salted Egg Yolk  ","description":"","price":0,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""},{"id":34623206,"product_id":9726482,"name":"Vietnamese Sausage","description":"","price":0,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""},{"id":34623207,"product_id":9726486,"name":"Cockle","description":"","price":30,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""},{"id":34623208,"product_id":9726490,"name":"Seafood","description":"Squid and shrimp","price":90,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""},{"id":34623209,"product_id":9726491,"name":"Blue Crab","description":"","price":30,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""}]},"26481180":{"id":26481180,"name":"Choose meat tom yum","description":"","quantity_minimum":1,"quantity_maximum":1,"options":[{"id":34623225,"product_id":9726489,"name":"Chicken ","description":"","price":0,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""},{"id":34623226,"product_id":9726490,"name":"Seafood","description":"Squid and shrimp","price":50,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""}]}},"accepts_instructions":true,"category_quantity":7,"loyalty_program_enabled":false,"loyalty_percentage_amount":0,"has_delivery_provider":true,"vertical":"restaurants","is_preorder_enabled":false,"is_vat_visible":true}'
+            data-vendor='{"id":147691,"name":"Yum Tum Zab Ta Lu Pak (Chonburi)","code":"q2qp","category":"","is_active":true,"timezone":"Asia\/Bangkok","available_in":"2020-10-20T11:00:00+0700","city_id":4192,"latitude":12.9432222,"longitude":100.9391111,"is_pickup_available":true,"is_delivery_available":true,"url_key":"yum-tum-zab-ta-lu-pak-chonburi","ddt":0,"chain":{"id":0,"name":null,"url_key":null,"is_accepting_global_vouchers":false,"code":null,"main_vendor_code":""},"rating":0,"review_number":0,"minOrder":0,"deliveryFee":0,"is_promoted":false,"is_premium":false,"toppings":{"26481093":{"id":26481093,"name":"Choose topping","description":"","quantity_minimum":1,"quantity_maximum":1,"options":[{"id":34623153,"product_id":9726433,"name":"Omelette","description":"With choices of topping available","price":15,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""},{"id":34623154,"product_id":9726475,"name":"Fried Egg","description":"","price":15,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""}]},"26481096":{"id":26481096,"name":"Choose topping lotus stem","description":"","quantity_minimum":1,"quantity_maximum":1,"options":[{"id":34623157,"product_id":9726472,"name":"Raw Shrimp","description":"","price":0,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""},{"id":34623158,"product_id":9726491,"name":"Blue Crab","description":"","price":0,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""}]},"26481097":{"id":26481097,"name":"Choose topping corn som tum","description":"","quantity_minimum":0,"quantity_maximum":1,"options":[{"id":34623167,"product_id":9726470,"name":"Salted Egg","description":"","price":20,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""}]},"26481103":{"id":26481103,"name":"Choice of meat","description":"","quantity_minimum":1,"quantity_maximum":1,"options":[{"id":34623070,"product_id":9726488,"name":"Pork","description":"","price":0,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""},{"id":34623071,"product_id":9726489,"name":"Chicken ","description":"","price":0,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""}]},"26481111":{"id":26481111,"name":"Choose meat fried rice","description":"","quantity_minimum":1,"quantity_maximum":1,"options":[{"id":34623086,"product_id":9726479,"name":"Squid","description":"","price":14,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""},{"id":34623087,"product_id":9726488,"name":"Pork","description":"","price":0,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""},{"id":34623088,"product_id":9726489,"name":"Chicken ","description":"","price":0,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""},{"id":34623103,"product_id":9726878,"name":"Shrimp","description":"","price":14,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""}]},"26481113":{"id":26481113,"name":"Choose topping omelette","description":"","quantity_minimum":1,"quantity_maximum":1,"options":[{"id":34623173,"product_id":9726469,"name":"Minced Shirmp","description":"","price":20,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""},{"id":34623174,"product_id":9726476,"name":"Minced Pork   ","description":"","price":0,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""}]},"26481117":{"id":26481117,"name":"Choose meat basil with rice","description":"","quantity_minimum":1,"quantity_maximum":1,"options":[{"id":34623115,"product_id":9726477,"name":"Crispy Pork","description":"","price":14,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""},{"id":34623116,"product_id":9726479,"name":"Squid","description":"","price":14,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""},{"id":34623117,"product_id":9726488,"name":"Pork","description":"","price":0,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""},{"id":34623118,"product_id":9726489,"name":"Chicken ","description":"","price":0,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""},{"id":34623119,"product_id":9726490,"name":"Seafood","description":"Squid and shrimp","price":14,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""},{"id":34623120,"product_id":9726878,"name":"Shrimp","description":"","price":14,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""}]},"26481118":{"id":26481118,"name":"Choose meat","description":"","quantity_minimum":1,"quantity_maximum":1,"options":[{"id":34623121,"product_id":9726488,"name":"Pork","description":"","price":0,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""},{"id":34623122,"product_id":9726489,"name":"Chicken ","description":"","price":0,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""},{"id":34623123,"product_id":9726490,"name":"Seafood","description":"Squid and shrimp","price":30,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""}]},"26481125":{"id":26481125,"name":"Choose meat fried noodles","description":"","quantity_minimum":1,"quantity_maximum":1,"options":[{"id":34623126,"product_id":9726488,"name":"Pork","description":"","price":0,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""},{"id":34623127,"product_id":9726490,"name":"Seafood","description":"Squid and shrimp","price":0,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""}]},"26481136":{"id":26481136,"name":"Choose meat spicy salad with herbs","description":"","quantity_minimum":1,"quantity_maximum":1,"options":[{"id":34623135,"product_id":9726488,"name":"Pork","description":"","price":0,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""},{"id":34623136,"product_id":9726489,"name":"Chicken ","description":"","price":0,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""},{"id":34623137,"product_id":9726490,"name":"Seafood","description":"Squid and shrimp","price":20,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""}]},"26481153":{"id":26481153,"name":"Choose serving","description":"","quantity_minimum":1,"quantity_maximum":1,"options":[{"id":34623138,"product_id":9726483,"name":"Extra","description":"","price":15,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""},{"id":34623139,"product_id":9726484,"name":"Regular","description":"","price":0,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""}]},"26481163":{"id":26481163,"name":"Choice of serving","description":"","quantity_minimum":1,"quantity_maximum":1,"options":[{"id":34623146,"product_id":9726483,"name":"Extra","description":"","price":30,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""},{"id":34623145,"product_id":9726484,"name":"Regular","description":"","price":0,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""}]},"26481170":{"id":26481170,"name":"Choose meat large fried rice","description":"","quantity_minimum":1,"quantity_maximum":1,"options":[{"id":34623183,"product_id":9726488,"name":"Pork","description":"","price":0,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""},{"id":34623184,"product_id":9726490,"name":"Seafood","description":"Squid and shrimp","price":60,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""}]},"26481173":{"id":26481173,"name":"Choose topping spicy mango salad","description":"","quantity_minimum":1,"quantity_maximum":1,"options":[{"id":34623197,"product_id":9726468,"name":"Giant Mud Crab","description":"","price":0,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""},{"id":34623198,"product_id":9726471,"name":"Salmon","description":"","price":90,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""},{"id":34623199,"product_id":9726472,"name":"Raw Shrimp","description":"","price":30,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""},{"id":34623200,"product_id":9726473,"name":"Oyster","description":"","price":30,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""},{"id":34623201,"product_id":9726474,"name":"Sausage","description":"","price":0,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""},{"id":34623202,"product_id":9726478,"name":"Corn and Salted Egg","description":"","price":0,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""},{"id":34623203,"product_id":9726479,"name":"Squid","description":"","price":30,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""},{"id":34623204,"product_id":9726480,"name":"Crispy Fish","description":"","price":0,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""},{"id":34623205,"product_id":9726481,"name":"Salted Egg Yolk  ","description":"","price":0,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""},{"id":34623206,"product_id":9726482,"name":"Vietnamese Sausage","description":"","price":0,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""},{"id":34623207,"product_id":9726486,"name":"Cockle","description":"","price":30,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""},{"id":34623208,"product_id":9726490,"name":"Seafood","description":"Squid and shrimp","price":90,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""},{"id":34623209,"product_id":9726491,"name":"Blue Crab","description":"","price":30,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""}]},"26481180":{"id":26481180,"name":"Choose meat tom yum","description":"","quantity_minimum":1,"quantity_maximum":1,"options":[{"id":34623225,"product_id":9726489,"name":"Chicken ","description":"","price":0,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""},{"id":34623226,"product_id":9726490,"name":"Seafood","description":"Squid and shrimp","price":50,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""}]}},"accepts_instructions":true,"category_quantity":7,"loyalty_program_enabled":false,"loyalty_percentage_amount":0,"has_delivery_provider":true,"vertical":"restaurants","is_preorder_enabled":false,"is_vat_visible":true}'
         >
                             <aside class="top-skinny-banner-container">
                     <div id="skinny-banner-react-root-vendor-page"></div>
@@ -1223,6 +1157,9 @@ View
 
                                             </div>
                 </div>
+                                    <div class="vendor-closed-image-overlay">
+                        <div class="vendor-closed-until"><span class="vendor-closed">CLOSED</span> until Tue 11:00 AM</div>
+                    </div>
                                 <div class="postal-index-form-overlay"></div>
                 
 <div class="vendor-info-container">
@@ -1234,6 +1171,9 @@ View
                                                                                                             <span class="multi-tag">New</span>
                                             </div>
                                 
+                                    <div class="closed-tag-container" data-toggle="modal" data-target="#rich-description">
+                        <span class="closed-tag">CLOSED</span>
+                    </div>
                 
                                                                 </div>
 
@@ -1281,11 +1221,8 @@ View
                 <div class="menu__blocks">
                     <div class="menu__list-wrapper"
                          data-user-id='anonymous'
-                         data-vendor-is-open="open"
-                         data-vendor-next-available="Sat 11:31 AM">
-                                                     <section class="vendor-lane-section" id="vendor-quick-reorder"></section>
-                            <div id="quick-reorder-overview-provider"></div>
-                            <div id="quick-reorder-modal"></div>
+                         data-vendor-is-open="closed"
+                         data-vendor-next-available="Tue 11:00 AM">
                                                      <nav class="dish-menu-category-list hide">
         <div class="dish-control-holder">
             <div class="nav-holder">
@@ -1423,7 +1360,7 @@ View
                     </p>
                             </div>
                     </div>
-        <section class="action-bar" data="Original" ff="open">
+        <section class="action-bar" data="Original" ff="closed">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                                             à¸¿269.00
@@ -1459,7 +1396,7 @@ View
                     </p>
                             </div>
                     </div>
-        <section class="action-bar" data="Original" ff="open">
+        <section class="action-bar" data="Original" ff="closed">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                                             à¸¿269.00
@@ -1492,46 +1429,10 @@ View
 
                             </div>
                     </div>
-        <section class="action-bar" data="Original" ff="open">
+        <section class="action-bar" data="Original" ff="closed">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                                             à¸¿139.00
-                                            </span>
-                
-                            </div>
-                    </section>
-            </div>
-</li>
-                            
-                    
-<li class="dish-card h-product menu__item "
-     data-object='{"is_half_type_available":false,"id":9726406,"name":"Lotus Stem Som Tum","code":"b4a96b708ced83d9f595be513c1d7104","description":"With choices of toping available","file_path":"","logo_path":"","half_type":"","is_alcoholic_item":false,"product_variations":[{"id":10918017,"code":"6cfd88647b0d93bfd0a83d98e29b5b37","name":null,"price":109,"price_before_discount":null,"container_price":0,"choices":[],"toppings":[],"topping_ids":[26481096]}],"master_category_id":3,"is_prepacked_item":false,"exclude_dish_information":false,"has_dish_information":null,"is_sold_out":false,"additives":[],"sold_out_options":[{"default":true,"option":"REFUND","text":"NEXTGEN_SoldOutOptions_Refund"},{"default":false,"option":"CANCEL","text":"NEXTGEN_SoldOutOptions_Cancel"},{"default":false,"option":"CALL_CUSTOMER","text":"NEXTGEN_SoldOutOptions_CALL_CUSTOMER"}]}'
-     data-menu-category='Som Tum'
-     data-variation-id='10918017'
-     data-product-id='9726406'
-     data-has-priced-topping='false'
-     ontouchstart=""
-     data-menu-id='228226'
-     data-menu-category-id='1171814'
-     >
-    <div class="item-react-root">
-        <div class='dish-info-container '>
-            <div class="dish-info">
-                <h3 class="dish-name fn p-name">
-                    <span>Lotus Stem Som Tum</span>
-
-                    
-                                    </h3>
-
-                                    <p class="dish-description e-description">
-                        With choices of toping available
-                    </p>
-                            </div>
-                    </div>
-        <section class="action-bar" data="Original" ff="open">
-            <div class='action-bar-content'>
-                                                                                                                                                                    <span class="price p-price">
-                                                                            à¸¿109.00
                                             </span>
                 
                             </div>
@@ -1561,7 +1462,7 @@ View
 
                             </div>
                     </div>
-        <section class="action-bar" data="Original" ff="open">
+        <section class="action-bar" data="Original" ff="closed">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                                             à¸¿99.00
@@ -1594,7 +1495,7 @@ View
 
                             </div>
                     </div>
-        <section class="action-bar" data="Original" ff="open">
+        <section class="action-bar" data="Original" ff="closed">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                                             à¸¿99.00
@@ -1627,7 +1528,7 @@ View
 
                             </div>
                     </div>
-        <section class="action-bar" data="Original" ff="open">
+        <section class="action-bar" data="Original" ff="closed">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                                             à¸¿99.00
@@ -1660,7 +1561,7 @@ View
 
                             </div>
                     </div>
-        <section class="action-bar" data="Original" ff="open">
+        <section class="action-bar" data="Original" ff="closed">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                                             à¸¿99.00
@@ -1693,7 +1594,7 @@ View
 
                             </div>
                     </div>
-        <section class="action-bar" data="Original" ff="open">
+        <section class="action-bar" data="Original" ff="closed">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                                             à¸¿99.00
@@ -1726,7 +1627,7 @@ View
 
                             </div>
                     </div>
-        <section class="action-bar" data="Original" ff="open">
+        <section class="action-bar" data="Original" ff="closed">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                                             à¸¿99.00
@@ -1759,7 +1660,7 @@ View
 
                             </div>
                     </div>
-        <section class="action-bar" data="Original" ff="open">
+        <section class="action-bar" data="Original" ff="closed">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                                             à¸¿99.00
@@ -1792,7 +1693,7 @@ View
 
                             </div>
                     </div>
-        <section class="action-bar" data="Original" ff="open">
+        <section class="action-bar" data="Original" ff="closed">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                                             à¸¿99.00
@@ -1828,7 +1729,7 @@ View
                     </p>
                             </div>
                     </div>
-        <section class="action-bar" data="Original" ff="open">
+        <section class="action-bar" data="Original" ff="closed">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                     from                                                                             à¸¿79.00
@@ -1861,7 +1762,7 @@ View
 
                             </div>
                     </div>
-        <section class="action-bar" data="Original" ff="open">
+        <section class="action-bar" data="Original" ff="closed">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                                             à¸¿69.00
@@ -1894,7 +1795,7 @@ View
 
                             </div>
                     </div>
-        <section class="action-bar" data="Original" ff="open">
+        <section class="action-bar" data="Original" ff="closed">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                                             à¸¿69.00
@@ -1927,7 +1828,7 @@ View
 
                             </div>
                     </div>
-        <section class="action-bar" data="Original" ff="open">
+        <section class="action-bar" data="Original" ff="closed">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                                             à¸¿69.00
@@ -1960,7 +1861,7 @@ View
 
                             </div>
                     </div>
-        <section class="action-bar" data="Original" ff="open">
+        <section class="action-bar" data="Original" ff="closed">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                                             à¸¿69.00
@@ -1993,7 +1894,7 @@ View
 
                             </div>
                     </div>
-        <section class="action-bar" data="Original" ff="open">
+        <section class="action-bar" data="Original" ff="closed">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                                             à¸¿69.00
@@ -2026,7 +1927,7 @@ View
 
                             </div>
                     </div>
-        <section class="action-bar" data="Original" ff="open">
+        <section class="action-bar" data="Original" ff="closed">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                                             à¸¿199.00
@@ -2059,7 +1960,7 @@ View
 
                             </div>
                     </div>
-        <section class="action-bar" data="Original" ff="open">
+        <section class="action-bar" data="Original" ff="closed">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                                             à¸¿199.00
@@ -2092,7 +1993,7 @@ View
 
                             </div>
                     </div>
-        <section class="action-bar" data="Original" ff="open">
+        <section class="action-bar" data="Original" ff="closed">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                                             à¸¿199.00
@@ -2125,7 +2026,7 @@ View
 
                             </div>
                     </div>
-        <section class="action-bar" data="Original" ff="open">
+        <section class="action-bar" data="Original" ff="closed">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                                             à¸¿199.00
@@ -2158,7 +2059,7 @@ View
 
                             </div>
                     </div>
-        <section class="action-bar" data="Original" ff="open">
+        <section class="action-bar" data="Original" ff="closed">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                                             à¸¿199.00
@@ -2191,7 +2092,7 @@ View
 
                             </div>
                     </div>
-        <section class="action-bar" data="Original" ff="open">
+        <section class="action-bar" data="Original" ff="closed">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                                             à¸¿199.00
@@ -2224,7 +2125,7 @@ View
 
                             </div>
                     </div>
-        <section class="action-bar" data="Original" ff="open">
+        <section class="action-bar" data="Original" ff="closed">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                                             à¸¿199.00
@@ -2257,7 +2158,7 @@ View
 
                             </div>
                     </div>
-        <section class="action-bar" data="Original" ff="open">
+        <section class="action-bar" data="Original" ff="closed">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                                             à¸¿199.00
@@ -2301,7 +2202,7 @@ View
                     </p>
                             </div>
                     </div>
-        <section class="action-bar" data="Original" ff="open">
+        <section class="action-bar" data="Original" ff="closed">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                     from                                                                             à¸¿109.00
@@ -2334,7 +2235,7 @@ View
 
                             </div>
                     </div>
-        <section class="action-bar" data="Original" ff="open">
+        <section class="action-bar" data="Original" ff="closed">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                                             à¸¿199.00
@@ -2367,7 +2268,7 @@ View
 
                             </div>
                     </div>
-        <section class="action-bar" data="Original" ff="open">
+        <section class="action-bar" data="Original" ff="closed">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                                             à¸¿199.00
@@ -2400,7 +2301,7 @@ View
 
                             </div>
                     </div>
-        <section class="action-bar" data="Original" ff="open">
+        <section class="action-bar" data="Original" ff="closed">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                                             à¸¿199.00
@@ -2433,7 +2334,7 @@ View
 
                             </div>
                     </div>
-        <section class="action-bar" data="Original" ff="open">
+        <section class="action-bar" data="Original" ff="closed">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                                             à¸¿199.00
@@ -2466,7 +2367,7 @@ View
 
                             </div>
                     </div>
-        <section class="action-bar" data="Original" ff="open">
+        <section class="action-bar" data="Original" ff="closed">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                                             à¸¿199.00
@@ -2502,7 +2403,7 @@ View
                     </p>
                             </div>
                     </div>
-        <section class="action-bar" data="Original" ff="open">
+        <section class="action-bar" data="Original" ff="closed">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                     from                                                                             à¸¿99.00
@@ -2546,7 +2447,7 @@ View
                     </p>
                             </div>
                     </div>
-        <section class="action-bar" data="Original" ff="open">
+        <section class="action-bar" data="Original" ff="closed">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                     from                                                                             à¸¿65.00
@@ -2582,7 +2483,7 @@ View
                     </p>
                             </div>
                     </div>
-        <section class="action-bar" data="Original" ff="open">
+        <section class="action-bar" data="Original" ff="closed">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                     from                                                                             à¸¿65.00
@@ -2618,7 +2519,7 @@ View
                     </p>
                             </div>
                     </div>
-        <section class="action-bar" data="Original" ff="open">
+        <section class="action-bar" data="Original" ff="closed">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                     from                                                                             à¸¿65.00
@@ -2654,7 +2555,7 @@ View
                     </p>
                             </div>
                     </div>
-        <section class="action-bar" data="Original" ff="open">
+        <section class="action-bar" data="Original" ff="closed">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                     from                                                                             à¸¿65.00
@@ -2690,7 +2591,7 @@ View
                     </p>
                             </div>
                     </div>
-        <section class="action-bar" data="Original" ff="open">
+        <section class="action-bar" data="Original" ff="closed">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                     from                                                                             à¸¿65.00
@@ -2726,7 +2627,7 @@ View
                     </p>
                             </div>
                     </div>
-        <section class="action-bar" data="Original" ff="open">
+        <section class="action-bar" data="Original" ff="closed">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                     from                                                                             à¸¿65.00
@@ -2762,7 +2663,7 @@ View
                     </p>
                             </div>
                     </div>
-        <section class="action-bar" data="Original" ff="open">
+        <section class="action-bar" data="Original" ff="closed">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                     from                                                                             à¸¿65.00
@@ -2798,7 +2699,7 @@ View
                     </p>
                             </div>
                     </div>
-        <section class="action-bar" data="Original" ff="open">
+        <section class="action-bar" data="Original" ff="closed">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                     from                                                                             à¸¿65.00
@@ -2834,7 +2735,7 @@ View
                     </p>
                             </div>
                     </div>
-        <section class="action-bar" data="Original" ff="open">
+        <section class="action-bar" data="Original" ff="closed">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                     from                                                                             à¸¿55.00
@@ -2870,7 +2771,7 @@ View
                     </p>
                             </div>
                     </div>
-        <section class="action-bar" data="Original" ff="open">
+        <section class="action-bar" data="Original" ff="closed">
             <div class='action-bar-content'>
                                                                                                                                                                                                                                         <span class="price p-price">
                                                     from                                                                             à¸¿55.00
@@ -2906,7 +2807,7 @@ View
                     </p>
                             </div>
                     </div>
-        <section class="action-bar" data="Original" ff="open">
+        <section class="action-bar" data="Original" ff="closed">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                     from                                                                             à¸¿69.00
@@ -2942,7 +2843,7 @@ View
                     </p>
                             </div>
                     </div>
-        <section class="action-bar" data="Original" ff="open">
+        <section class="action-bar" data="Original" ff="closed">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                     from                                                                             à¸¿69.00
@@ -2978,7 +2879,7 @@ View
                     </p>
                             </div>
                     </div>
-        <section class="action-bar" data="Original" ff="open">
+        <section class="action-bar" data="Original" ff="closed">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                     from                                                                             à¸¿69.00
@@ -3011,7 +2912,7 @@ View
 
                             </div>
                     </div>
-        <section class="action-bar" data="Original" ff="open">
+        <section class="action-bar" data="Original" ff="closed">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                                             à¸¿109.00
@@ -3044,7 +2945,7 @@ View
 
                             </div>
                     </div>
-        <section class="action-bar" data="Original" ff="open">
+        <section class="action-bar" data="Original" ff="closed">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                                             à¸¿109.00
@@ -3077,7 +2978,7 @@ View
 
                             </div>
                     </div>
-        <section class="action-bar" data="Original" ff="open">
+        <section class="action-bar" data="Original" ff="closed">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                     from                                                                             à¸¿109.00
@@ -3121,7 +3022,7 @@ View
                     </p>
                             </div>
                     </div>
-        <section class="action-bar" data="Original" ff="open">
+        <section class="action-bar" data="Original" ff="closed">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                                             à¸¿109.00
@@ -3162,7 +3063,7 @@ View
 
                             </div>
                     </div>
-        <section class="action-bar" data="Original" ff="open">
+        <section class="action-bar" data="Original" ff="closed">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                                             à¸¿219.00
@@ -3195,7 +3096,7 @@ View
 
                             </div>
                     </div>
-        <section class="action-bar" data="Original" ff="open">
+        <section class="action-bar" data="Original" ff="closed">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                                             à¸¿199.00
@@ -3228,7 +3129,7 @@ View
 
                             </div>
                     </div>
-        <section class="action-bar" data="Original" ff="open">
+        <section class="action-bar" data="Original" ff="closed">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                                             à¸¿159.00
@@ -3261,7 +3162,7 @@ View
 
                             </div>
                     </div>
-        <section class="action-bar" data="Original" ff="open">
+        <section class="action-bar" data="Original" ff="closed">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                                             à¸¿99.00
@@ -3294,7 +3195,7 @@ View
 
                             </div>
                     </div>
-        <section class="action-bar" data="Original" ff="open">
+        <section class="action-bar" data="Original" ff="closed">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                                             à¸¿79.00
@@ -3327,7 +3228,7 @@ View
 
                             </div>
                     </div>
-        <section class="action-bar" data="Original" ff="open">
+        <section class="action-bar" data="Original" ff="closed">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                                             à¸¿79.00
@@ -3360,7 +3261,7 @@ View
 
                             </div>
                     </div>
-        <section class="action-bar" data="Original" ff="open">
+        <section class="action-bar" data="Original" ff="closed">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                                             à¸¿79.00
@@ -3393,7 +3294,7 @@ View
 
                             </div>
                     </div>
-        <section class="action-bar" data="Original" ff="open">
+        <section class="action-bar" data="Original" ff="closed">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                                             à¸¿99.00
@@ -3426,7 +3327,7 @@ View
 
                             </div>
                     </div>
-        <section class="action-bar" data="Original" ff="open">
+        <section class="action-bar" data="Original" ff="closed">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                                             à¸¿99.00
@@ -3467,7 +3368,7 @@ View
 
                             </div>
                     </div>
-        <section class="action-bar" data="Original" ff="open">
+        <section class="action-bar" data="Original" ff="closed">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                                             à¸¿139.00
@@ -3500,7 +3401,7 @@ View
 
                             </div>
                     </div>
-        <section class="action-bar" data="Original" ff="open">
+        <section class="action-bar" data="Original" ff="closed">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                                             à¸¿109.00
@@ -3536,7 +3437,7 @@ View
                     </p>
                             </div>
                     </div>
-        <section class="action-bar" data="Original" ff="open">
+        <section class="action-bar" data="Original" ff="closed">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                                             à¸¿139.00
@@ -3569,7 +3470,7 @@ View
 
                             </div>
                     </div>
-        <section class="action-bar" data="Original" ff="open">
+        <section class="action-bar" data="Original" ff="closed">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                                             à¸¿139.00
@@ -3605,7 +3506,7 @@ View
                     </p>
                             </div>
                     </div>
-        <section class="action-bar" data="Original" ff="open">
+        <section class="action-bar" data="Original" ff="closed">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                     from                                                                             à¸¿139.00
@@ -3641,7 +3542,7 @@ View
                     </p>
                             </div>
                     </div>
-        <section class="action-bar" data="Original" ff="open">
+        <section class="action-bar" data="Original" ff="closed">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                     from                                                                             à¸¿139.00
@@ -3677,7 +3578,7 @@ View
                     </p>
                             </div>
                     </div>
-        <section class="action-bar" data="Original" ff="open">
+        <section class="action-bar" data="Original" ff="closed">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                     from                                                                             à¸¿139.00
@@ -3713,7 +3614,7 @@ View
                     </p>
                             </div>
                     </div>
-        <section class="action-bar" data="Original" ff="open">
+        <section class="action-bar" data="Original" ff="closed">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                     from                                                                             à¸¿79.00
@@ -3749,7 +3650,7 @@ View
                     </p>
                             </div>
                     </div>
-        <section class="action-bar" data="Original" ff="open">
+        <section class="action-bar" data="Original" ff="closed">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                     from                                                                             à¸¿109.00
@@ -3782,7 +3683,7 @@ View
 
                             </div>
                     </div>
-        <section class="action-bar" data="Original" ff="open">
+        <section class="action-bar" data="Original" ff="closed">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                                             à¸¿109.00
@@ -3815,7 +3716,7 @@ View
 
                             </div>
                     </div>
-        <section class="action-bar" data="Original" ff="open">
+        <section class="action-bar" data="Original" ff="closed">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                                             à¸¿99.00
@@ -3848,7 +3749,7 @@ View
 
                             </div>
                     </div>
-        <section class="action-bar" data="Original" ff="open">
+        <section class="action-bar" data="Original" ff="closed">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                                             à¸¿99.00
@@ -3889,7 +3790,7 @@ View
 
                             </div>
                     </div>
-        <section class="action-bar" data="Original" ff="open">
+        <section class="action-bar" data="Original" ff="closed">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                                             à¸¿15.00
@@ -3922,7 +3823,7 @@ View
 
                             </div>
                     </div>
-        <section class="action-bar" data="Original" ff="open">
+        <section class="action-bar" data="Original" ff="closed">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                                             à¸¿15.00
@@ -3979,6 +3880,9 @@ View
                                 </div>
                             </section>
                         </div>
+                                                    <div class="menu-disabled"></div>
+                            <div id="vendor-closed-root"></div>
+                            <div id="vendor-closed-modal"></div>
                                                 <div id="alcohol-disclaimer-root"></div>
                         <div id="alcohol-disclaimer-modal"></div>
                         <div id="react-cart-modal"></div>
@@ -4125,7 +4029,7 @@ View
                  data-is-vat-included-in-product-price="">
                 <div class="desktop-cart mobile-cart__hidden"
                      data-minimum_order_amount="0"
-                     data-vendor-is-open="open"
+                     data-vendor-is-open="closed"
                      data-vendor-master-category-ids="[]">
                                     </div>
             </div>
@@ -4336,7 +4240,7 @@ View
                         <h3 class="desktop-cart__title" data-testid="cartlib-cart-title">
                 Your order from <span>Yum Tum Zab Ta Lu Pak (Chonburi)</span>            </h3>
                                     <p class="desktop-cart_order__message">
-                                    You havenât added anything to your cart yet! Start adding your favourite dishes 
+                                    The restaurant is closed
                             </p>
         </div>
         <!-- Actual Cart -->
@@ -4526,24 +4430,9 @@ View
 </script>
 
 <script type="text/template" id="template-cart-checkout-button">
-            
-<button class="button full btn-upsell btn-checkout hide" data-vendor-code="q2qp">Go to checkout</button>
-
-        
-<button class="button full btn-confirm-below-minimum-amount btn-checkout hide" data-vendor-code="q2qp">Go to checkout</button>
-
-        
-<button class="button full btn-checkout btn-to-checkout hide" data-vendor-code="q2qp"data-captcha-container=captcha-container-cart>Go to checkout</button>
-
-        
-<button class="button full btn-below-minimum-amount button--disabled btn-checkout disabled hide" data-vendor-code="q2qp"data-captcha-container=captcha-container-cart>Go to checkout</button>
-
-        
-<button class="button full btn-confirm-preorder btn-checkout hide" data-vendor-code="q2qp"data-captcha-container=captcha-container-cart>Go to checkout</button>
-
-        
-<button class="button full js-payment-disabled button--disabled btn-checkout disabled hide" data-vendor-code="q2qp"data-captcha-container=captcha-container-cart>Go to checkout</button>
-            <div class="error-message full desktop-cart__error__below-minimum-amount hide" id="" >
+                
+<button class="button full button--disabled disabled" data-vendor-code="q2qp">CURRENTLY UNAVAILABLE</button>
+        <div class="error-message full desktop-cart__error__below-minimum-amount hide" id="" >
     You need to add more items to be able to checkout
 </div>
 
@@ -5598,7 +5487,8 @@ Write comments in case you are allergic to ingredients or want to exclude some."
                     <div class="opening-time">
                         
     
-            <span class="green-class">Open</span>
+            <span class="line-wrapper">Available for preorder</span>
+        <span>Tuesday</span>
     
 <span class="schedule-times">
            11:00 AM - 9:00 PM    </span>
@@ -5836,7 +5726,7 @@ Write comments in case you are allergic to ingredients or want to exclude some."
             error: false
         },
         onError: function (payload, error) {
-            var requestId = '3014265175f1a2a8c7d9e01d853b58ee';
+            var requestId = '6dcc33b90813fbfa50932580f3bf602c';
             var appVersion = '6ce6fbe';
             var appVersionName = 'master';
             var featureFlags;
@@ -6250,5 +6140,5 @@ Write comments in case you are allergic to ingredients or want to exclude some."
     </span>
 </script>
 
-        <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam-cell.nr-data.net","licenseKey":"f77b1abc66","applicationID":"66674442,97495756,49764655","transactionName":"bldXNUJYXhAABxBZDVcddhRDTV8OTjILXA1ldEcOXk1VDQUmEV4GVVdpIl9XRBEOCAhVEGVkUA9UVkIgDgoQQg1VXlATCgNGBg8AC0IjWkZcDl4=","queueTime":2,"applicationTime":5125,"atts":"QhBUQwpCTR4=","errorBeacon":"bam-cell.nr-data.net","agent":""}</script></body>
+        <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam-cell.nr-data.net","licenseKey":"f77b1abc66","applicationID":"66674442,97495756,49764655","transactionName":"bldXNUJYXhAABxBZDVcddhRDTV8OTjILXA1ldEcOXk1VDQUmEV4GVVdpIl9XRBEOCAhVEGVkUA9UVkIgDgoQQg1VXlATCgNGBg8AC0IjWkZcDl4=","queueTime":1,"applicationTime":1051,"atts":"QhBUQwpCTR4=","errorBeacon":"bam-cell.nr-data.net","agent":""}</script></body>
 </html>
