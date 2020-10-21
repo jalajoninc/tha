@@ -32,14 +32,14 @@
     "url" : "/city/prachuap-khiri-khan",
     "item" : "Prachuap Khiri Khan",
     "image" : "https://images.deliveryhero.io/image/fd-th/city-tile/Hua-Hin.jpg",
-    "done" : "n"
+    "done" : "y"
   },
   {
     "icon" : "https://raw.githubusercontent.com/jalajoninc/tha/main/city/Khon-Kaen.jpg",
     "url" : "/city/khon-kaen",
     "item" : "Khon Kaen",
     "image" : "https://images.deliveryhero.io/image/fd-th/city-tile/Khon-Kaen.jpg",
-    "done" : "y"
+    "done" : "n"
   },
   {
     "icon" : "https://raw.githubusercontent.com/jalajoninc/tha/main/city/korat.jpg",
