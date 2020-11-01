@@ -42,7 +42,7 @@
             
         <link rel="stylesheet" href="https://assets.foodora.com/9fbbae4/css/dist/th-menu-page.css?9fbbae4" />
 
-            <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+            <link href="https://micro-assets.foodora.com/fonts/MuseoSans.css" rel="stylesheet">
     
                     
                 
@@ -347,7 +347,73 @@ View
     </div>
 
     <div class="order-components">
-            
+                    <script type="text/template" id="template-day-picker-component">
+    <% var slideClass = days.length > 3 ? 'slidable' : ''; %>
+
+    <div class="day-picker <%- slideClass %>">
+        <div class="day-picker-holder">
+            <ul>
+                <% _.forEach(days, function(day) { %>
+                    <li>
+                        <label class="button-toggle-wrapper">
+                            <input type="radio" value="<%- day.date %>" name="day-picker" />
+                            <span class="day-value button-toggle"><%- day.text %> <span class="day-number"><%- day.number %></span></span>
+                        </label>
+                    </li>
+                <% }); %>
+            </ul>
+        </div>
+        <button class="nav-scroller prev hide">
+            <svg width="12" height="14" xmlns="http://www.w3.org/2000/svg">
+    <path class="svg-stroke-container" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd" fill="none" stroke="#D70F64" d="m3.5,1.5l5,5.5l-5,5.5"/>
+</svg>
+        </button>
+        <button class="nav-scroller next hide">
+            <svg width="12" height="14" xmlns="http://www.w3.org/2000/svg">
+    <path class="svg-stroke-container" stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd" fill="none" stroke="#D70F64" d="m3.5,1.5l5,5.5l-5,5.5"/>
+</svg>
+        </button>
+    </div>
+</script>
+<script type="text/template" id="template-time-picker-component">
+    <div class="time-picker">
+        <ul>
+            <% _.forEach(times, function(time) { %>
+                <li>
+                  <label class="time-picker-toggle-wrapper">
+                    <input type="radio" value="<%- time.time %>" name="time-picker" />
+                    <span class="time-name"><%- time.text %></span>
+                  </label>
+                </li>
+            <% }); %>
+        </ul>
+    </div>
+</script>
+
+<div class="when-wrapper hide">
+    <div class="time-picker-button header-order-button">
+    <span class="header-order-button-title">When</span>
+    <span class="header-order-button-content"></span>
+    </div>
+    <div class="modal fade time-picker-component" data-time-picker-component tabindex="-1" role="dialog" aria-hidden="true"  data-now-translation="ASAP">
+        <div class="modal-wrapper">
+            <header class="picker-header">
+                <a class="close-button" data-dismiss="modal"></a>
+                <h2 class="picker-title">When</h2>
+            </header>
+            <div class="picker-container">
+                <div class="day-picker-container"></div>
+                <div class="time-picker-container"></div>
+            </div>
+            <footer class="picker-footer">
+                <button class="picker-confirm button full">Confirm</button>
+            </footer>
+        </div>
+    </div>
+
+    </div>
+
+    
 
                     <div class="where-wrapper">
     <div class="location-search-button header-order-button" data-vendorID="135735">
@@ -569,7 +635,7 @@ View
       data-server-errors="&quot;{}&quot;"
       novalidate
 >
-    <input type="hidden" name="_csrf_token" value="1603976800:GS6ewnbZa8UTKKw4cEGj5J+UB915Gl+cRAxGopCKvKsOcCsV81cgqVMM3wzq38/JvZVq2vbMh3IPPHiVXnaXYA==:2lc1rxyA5u/kgkPcToI9wwLyeiklHiLe+ZBvoiEKR95j2oaUdcHR6Ai8d1aZTmmzTYC1WIDaL3Ju/BmpFRIjng==" >
+    <input type="hidden" name="_csrf_token" value="1604203692:cDbbqeBBeK2hvLUfsIZxE0x6aKMhhW2H4BbaJoi7hQctmoXKYhSWNL7FpnpVAiGepF8MG8lgzQJiTmzNqNobfw==:K6YuGRrEE/9OLEZzarNnV4vT4Ro7Vt1IvyfVxSTzvcxb77UAHyqE9MQpCkjEDSBz6tqtlHQxawTFQTE+dZjZsQ==" >
     <input type="hidden" name="_target_path" value="/restaurant/r1nc/somtam-mae-ja" >
 
     
@@ -921,8 +987,8 @@ View
 
         VOLO.configuration = VOLO.configuration || {};
         VOLO.configuration.features = {
-            user: {"key":"184.22.177.204","ip":"184.22.177.204","custom":{"country_code":"th","platform":"b2c","cookie_key":"184.22.146.94"},"anonymous":true},
-            flags: {"use-optimizely":false,"saved-address":true,"show-vipps":false,"sameday-preorder-popup":true,"redirect-chain-vendors":true,"new-city-page":true,"ab-test-flags":"cs-cart,alan-hc,search-config,self-service,verticals,react-map,show-wallet,apple-login,otp-time-format","sold-out-items":false,"best-price":false,"ds":"vendors_only","new-vendor-tile":"Variant","od-vd-rlp":"NA","mbl-google-address":false,"quick-filters":true,"free-scroll-in-swimlanes":true,"item-counter":false,"should-confirm-preorder":"2","menu-platform-specific-products":false,"otp-revamp":true,"klarna-in-microfrontend":false,"additional-information-on-checkout":false,"show-wallet":false,"enable-alfred":false,"cs-cart":"all-items","showIM":"Original","add-address":"n\/a","mBanner":1,"raf-migration":true,"mbl-dynamic-fields":"Original","separate-vendor-chain-meta":true,"x-sell-placement":"control","payios":false,"ios-hs":"On","rlp-to-mf":"Variant","ios-app-reviews-not-after-first":true,"cartapi":true,"ignore-events":true,"tracking-card-web":true,"check-2":true,"restaurant-chat":false,"timed-menus":true,"swimlanes":"Original","preorder":true,"px":true,"rider-map":true,"group-order-split-allowance":true,"rewards-feature-variation":"na","df-info-icon":false,"disable-migration-banner":true,"time-range-on-otp":false,"exposed-filters":"Off","reviews":"On","new-credit-card-form-react":false,"parallel-calls-rlp":"NA","organicList":"Variant1","show-price-from-with-non-zero-topping-price":true,"nv-entry-point-config":1,"index-secondary-language":true,"address-tooltip":2,"cuisines":"Original","subscriptions-new-card":true,"darkstores-landing-page-config":"dark-stores-config-2","dd-logs":false,"help-center-access":false,"verticals-fork":"Variant1","should-check-for-app-updates":false,"show-darkstore-tile":true,"rating":"On","brand":"foodpanda","cs-backend":"default","campaign-service":"campaign-service","favorites":"Variant","mc":"Variant","verticals-out-of-stock":"[{\u0022text\u0022:\u0022NEXTGEN_SoldOutOptions_Refund\u0022,\u0022option\u0022:\u0022REFUND\u0022,\u0022default\u0022:true},{\u0022text\u0022:\u0022NEXTGEN_SoldOutOptions_Cancel\u0022,\u0022option\u0022:\u0022CANCEL\u0022,\u0022default\u0022:false}]","address-snapping-tooltip-radius":200,"verticals-feed-config":"config-1","login-registration-tabs":true,"upsell-drinks":true,"new-nav-flow":"Control","check-1":true,"time-range":"NA","df":"On","eta-range-otp":0,"get-direction-otp":true,"ab_test_flags":"vendor-tile-extra-info,swimlanes,upsell-drinks,self-service,when-component,apple-pay-inline-setup,rider-map,ds","vendor-tile-extra-info":true,"new-payment-selector":true,"groupie":true,"variations":true,"item-modifier-redesign":"v1","location-lib":false,"global-search-rlp":false,"no-delivery-time-on-rlp-rdp-checkout":false,"distance-on-pickup":true,"alan-hc":true,"search-suggests":"On","pagination":true,"show-restaurant-contact-information":false,"x-sell-otp-nv":"off","cookies-banner":false,"x-sell-discounts":"variant","rdp-dialog":"1","chained-place-order":false,"show-cutlery-toggle":true,"verticals":"[      {          \u0022id\u0022: \u0022restaurants\u0022,          \u0022title_key\u0022: \u0022NEXTGEN_RESTAURANT_ENTRY_TAB\u0022, \t\t          \u0022title_key_web\u0022: \u0022restaurants.entry_tab\u0022,           \u0022vertical_types\u0022: [\u0022restaurants\u0022],         \t          \u0022title_icon_res\u0022: \u0022ic_vert_restaurants\u0022      \t                },            {          \u0022id\u0022: \u0022shop\u0022,          \u0022title_key\u0022: \u0022NEXTGEN_SHOPS_ENTRY_TAB\u0022, \t          \u0022title_key_web\u0022: \u0022shops.entry_tab\u0022,                 \u0022vertical_types\u0022: [\u0022shop\u0022],                   \u0022title_icon_res\u0022: \u0022ic_vert_shops\u0022      \t           }  ]","should-use-mapped-toppings":true,"mov":"Off","auto-apply":true,"cs-menu":"On","perimeterx":true,"disable-rider-banner":false,"newcart":false,"mbl-google-address-variant":"Variant","establishment-as-building":true,"alco-rest":true,"delay-gmap":"after-load","voucher-wallet":true,"otp-audience":false,"quick-reorder-in-rdp":"quick-reorder-off","preorder-popup-on-rdp":false,"variations-line-rdp":false,"out-of-stock-component":"Off","deals":true,"address-snapping-tooltip":"na","cancel-cap-limit":5,"web-lists":"Variant1","rdp-reco":true,"new-authentication-flow":true,"apple-pay-inline-setup":false,"vendor-sorting":true,"when-component":true,"characteristics":"Variant","verticals-autocomplete-config":"config-1","hero-image":false,"rdp-recommendation":"Variant","get-direction":true,"disable-smartphone-banner":false,"aggregate-regions":false,"darkstores-web-ui":false,"cselling":"multiple-variations","challenges":false,"challenge-special-provider-enabled":["pickup","vendor_delivery"],"city-page-limit":500,"loyalty":true,"new-search-flow":"NA","out-of-stock-verticals":[],"otp-horizontal-progressbar":2,"dish-detailed-information":false,"subscriptions":"NA","closed-on-rlp":"Label_center","download-personal-data":false,"using-sherlock-as-api":true,"override-flags":false,"bottom-bar":"NA","use-atlas-proxy-get-by-id-endpoint":false,"react-cart":true,"payment-tokens":true,"rewards-back-office-write-access":false,"budget":"Variant","wsb":"On","welcome-to-verticals":false,"global-search-rdp":false,"cashier-sdk":false,"vendor-dh-reco":false,"self-reference-canonical":true,"alcohol-verticals":true,"subPlans":true,"zopim-chat":true,"promo-banner":true,"always-map":"n\/a","search-config":"Variant6","checkout_map":"Variant","otp-rewards":false,"product-listing-verticals":false,"shadow":"NA","customer-rider-chat":{"apiKey":"FF804081-D96C-48F4-ADCE-C3BB82782434","isEnabled":true,"localesMapping":{"en":"en","ja":"ja","th":"th"}},"rectify-where-component":true,"dps":"Original","where-component":true,"vendor-dh-recommendation":"recommendations-off","autocomplete-config":"Variant2","self-service":true,"archimedes-fwf-enabled":false,"always-open-item-modifier-foo":false,"show-subtitles-on-otp":false,"joker":"on","multi-tags":"2","tr-card-revamp":"true","react-map":"yes","flexiadd":true,"ratings-reviews":true,"cancellation-button":false,"ios-app-reviews":true,"yum":"na","always-display-item-modifier":false,"reward-challenge-enabled":false,"sorting":"Original","address-book-mf":true,"address-snapping-tooltip-a":"Variation1","address-snapping-tooltip-b":"Variation1","address-snapping-tooltip-d":"Variation1","address-svc-use-geolocator-find-city":false,"alfred-performance-adjustment":true,"allergenspdf":false,"apple-login":false,"archimedes-enable-offer-voucher-validation":true,"archimedes-use-discount-data-from-watson":true,"b2b-landing":false,"block-preorders":"disabled","cache-vendor-from-watson":true,"campaign-shop-carousel":true,"carousel-ui-style":"carousel_listview","cart-service-circuit-breaker-enabled":true,"cart-service-enable-djini":false,"cart-to-checkout-cta":"Control","cashier-token-sync":false,"catalog-service-disable-database-writes":false,"catalog-service-enable-rdp-call-customer-option":true,"catalog-service-out-of-stock":false,"catalog-service-rdp-use-circuit-breaker":true,"catalog-service-send-non-restaurants-product-update-on-dedicated-sns":false,"checkout-during-events":"Allow if shrinking","checkout-request-invoice":false,"city-in-checkout":true,"closing-soon":"Control","contactless-delivery":false,"corporate-self-signup":true,"custom-rider-icon":"true","customer-active-consent":"Control","darkstore-category-discovery1":"Control","darkstore-category-scroll1":"Control","darkstore-limit-items-per-sku":"Control","darkstore-past-order":"Control","darkstore-search-entry1":"Variation1","darkstore-search-redesign1":"Variation1","darkstore-tile-variant":"variant","darkstores-show-low-in-stock":false,"disable-cutlery-for-vd":false,"discount-title-as-tag":true,"dynamic-pricing-indicator":"Original","enable-archimedes-request-logging":false,"enable-cod-with-rider-tip":false,"enable-df-address-notifier":true,"enable-df-address-svc-worker":true,"enable-search-populator-long-closure":true,"expose-current-location":"Original","favorites-shops":false,"filter-ux-revamp":"Variation1","filters-shops":false,"first-name-last-name-order":true,"force-enroll-internal-users":false,"fork-dismiss-btn":"Original","geolocator-enable-df-ingest":true,"geolocator-enable-tpl-cache":true,"geolocator-providers-ab-testing-experimental":"Control","geolocator-use-city-service":true,"geolocator-use-country-service":true,"gps-timeout":"3000","help-center":"global-hc","is-beta-enabled":true,"is-internal-beta-enabled":true,"locate-me":"Variant2","location-read-city-from-vendor-in-checkout":false,"max-change-country-address-svc-worker":"2000","mbl_google_address":true,"merge-cashback":"Control","modular-subscription":"NA","nested-products":"Off","nested-products-ab":"Control","nested-products-shops":"Variation1","new-authentication-web":true,"new-checkout-flow-ab":"Control","new-customer-validation":true,"new-homepage":"Control","open-sans":"Variation1","order-summary-checkout":"Control","organic-list":"Original","otp-microfrontend":"Variation1","otp-time-format":"Control","out-of-stock":false,"passwordless-account":false,"patch-device-token":false,"payment_code_adyen_applepay":false,"payment_code_adyen_creditcard":true,"payment_code_adyen_googlepay":false,"payment_code_antfinancial_bkash":true,"payment_code_antfinancial_gcash":false,"payment_code_antfinancial_truemoney":false,"payment_code_cybersource_creditcard":false,"payment_code_paypal":true,"payment_code_spreedly_creditcard":true,"pickup-awareness-on-checkout":false,"pickup-map-config":"{\u0022isEnabled\u0022:false}","pickup-rlp-banner-config":{"backgroundColor":"#F7BDD1","description":"NEXTGEN_PICKUP_BANNER_DESCRIPTION","imageUrl":"https:\/\/images.deliveryhero.io\/image\/fd-th\/pickup\/pickup_banner.png","isEnabled":true,"title":"NEXTGEN_PICKUP_BANNER_TITLE"},"pickup-swimlane":"pickup-control","prevent-duplicated-orders":true,"process-by-country-address-svc-worker":true,"promoted-on-rlp":true,"quantity_stepper_animation":"Control","recent-searches":"Variation1","referral-flow":"Control","referral-links":"Variant2","return-closed-vendors":true,"rewards-back-office-global-user":false,"rewards-communication-challenge-rewarded":false,"rewards-data-stream":true,"rewards-feature":"Control","rewards-flash-challenges":"Control","rewards-multi-step-challenges":false,"rider-chat-alert":"Variation1","rider-chat-new-msg":true,"rider-tip":false,"rlp-address-map":"Variation1","search-closed-vendor-restaurants":"Variation1","search-closed-vendor-shops":"Variation1","search-populator-process-events":true,"search-suggests-shops":"Off","share-rdp":false,"shops-swimlanes":"shops-variant","shops_maxsales_parameter":true,"show-free-delivery-tag-on-zero-delivery-fee":true,"show-pickup-tooltip":true,"show-skinny-banner":false,"show-wallet-setting":true,"show-wallet-setting-refund-destination":true,"showim":"Original","simplify-cart-calculation":{"*":2,"auto-apply-voucher_delivery":2,"auto-apply-voucher_delivery_rider-tip":2,"auto-apply-voucher_delivery_voucher":2,"auto-apply-voucher_pickup":2,"auto-apply-voucher_pickup_voucher":2,"delivery":2,"delivery_rider-tip":2,"delivery_rider-tip_voucher":2,"delivery_voucher":2,"pickup":2,"pickup_voucher":2},"static-map-checkout":"Control","stm-on-otp":"Control","subscribe-with-new-card":true,"subscription-payment-through-saved-card":true,"two-factor-authentication":false,"use-midas-boost-on-watson":false,"use-new-sorting":false,"use-tes-for-ddt":true,"use-watson-integration":true,"uxcam-sdk":false,"vcb-rlp":"Control","vendor-service-block-db-writes":true,"vendor-service-enable-logistics-offset":true,"vertical-inline-add-to-cart":"Control","verticals-dish-portal":false,"verticals-listing-search-filters":"Control","verticals-new-cart":false,"verticals-oos-default":"refund","verticals-shop-categories":"original","verticals-show-delivery-fee":false,"verticals-vendor-disclaimers":true,"watson-apply-discounts-on-watson":true,"watson-dynamodb-rdp":true,"watson-forward-listing-to-disco":true,"watson-show-vendor-legal-information":false,"watson-use-dynamic-pricing":true,"watson-use-offers-service-to-fetch-discount":true,"watson-use-vendor-service-timepicker":true,"x-sell-pdp-dmarts":"Control"},
+            user: {"key":"184.22.65.157","ip":"184.22.65.157","custom":{"country_code":"th","platform":"b2c","cookie_key":"184.22.146.94"},"anonymous":true},
+            flags: {"saved-address":true,"use-optimizely":false,"sameday-preorder-popup":true,"show-vipps":false,"redirect-chain-vendors":true,"new-city-page":true,"ab-test-flags":"cs-cart,alan-hc,search-config,self-service,verticals,react-map,show-wallet,apple-login,otp-time-format","sold-out-items":false,"best-price":false,"ds":"vendors_only","new-vendor-tile":"Variant","od-vd-rlp":"NA","mbl-google-address":false,"quick-filters":true,"free-scroll-in-swimlanes":true,"item-counter":false,"should-confirm-preorder":"2","menu-platform-specific-products":false,"klarna-in-microfrontend":false,"otp-revamp":true,"additional-information-on-checkout":false,"show-wallet":false,"enable-alfred":false,"cs-cart":"off","showIM":"Original","add-address":"n\/a","mBanner":1,"raf-migration":true,"mbl-dynamic-fields":"Variant","separate-vendor-chain-meta":true,"x-sell-placement":"control","payios":false,"ios-hs":"On","rlp-to-mf":"Variant","ios-app-reviews-not-after-first":true,"cartapi":true,"tracking-card-web":true,"check-2":true,"ignore-events":true,"restaurant-chat":false,"preorder":true,"timed-menus":true,"swimlanes":"Variant","px":true,"rider-map":true,"group-order-split-allowance":true,"rewards-feature-variation":"na","df-info-icon":false,"disable-migration-banner":true,"time-range-on-otp":false,"exposed-filters":"Off","reviews":"On","parallel-calls-rlp":"NA","new-credit-card-form-react":false,"organicList":"Variant1","show-price-from-with-non-zero-topping-price":true,"nv-entry-point-config":1,"index-secondary-language":true,"address-tooltip":2,"cuisines":"Original","subscriptions-new-card":true,"darkstores-landing-page-config":"dark-stores-config-2","help-center-access":false,"verticals-fork":"Variant1","dd-logs":false,"show-darkstore-tile":true,"should-check-for-app-updates":false,"rating":"On","brand":"foodpanda","favorites":"Variant","campaign-service":"campaign-service","cs-backend":"default","mc":"Variant","verticals-out-of-stock":"[{\u0022text\u0022:\u0022NEXTGEN_SoldOutOptions_Refund\u0022,\u0022option\u0022:\u0022REFUND\u0022,\u0022default\u0022:true},{\u0022text\u0022:\u0022NEXTGEN_SoldOutOptions_Cancel\u0022,\u0022option\u0022:\u0022CANCEL\u0022,\u0022default\u0022:false}]","address-snapping-tooltip-radius":200,"login-registration-tabs":true,"verticals-feed-config":"config-1","new-nav-flow":"Control","upsell-drinks":true,"check-1":true,"time-range":"NA","eta-range-otp":0,"df":"On","get-direction-otp":true,"ab_test_flags":"vendor-tile-extra-info,swimlanes,upsell-drinks,self-service,when-component,apple-pay-inline-setup,rider-map,ds","vendor-tile-extra-info":true,"new-payment-selector":true,"groupie":true,"variations":true,"item-modifier-redesign":"v1","location-lib":false,"global-search-rlp":false,"no-delivery-time-on-rlp-rdp-checkout":false,"distance-on-pickup":true,"alan-hc":true,"search-suggests":"On","pagination":true,"show-restaurant-contact-information":false,"x-sell-otp-nv":"off","cookies-banner":false,"x-sell-discounts":"variant","chained-place-order":false,"rdp-dialog":"1","show-cutlery-toggle":true,"verticals":"[      {          \u0022id\u0022: \u0022restaurants\u0022,          \u0022title_key\u0022: \u0022NEXTGEN_RESTAURANT_ENTRY_TAB\u0022, \t\t          \u0022title_key_web\u0022: \u0022restaurants.entry_tab\u0022,           \u0022vertical_types\u0022: [\u0022restaurants\u0022],         \t          \u0022title_icon_res\u0022: \u0022ic_vert_restaurants\u0022      \t                },            {          \u0022id\u0022: \u0022shop\u0022,          \u0022title_key\u0022: \u0022NEXTGEN_SHOPS_ENTRY_TAB\u0022, \t          \u0022title_key_web\u0022: \u0022shops.entry_tab\u0022,                 \u0022vertical_types\u0022: [\u0022shop\u0022],                   \u0022title_icon_res\u0022: \u0022ic_vert_shops\u0022      \t           }  ]","should-use-mapped-toppings":true,"mov":"Off","auto-apply":true,"cs-menu":"On","perimeterx":true,"disable-rider-banner":false,"newcart":false,"mbl-google-address-variant":"Variant","establishment-as-building":true,"alco-rest":true,"delay-gmap":"after-load","voucher-wallet":true,"otp-audience":false,"quick-reorder-in-rdp":"quick-reorder-off","preorder-popup-on-rdp":false,"variations-line-rdp":false,"out-of-stock-component":"Off","deals":true,"address-snapping-tooltip":"na","cancel-cap-limit":5,"web-lists":"Variant1","new-authentication-flow":true,"rdp-reco":true,"apple-pay-inline-setup":false,"when-component":true,"vendor-sorting":true,"characteristics":"Variant","verticals-autocomplete-config":"config-1","rdp-recommendation":"Variant","hero-image":false,"get-direction":true,"disable-smartphone-banner":false,"aggregate-regions":false,"cselling":"multiple-variations","darkstores-web-ui":false,"challenge-special-provider-enabled":["pickup","vendor_delivery"],"challenges":false,"city-page-limit":500,"loyalty":true,"new-search-flow":"NA","out-of-stock-verticals":[],"otp-horizontal-progressbar":2,"subscriptions":"NA","dish-detailed-information":false,"closed-on-rlp":"Label_center","download-personal-data":false,"bottom-bar":"NA","override-flags":false,"using-sherlock-as-api":true,"use-atlas-proxy-get-by-id-endpoint":false,"wsb":"On","payment-tokens":true,"rewards-back-office-write-access":false,"budget":"Variant","react-cart":true,"global-search-rdp":false,"welcome-to-verticals":false,"cashier-sdk":false,"vendor-dh-reco":false,"self-reference-canonical":true,"alcohol-verticals":true,"subPlans":true,"promo-banner":true,"zopim-chat":true,"always-map":"n\/a","search-config":"Variant6","checkout_map":"Variant","otp-rewards":false,"product-listing-verticals":false,"customer-rider-chat":{"apiKey":"FF804081-D96C-48F4-ADCE-C3BB82782434","isEnabled":true,"localesMapping":{"en":"en","ja":"ja","th":"th"}},"shadow":"NA","rectify-where-component":true,"dps":"Original","vendor-dh-recommendation":"recommendations-off","autocomplete-config":"Variant2","where-component":true,"self-service":true,"archimedes-fwf-enabled":false,"always-open-item-modifier-foo":false,"show-subtitles-on-otp":false,"joker":"on","multi-tags":"2","tr-card-revamp":"true","react-map":"yes","flexiadd":true,"ratings-reviews":true,"cancellation-button":false,"ios-app-reviews":true,"yum":"na","always-display-item-modifier":false,"sorting":"Original","reward-challenge-enabled":false,"address-book-mf":true,"address-snapping-tooltip-a":"Variation1","address-snapping-tooltip-b":"Variation1","address-snapping-tooltip-d":"Variation1","address-svc-use-geolocator-find-city":false,"alfred-performance-adjustment":true,"allergenspdf":false,"apple-login":false,"archimedes-enable-offer-voucher-validation":true,"archimedes-use-discount-data-from-watson":true,"b2b-landing":false,"block-preorders":"disabled","cache-vendor-from-watson":true,"campaign-shop-carousel":true,"carousel-ui-style":"carousel_listview","cart-service-circuit-breaker-enabled":true,"cart-service-enable-djini":false,"cart-to-checkout-cta":"Control","cashier-token-sync":false,"catalog-service-disable-database-writes":false,"catalog-service-enable-rdp-call-customer-option":true,"catalog-service-out-of-stock":false,"catalog-service-rdp-use-circuit-breaker":true,"catalog-service-send-non-restaurants-product-update-on-dedicated-sns":false,"checkout-during-events":"Allow if shrinking","checkout-request-invoice":false,"city-in-checkout":true,"closing-soon":"Control","contactless-delivery":false,"corporate-self-signup":true,"custom-rider-icon":"true","customer-active-consent":"Control","darkstore-category-discovery1":"Control","darkstore-category-scroll1":"Control","darkstore-limit-items-per-sku":"Control","darkstore-past-order":"Control","darkstore-search-entry1":"Variation1","darkstore-search-redesign1":"Variation1","darkstore-tile-variant":"variant","darkstores-show-low-in-stock":false,"disable-cutlery-for-vd":false,"discount-title-as-tag":true,"dynamic-pricing-indicator":"Original","enable-archimedes-request-logging":false,"enable-cod-with-rider-tip":false,"enable-df-address-notifier":true,"enable-df-address-svc-worker":true,"enable-search-populator-long-closure":true,"expose-current-location":"Original","favorites-shops":false,"filter-ux-revamp":"Control","filters-shops":false,"first-name-last-name-order":true,"force-enroll-internal-users":false,"fork-dismiss-btn":"Original","geolocator-enable-df-ingest":true,"geolocator-enable-tpl-cache":true,"geolocator-providers-ab-testing-experimental":"Control","geolocator-use-city-service":true,"geolocator-use-country-service":true,"gps-timeout":"3000","help-center":"global-hc","is-beta-enabled":true,"is-internal-beta-enabled":true,"locate-me":"Variant2","location-read-city-from-vendor-in-checkout":false,"max-change-country-address-svc-worker":"2000","mbl_google_address":true,"merge-cashback":"Control","modular-subscription":"NA","nested-products":"Off","nested-products-ab":"Control","nested-products-shops":"Variation1","new-authentication-web":true,"new-checkout-flow-ab":"Control","new-customer-validation":true,"new-homepage":"Control","open-sans":"Control","order-summary-checkout":"Control","organic-list":"Original","otp-microfrontend":"Variation1","otp-time-format":"Variation3","out-of-stock":false,"passwordless-account":false,"patch-device-token":false,"payment_code_adyen_applepay":false,"payment_code_adyen_creditcard":true,"payment_code_adyen_googlepay":false,"payment_code_antfinancial_bkash":true,"payment_code_antfinancial_gcash":false,"payment_code_antfinancial_truemoney":false,"payment_code_cybersource_creditcard":false,"payment_code_paypal":true,"payment_code_spreedly_creditcard":true,"pickup-awareness-on-checkout":false,"pickup-map-config":"{\u0022isEnabled\u0022:false}","pickup-rlp-banner-config":{"backgroundColor":"#F7BDD1","description":"NEXTGEN_PICKUP_BANNER_DESCRIPTION","imageUrl":"https:\/\/images.deliveryhero.io\/image\/fd-th\/pickup\/pickup_banner.png","isEnabled":true,"title":"NEXTGEN_PICKUP_BANNER_TITLE"},"pickup-swimlane":"pickup-control","prevent-duplicated-orders":true,"process-by-country-address-svc-worker":true,"promoted-on-rlp":true,"quantity_stepper_animation":"Control","recent-searches":"Variation1","referral-flow":"Control","referral-links":"Variant2","return-closed-vendors":true,"rewards-back-office-global-user":false,"rewards-communication-challenge-rewarded":false,"rewards-data-stream":true,"rewards-feature":"Control","rewards-flash-challenges":"Control","rewards-multi-step-challenges":false,"rider-chat-alert":"Variation1","rider-chat-new-msg":true,"rider-tip":false,"rlp-address-map":"Variation1","search-closed-vendor-restaurants":"Variation1","search-closed-vendor-shops":"Variation1","search-populator-process-events":true,"search-suggests-shops":"Off","share-rdp":false,"shops-swimlanes":"shops-variant","shops_maxsales_parameter":true,"show-free-delivery-tag-on-zero-delivery-fee":true,"show-pickup-tooltip":true,"show-skinny-banner":false,"show-wallet-setting":true,"show-wallet-setting-refund-destination":true,"showim":"Original","simplify-cart-calculation":{"*":2,"auto-apply-voucher_delivery":2,"auto-apply-voucher_delivery_rider-tip":2,"auto-apply-voucher_delivery_voucher":2,"auto-apply-voucher_pickup":2,"auto-apply-voucher_pickup_voucher":2,"delivery":2,"delivery_rider-tip":2,"delivery_rider-tip_voucher":2,"delivery_voucher":2,"pickup":2,"pickup_voucher":2},"static-map-checkout":"Control","stm-on-otp":"Control","subscribe-with-new-card":true,"subscription-payment-through-saved-card":true,"two-factor-authentication":false,"use-midas-boost-on-watson":false,"use-new-sorting":false,"use-tes-for-ddt":true,"use-watson-integration":true,"uxcam-sdk":false,"vcb-rlp":"Control","vendor-service-block-db-writes":true,"vendor-service-enable-logistics-offset":true,"vertical-inline-add-to-cart":"Control","verticals-dish-portal":false,"verticals-listing-search-filters":"Control","verticals-new-cart":false,"verticals-oos-default":"refund","verticals-shop-categories":"original","verticals-show-delivery-fee":false,"verticals-vendor-disclaimers":true,"watson-apply-discounts-on-watson":true,"watson-dynamodb-rdp":true,"watson-forward-listing-to-disco":true,"watson-show-vendor-legal-information":false,"watson-use-dynamic-pricing":true,"watson-use-offers-service-to-fetch-discount":true,"watson-use-vendor-service-timepicker":true,"x-sell-pdp-dmarts":"Control"},
             clientId: "588b668dd61cf00908688c6f"
         };
 
@@ -941,7 +1007,7 @@ View
         VOLO.configuration.sessionId = '';
         VOLO.configuration.dpsSessionIdCookieName = "dps-session-id";
         VOLO.configuration.dpsSessionIdDelimiter = "_";
-        VOLO.configuration.dpsClientIP = '184.22.177.204';
+        VOLO.configuration.dpsClientIP = '184.22.65.157';
         VOLO.configuration.isDpsEnabled = 0;
         VOLO.configuration.dpsSessionExpiry = '1800';
         VOLO.configuration.googleTagManagerContainerId = 'GTM-N9RJXV';
@@ -1038,7 +1104,7 @@ View
     <div class="page-container">
         <section 
             class="vendor-section"
-            data-vendor='{"id":135735,"name":"Somtam Mae Ja","code":"r1nc","category":"Thai","is_active":true,"timezone":"Asia\/Bangkok","available_in":"2020-10-30T10:00:00+0700","city_id":1358323,"latitude":6.62285746,"longitude":100.06507217,"is_pickup_available":true,"is_delivery_available":true,"url_key":"somtam-mae-ja","ddt":0,"chain":{"id":0,"name":null,"url_key":null,"is_accepting_global_vouchers":false,"code":null,"main_vendor_code":""},"rating":4.6,"review_number":128,"minOrder":0,"deliveryFee":0,"is_promoted":false,"is_premium":false,"toppings":{"26402707":{"id":26402707,"name":"Choices of topping - thai som tum","description":"","quantity_minimum":0,"quantity_maximum":1,"options":[{"id":34221664,"product_id":8750345,"name":"Salted Crab","description":"","price":5,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""},{"id":34221665,"product_id":8750347,"name":"Salted Egg","description":"","price":10,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""}]},"26402710":{"id":26402710,"name":"Choices of topping - Crab and fermented fish som tum","description":"","quantity_minimum":0,"quantity_maximum":1,"options":[{"id":34221668,"product_id":8750347,"name":"Salted Egg","description":"","price":10,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""}]},"26402715":{"id":26402715,"name":"Choices of topping - salted crab","description":"","quantity_minimum":0,"quantity_maximum":1,"options":[{"id":34221680,"product_id":8750345,"name":"Salted Crab","description":"","price":5,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""}]},"26402719":{"id":26402719,"name":"Choices of topping - corn som tum","description":"","quantity_minimum":1,"quantity_maximum":1,"options":[{"id":34221685,"product_id":8750333,"name":"Thai Style","description":"","price":0,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""},{"id":34221686,"product_id":8750336,"name":"Fermented Fish","description":"","price":0,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""},{"id":34221687,"product_id":8750345,"name":"Salted Crab","description":"","price":5,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""},{"id":34221688,"product_id":8750347,"name":"Salted Egg","description":"","price":10,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""}]},"26403410":{"id":26403410,"name":"Choices of serving - crab, mango, and pickled mussel som tum","description":"","quantity_minimum":0,"quantity_maximum":1,"options":[{"id":34224830,"product_id":8750336,"name":"Fermented Fish","description":"","price":0,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""}]},"26403417":{"id":26403417,"name":"Choices of serving - 2 style","description":"","quantity_minimum":1,"quantity_maximum":1,"options":[{"id":34224845,"product_id":8750333,"name":"Thai Style","description":"","price":0,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""},{"id":34224846,"product_id":8750336,"name":"Fermented Fish","description":"","price":0,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""}]},"26403418":{"id":26403418,"name":"Choices of meat - shrimp","description":"","quantity_minimum":1,"quantity_maximum":1,"options":[{"id":34224851,"product_id":8750339,"name":"Raw Shrimp","description":"","price":0,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""},{"id":34224852,"product_id":8750341,"name":"Cooked Shrimp","description":"","price":0,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""}]},"26403421":{"id":26403421,"name":"Choices of meat - blue crab","description":"","quantity_minimum":1,"quantity_maximum":1,"options":[{"id":34224854,"product_id":8750337,"name":"Raw Blue Crab","description":"","price":0,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""},{"id":34224855,"product_id":8750338,"name":"Cooked Blue Crab","description":"","price":0,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""}]},"26403428":{"id":26403428,"name":"Choices of serving - vietnamese chicken sausage","description":"","quantity_minimum":1,"quantity_maximum":1,"options":[{"id":34224865,"product_id":8750333,"name":"Thai Style","description":"","price":0,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""},{"id":34224866,"product_id":8750336,"name":"Fermented Fish","description":"","price":5,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""},{"id":34224867,"product_id":8750350,"name":"Salted Crab and Fermented Fish","description":"","price":10,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""}]},"26403432":{"id":26403432,"name":"Choices of topping - cucumber som tum","description":"","quantity_minimum":0,"quantity_maximum":1,"options":[{"id":34224904,"product_id":8750339,"name":"Raw Shrimp","description":"","price":30,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""},{"id":34224905,"product_id":8750345,"name":"Salted Crab","description":"","price":5,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""}]},"26403437":{"id":26403437,"name":"Choices of meat - lemongrass salad","description":"","quantity_minimum":1,"quantity_maximum":1,"options":[{"id":34224964,"product_id":8750339,"name":"Raw Shrimp","description":"","price":0,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""},{"id":34224965,"product_id":8750348,"name":"Cockle","description":"","price":0,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""}]},"26403448":{"id":26403448,"name":"Choices of meat - corn salad","description":"","quantity_minimum":1,"quantity_maximum":1,"options":[{"id":34224977,"product_id":8750334,"name":"Cockle, Raw Shrimp, and Blue Crab","description":"","price":10,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""},{"id":34224978,"product_id":8750339,"name":"Raw Shrimp","description":"","price":0,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""},{"id":34224979,"product_id":8750343,"name":"Raw Shrimp and Blue Crab","description":"","price":10,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""},{"id":34224980,"product_id":8750348,"name":"Cockle","description":"","price":0,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""}]},"26403453":{"id":26403453,"name":"Choices of meat - Spicy minced meat salad","description":"","quantity_minimum":1,"quantity_maximum":1,"options":[{"id":34225001,"product_id":8750332,"name":"Duck","description":"","price":10,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""},{"id":34225002,"product_id":8750335,"name":"Seafood","description":"","price":10,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""},{"id":34225003,"product_id":8750340,"name":"Beef","description":"","price":10,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""},{"id":34225004,"product_id":8750344,"name":"Glass Noodles","description":"","price":0,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""},{"id":34225005,"product_id":8750346,"name":"Catfish","description":"","price":10,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""},{"id":34225006,"product_id":8750349,"name":"Chicken","description":"","price":0,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""}]},"26403464":{"id":26403464,"name":"Choices of meat - grilled meat salad","description":"","quantity_minimum":1,"quantity_maximum":1,"options":[{"id":34225008,"product_id":8750340,"name":"Beef","description":"","price":20,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""},{"id":34225009,"product_id":8750349,"name":"Chicken","description":"","price":0,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""}]}},"accepts_instructions":true,"category_quantity":5,"loyalty_program_enabled":false,"loyalty_percentage_amount":0,"has_delivery_provider":true,"vertical":"restaurants","is_preorder_enabled":false,"is_vat_visible":true}'
+            data-vendor='{"id":135735,"name":"Somtam Mae Ja","code":"r1nc","category":"Thai","is_active":true,"timezone":"Asia\/Bangkok","available_in":null,"city_id":1358323,"latitude":6.62285746,"longitude":100.06507217,"is_pickup_available":true,"is_delivery_available":true,"url_key":"somtam-mae-ja","ddt":0,"chain":{"id":0,"name":null,"url_key":null,"is_accepting_global_vouchers":false,"code":null,"main_vendor_code":""},"rating":4.6,"review_number":140,"minOrder":0,"deliveryFee":0,"is_promoted":false,"is_premium":false,"toppings":{"26402707":{"id":26402707,"name":"Choices of topping - thai som tum","description":"","quantity_minimum":0,"quantity_maximum":1,"options":[{"id":34221664,"product_id":8750345,"name":"Salted Crab","description":"","price":5,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""},{"id":34221665,"product_id":8750347,"name":"Salted Egg","description":"","price":10,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""}]},"26402710":{"id":26402710,"name":"Choices of topping - Crab and fermented fish som tum","description":"","quantity_minimum":0,"quantity_maximum":1,"options":[{"id":34221668,"product_id":8750347,"name":"Salted Egg","description":"","price":10,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""}]},"26402715":{"id":26402715,"name":"Choices of topping - salted crab","description":"","quantity_minimum":0,"quantity_maximum":1,"options":[{"id":34221680,"product_id":8750345,"name":"Salted Crab","description":"","price":5,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""}]},"26402719":{"id":26402719,"name":"Choices of topping - corn som tum","description":"","quantity_minimum":1,"quantity_maximum":1,"options":[{"id":34221685,"product_id":8750333,"name":"Thai Style","description":"","price":0,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""},{"id":34221686,"product_id":8750336,"name":"Fermented Fish","description":"","price":0,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""},{"id":34221687,"product_id":8750345,"name":"Salted Crab","description":"","price":5,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""},{"id":34221688,"product_id":8750347,"name":"Salted Egg","description":"","price":10,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""}]},"26403410":{"id":26403410,"name":"Choices of serving - crab, mango, and pickled mussel som tum","description":"","quantity_minimum":0,"quantity_maximum":1,"options":[{"id":34224830,"product_id":8750336,"name":"Fermented Fish","description":"","price":0,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""}]},"26403417":{"id":26403417,"name":"Choices of serving - 2 style","description":"","quantity_minimum":1,"quantity_maximum":1,"options":[{"id":34224845,"product_id":8750333,"name":"Thai Style","description":"","price":0,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""},{"id":34224846,"product_id":8750336,"name":"Fermented Fish","description":"","price":0,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""}]},"26403418":{"id":26403418,"name":"Choices of meat - shrimp","description":"","quantity_minimum":1,"quantity_maximum":1,"options":[{"id":34224851,"product_id":8750339,"name":"Raw Shrimp","description":"","price":0,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""},{"id":34224852,"product_id":8750341,"name":"Cooked Shrimp","description":"","price":0,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""}]},"26403421":{"id":26403421,"name":"Choices of meat - blue crab","description":"","quantity_minimum":1,"quantity_maximum":1,"options":[{"id":34224854,"product_id":8750337,"name":"Raw Blue Crab","description":"","price":0,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""},{"id":34224855,"product_id":8750338,"name":"Cooked Blue Crab","description":"","price":0,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""}]},"26403428":{"id":26403428,"name":"Choices of serving - vietnamese chicken sausage","description":"","quantity_minimum":1,"quantity_maximum":1,"options":[{"id":34224865,"product_id":8750333,"name":"Thai Style","description":"","price":0,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""},{"id":34224866,"product_id":8750336,"name":"Fermented Fish","description":"","price":5,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""},{"id":34224867,"product_id":8750350,"name":"Salted Crab and Fermented Fish","description":"","price":10,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""}]},"26403432":{"id":26403432,"name":"Choices of topping - cucumber som tum","description":"","quantity_minimum":0,"quantity_maximum":1,"options":[{"id":34224904,"product_id":8750339,"name":"Raw Shrimp","description":"","price":30,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""},{"id":34224905,"product_id":8750345,"name":"Salted Crab","description":"","price":5,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""}]},"26403437":{"id":26403437,"name":"Choices of meat - lemongrass salad","description":"","quantity_minimum":1,"quantity_maximum":1,"options":[{"id":34224964,"product_id":8750339,"name":"Raw Shrimp","description":"","price":0,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""},{"id":34224965,"product_id":8750348,"name":"Cockle","description":"","price":0,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""}]},"26403448":{"id":26403448,"name":"Choices of meat - corn salad","description":"","quantity_minimum":1,"quantity_maximum":1,"options":[{"id":34224977,"product_id":8750334,"name":"Cockle, Raw Shrimp, and Blue Crab","description":"","price":10,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""},{"id":34224978,"product_id":8750339,"name":"Raw Shrimp","description":"","price":0,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""},{"id":34224979,"product_id":8750343,"name":"Raw Shrimp and Blue Crab","description":"","price":10,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""},{"id":34224980,"product_id":8750348,"name":"Cockle","description":"","price":0,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""}]},"26403453":{"id":26403453,"name":"Choices of meat - Spicy minced meat salad","description":"","quantity_minimum":1,"quantity_maximum":1,"options":[{"id":34225001,"product_id":8750332,"name":"Duck","description":"","price":10,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""},{"id":34225002,"product_id":8750335,"name":"Seafood","description":"","price":10,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""},{"id":34225003,"product_id":8750340,"name":"Beef","description":"","price":10,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""},{"id":34225004,"product_id":8750344,"name":"Glass Noodles","description":"","price":0,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""},{"id":34225005,"product_id":8750346,"name":"Catfish","description":"","price":10,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""},{"id":34225006,"product_id":8750349,"name":"Chicken","description":"","price":0,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""}]},"26403464":{"id":26403464,"name":"Choices of meat - grilled meat salad","description":"","quantity_minimum":1,"quantity_maximum":1,"options":[{"id":34225008,"product_id":8750340,"name":"Beef","description":"","price":20,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""},{"id":34225009,"product_id":8750349,"name":"Chicken","description":"","price":0,"is_sold_out":false,"is_half_half_applicable":false,"remote_code":""}]}},"accepts_instructions":true,"category_quantity":5,"loyalty_program_enabled":false,"loyalty_percentage_amount":0,"has_delivery_provider":true,"vertical":"restaurants","is_preorder_enabled":false,"is_vat_visible":true}'
         >
                             <aside class="top-skinny-banner-container">
                     <div id="skinny-banner-react-root-vendor-page"></div>
@@ -1157,9 +1223,6 @@ View
 
                                             </div>
                 </div>
-                                    <div class="vendor-closed-image-overlay">
-                        <div class="vendor-closed-until"><span class="vendor-closed">CLOSED</span> until Fri 10:00 AM</div>
-                    </div>
                                 <div class="postal-index-form-overlay"></div>
                 
 <div class="vendor-info-container">
@@ -1168,9 +1231,6 @@ View
         <div class="vendor-tag-ratings-percentage">
             <div class="vendor-tag-ratings">
                                                                 
-                                    <div class="closed-tag-container" data-toggle="modal" data-target="#rich-description">
-                        <span class="closed-tag">CLOSED</span>
-                    </div>
                 
                                             <div class="ratings-component" data-toggle="modal" data-target="#rich-description">
         <span class="stars">
@@ -1179,8 +1239,8 @@ View
 </svg>
         </span>
         <span class="rating"><strong>4.6</strong>/5</span>
-        <span class="count" data-count="(128)">
-            128
+        <span class="count" data-count="(140)">
+            140
         </span>
     </div>
                             </div>
@@ -1229,8 +1289,11 @@ View
                 <div class="menu__blocks">
                     <div class="menu__list-wrapper"
                          data-user-id='anonymous'
-                         data-vendor-is-open="closed"
-                         data-vendor-next-available="Fri 10:00 AM">
+                         data-vendor-is-open="open"
+                         data-vendor-next-available="Sun 11:08 AM">
+                                                     <section class="vendor-lane-section" id="vendor-quick-reorder"></section>
+                            <div id="quick-reorder-overview-provider"></div>
+                            <div id="quick-reorder-modal"></div>
                                                      <nav class="dish-menu-category-list hide">
         <div class="dish-control-holder">
             <div class="nav-holder">
@@ -1351,7 +1414,7 @@ View
                                         <div class="photo u-photo b-lazy" data-src="https://images.deliveryhero.io/image/fd-th/Products/8750269.jpg?width=302"></div>
                 </picture>
                     </div>
-        <section class="action-bar" data="Original" ff="closed">
+        <section class="action-bar" data="Original" ff="open">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                     from                                                                             à¸¿40.00
@@ -1390,7 +1453,7 @@ View
                                         <div class="photo u-photo b-lazy" data-src="https://images.deliveryhero.io/image/fd-th/Products/8750288.jpg?width=302"></div>
                 </picture>
                     </div>
-        <section class="action-bar" data="Original" ff="closed">
+        <section class="action-bar" data="Original" ff="open">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                     from                                                                             à¸¿45.00
@@ -1423,7 +1486,7 @@ View
 
                             </div>
                     </div>
-        <section class="action-bar" data="Original" ff="closed">
+        <section class="action-bar" data="Original" ff="open">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                                             à¸¿45.00
@@ -1462,7 +1525,7 @@ View
                                         <div class="photo u-photo b-lazy" data-src="https://images.deliveryhero.io/image/fd-th/Products/8750271.jpg?width=302"></div>
                 </picture>
                     </div>
-        <section class="action-bar" data="Original" ff="closed">
+        <section class="action-bar" data="Original" ff="open">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                     from                                                                             à¸¿50.00
@@ -1495,7 +1558,7 @@ View
 
                             </div>
                     </div>
-        <section class="action-bar" data="Original" ff="closed">
+        <section class="action-bar" data="Original" ff="open">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                                             à¸¿50.00
@@ -1528,7 +1591,7 @@ View
 
                             </div>
                     </div>
-        <section class="action-bar" data="Original" ff="closed">
+        <section class="action-bar" data="Original" ff="open">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                                             à¸¿50.00
@@ -1567,7 +1630,7 @@ View
                                         <div class="photo u-photo b-lazy" data-src="https://images.deliveryhero.io/image/fd-th/Products/8750280.jpg?width=302"></div>
                 </picture>
                     </div>
-        <section class="action-bar" data="Original" ff="closed">
+        <section class="action-bar" data="Original" ff="open">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                                             à¸¿55.00
@@ -1603,7 +1666,7 @@ View
                     </p>
                             </div>
                     </div>
-        <section class="action-bar" data="Original" ff="closed">
+        <section class="action-bar" data="Original" ff="open">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                     from                                                                             à¸¿60.00
@@ -1636,7 +1699,7 @@ View
 
                             </div>
                     </div>
-        <section class="action-bar" data="Original" ff="closed">
+        <section class="action-bar" data="Original" ff="open">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                                             à¸¿60.00
@@ -1672,7 +1735,7 @@ View
                     </p>
                             </div>
                     </div>
-        <section class="action-bar" data="Original" ff="closed">
+        <section class="action-bar" data="Original" ff="open">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                     from                                                                             à¸¿50.00
@@ -1708,7 +1771,7 @@ View
                     </p>
                             </div>
                     </div>
-        <section class="action-bar" data="Original" ff="closed">
+        <section class="action-bar" data="Original" ff="open">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                     from                                                                             à¸¿50.00
@@ -1744,7 +1807,7 @@ View
                     </p>
                             </div>
                     </div>
-        <section class="action-bar" data="Original" ff="closed">
+        <section class="action-bar" data="Original" ff="open">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                     from                                                                             à¸¿60.00
@@ -1780,7 +1843,7 @@ View
                     </p>
                             </div>
                     </div>
-        <section class="action-bar" data="Original" ff="closed">
+        <section class="action-bar" data="Original" ff="open">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                     from                                                                             à¸¿50.00
@@ -1816,7 +1879,7 @@ View
                     </p>
                             </div>
                     </div>
-        <section class="action-bar" data="Original" ff="closed">
+        <section class="action-bar" data="Original" ff="open">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                     from                                                                             à¸¿50.00
@@ -1855,7 +1918,7 @@ View
                                         <div class="photo u-photo b-lazy" data-src="https://images.deliveryhero.io/image/fd-th/Products/8750277.jpg?width=302"></div>
                 </picture>
                     </div>
-        <section class="action-bar" data="Original" ff="closed">
+        <section class="action-bar" data="Original" ff="open">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                     from                                                                             à¸¿50.00
@@ -1891,7 +1954,7 @@ View
                     </p>
                             </div>
                     </div>
-        <section class="action-bar" data="Original" ff="closed">
+        <section class="action-bar" data="Original" ff="open">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                     from                                                                             à¸¿50.00
@@ -1927,7 +1990,7 @@ View
                     </p>
                             </div>
                     </div>
-        <section class="action-bar" data="Original" ff="closed">
+        <section class="action-bar" data="Original" ff="open">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                     from                                                                             à¸¿50.00
@@ -1963,7 +2026,7 @@ View
                     </p>
                             </div>
                     </div>
-        <section class="action-bar" data="Original" ff="closed">
+        <section class="action-bar" data="Original" ff="open">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                     from                                                                             à¸¿50.00
@@ -1999,7 +2062,7 @@ View
                     </p>
                             </div>
                     </div>
-        <section class="action-bar" data="Original" ff="closed">
+        <section class="action-bar" data="Original" ff="open">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                     from                                                                             à¸¿50.00
@@ -2035,7 +2098,7 @@ View
                     </p>
                             </div>
                     </div>
-        <section class="action-bar" data="Original" ff="closed">
+        <section class="action-bar" data="Original" ff="open">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                                             à¸¿80.00
@@ -2074,7 +2137,7 @@ View
                                         <div class="photo u-photo b-lazy" data-src="https://images.deliveryhero.io/image/fd-th/Products/8750273.jpg?width=302"></div>
                 </picture>
                     </div>
-        <section class="action-bar" data="Original" ff="closed">
+        <section class="action-bar" data="Original" ff="open">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                                             à¸¿90.00
@@ -2110,7 +2173,7 @@ View
                     </p>
                             </div>
                     </div>
-        <section class="action-bar" data="Original" ff="closed">
+        <section class="action-bar" data="Original" ff="open">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                                             à¸¿80.00
@@ -2146,7 +2209,7 @@ View
                     </p>
                             </div>
                     </div>
-        <section class="action-bar" data="Original" ff="closed">
+        <section class="action-bar" data="Original" ff="open">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                                             à¸¿100.00
@@ -2182,7 +2245,7 @@ View
                     </p>
                             </div>
                     </div>
-        <section class="action-bar" data="Original" ff="closed">
+        <section class="action-bar" data="Original" ff="open">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                                             à¸¿100.00
@@ -2221,7 +2284,7 @@ View
                                         <div class="photo u-photo b-lazy" data-src="https://images.deliveryhero.io/image/fd-th/Products/8750293.jpg?width=302"></div>
                 </picture>
                     </div>
-        <section class="action-bar" data="Original" ff="closed">
+        <section class="action-bar" data="Original" ff="open">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                                             à¸¿100.00
@@ -2257,7 +2320,7 @@ View
                     </p>
                             </div>
                     </div>
-        <section class="action-bar" data="Original" ff="closed">
+        <section class="action-bar" data="Original" ff="open">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                     from                                                                             à¸¿80.00
@@ -2293,7 +2356,7 @@ View
                     </p>
                             </div>
                     </div>
-        <section class="action-bar" data="Original" ff="closed">
+        <section class="action-bar" data="Original" ff="open">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                                             à¸¿100.00
@@ -2329,7 +2392,7 @@ View
                     </p>
                             </div>
                     </div>
-        <section class="action-bar" data="Original" ff="closed">
+        <section class="action-bar" data="Original" ff="open">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                     from                                                                             à¸¿50.00
@@ -2365,7 +2428,7 @@ View
                                         <div class="photo u-photo b-lazy" data-src="https://images.deliveryhero.io/image/fd-th/Products/10264182.jpg?width=302"></div>
                 </picture>
                     </div>
-        <section class="action-bar" data="Original" ff="closed">
+        <section class="action-bar" data="Original" ff="open">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                                             à¸¿40.00
@@ -2409,7 +2472,7 @@ View
                                         <div class="photo u-photo b-lazy" data-src="https://images.deliveryhero.io/image/fd-th/Products/8750266.jpg?width=302"></div>
                 </picture>
                     </div>
-        <section class="action-bar" data="Original" ff="closed">
+        <section class="action-bar" data="Original" ff="open">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                                             à¸¿70.00
@@ -2442,7 +2505,7 @@ View
 
                             </div>
                     </div>
-        <section class="action-bar" data="Original" ff="closed">
+        <section class="action-bar" data="Original" ff="open">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                                             à¸¿70.00
@@ -2475,7 +2538,7 @@ View
 
                             </div>
                     </div>
-        <section class="action-bar" data="Original" ff="closed">
+        <section class="action-bar" data="Original" ff="open">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                                             à¸¿70.00
@@ -2508,7 +2571,7 @@ View
 
                             </div>
                     </div>
-        <section class="action-bar" data="Original" ff="closed">
+        <section class="action-bar" data="Original" ff="open">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                                             à¸¿70.00
@@ -2541,7 +2604,7 @@ View
 
                             </div>
                     </div>
-        <section class="action-bar" data="Original" ff="closed">
+        <section class="action-bar" data="Original" ff="open">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                                             à¸¿70.00
@@ -2577,7 +2640,7 @@ View
                     </p>
                             </div>
                     </div>
-        <section class="action-bar" data="Original" ff="closed">
+        <section class="action-bar" data="Original" ff="open">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                                             à¸¿60.00
@@ -2610,7 +2673,7 @@ View
 
                             </div>
                     </div>
-        <section class="action-bar" data="Original" ff="closed">
+        <section class="action-bar" data="Original" ff="open">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                                             à¸¿80.00
@@ -2643,7 +2706,7 @@ View
 
                             </div>
                     </div>
-        <section class="action-bar" data="Original" ff="closed">
+        <section class="action-bar" data="Original" ff="open">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                                             à¸¿80.00
@@ -2679,7 +2742,7 @@ View
                     </p>
                             </div>
                     </div>
-        <section class="action-bar" data="Original" ff="closed">
+        <section class="action-bar" data="Original" ff="open">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                                             à¸¿80.00
@@ -2715,7 +2778,7 @@ View
                     </p>
                             </div>
                     </div>
-        <section class="action-bar" data="Original" ff="closed">
+        <section class="action-bar" data="Original" ff="open">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                     from                                                                             à¸¿90.00
@@ -2748,7 +2811,7 @@ View
 
                             </div>
                     </div>
-        <section class="action-bar" data="Original" ff="closed">
+        <section class="action-bar" data="Original" ff="open">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                                             à¸¿90.00
@@ -2781,7 +2844,7 @@ View
 
                             </div>
                     </div>
-        <section class="action-bar" data="Original" ff="closed">
+        <section class="action-bar" data="Original" ff="open">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                                             à¸¿100.00
@@ -2814,7 +2877,7 @@ View
 
                             </div>
                     </div>
-        <section class="action-bar" data="Original" ff="closed">
+        <section class="action-bar" data="Original" ff="open">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                                             à¸¿80.00
@@ -2853,7 +2916,7 @@ View
                                         <div class="photo u-photo b-lazy" data-src="https://images.deliveryhero.io/image/fd-th/Products/8750299.jpg?width=302"></div>
                 </picture>
                     </div>
-        <section class="action-bar" data="Original" ff="closed">
+        <section class="action-bar" data="Original" ff="open">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                     from                                                                             à¸¿70.00
@@ -2892,7 +2955,7 @@ View
                                         <div class="photo u-photo b-lazy" data-src="https://images.deliveryhero.io/image/fd-th/Products/8750305.jpg?width=302"></div>
                 </picture>
                     </div>
-        <section class="action-bar" data="Original" ff="closed">
+        <section class="action-bar" data="Original" ff="open">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                     from                                                                             à¸¿70.00
@@ -2925,7 +2988,7 @@ View
 
                             </div>
                     </div>
-        <section class="action-bar" data="Original" ff="closed">
+        <section class="action-bar" data="Original" ff="open">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                                             à¸¿50.00
@@ -2958,7 +3021,7 @@ View
 
                             </div>
                     </div>
-        <section class="action-bar" data="Original" ff="closed">
+        <section class="action-bar" data="Original" ff="open">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                                             à¸¿50.00
@@ -2991,7 +3054,7 @@ View
 
                             </div>
                     </div>
-        <section class="action-bar" data="Original" ff="closed">
+        <section class="action-bar" data="Original" ff="open">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                                             à¸¿70.00
@@ -3027,7 +3090,7 @@ View
                                         <div class="photo u-photo b-lazy" data-src="https://images.deliveryhero.io/image/fd-th/Products/10264189.jpg?width=302"></div>
                 </picture>
                     </div>
-        <section class="action-bar" data="Original" ff="closed">
+        <section class="action-bar" data="Original" ff="open">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                                             à¸¿80.00
@@ -3063,7 +3126,7 @@ View
                                         <div class="photo u-photo b-lazy" data-src="https://images.deliveryhero.io/image/fd-th/Products/10264192.jpg?width=302"></div>
                 </picture>
                     </div>
-        <section class="action-bar" data="Original" ff="closed">
+        <section class="action-bar" data="Original" ff="open">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                                             à¸¿80.00
@@ -3104,7 +3167,7 @@ View
 
                             </div>
                     </div>
-        <section class="action-bar" data="Original" ff="closed">
+        <section class="action-bar" data="Original" ff="open">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                                             à¸¿70.00
@@ -3137,7 +3200,7 @@ View
 
                             </div>
                     </div>
-        <section class="action-bar" data="Original" ff="closed">
+        <section class="action-bar" data="Original" ff="open">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                                             à¸¿80.00
@@ -3170,7 +3233,7 @@ View
 
                             </div>
                     </div>
-        <section class="action-bar" data="Original" ff="closed">
+        <section class="action-bar" data="Original" ff="open">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                                             à¸¿70.00
@@ -3203,7 +3266,7 @@ View
 
                             </div>
                     </div>
-        <section class="action-bar" data="Original" ff="closed">
+        <section class="action-bar" data="Original" ff="open">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                                             à¸¿80.00
@@ -3239,7 +3302,7 @@ View
                                         <div class="photo u-photo b-lazy" data-src="https://images.deliveryhero.io/image/fd-th/Products/8750313.jpg?width=302"></div>
                 </picture>
                     </div>
-        <section class="action-bar" data="Original" ff="closed">
+        <section class="action-bar" data="Original" ff="open">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                                             à¸¿80.00
@@ -3275,7 +3338,7 @@ View
                                         <div class="photo u-photo b-lazy" data-src="https://images.deliveryhero.io/image/fd-th/Products/8750315.jpg?width=302"></div>
                 </picture>
                     </div>
-        <section class="action-bar" data="Original" ff="closed">
+        <section class="action-bar" data="Original" ff="open">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                                             à¸¿70.00
@@ -3311,7 +3374,7 @@ View
                                         <div class="photo u-photo b-lazy" data-src="https://images.deliveryhero.io/image/fd-th/Products/8750317.jpg?width=302"></div>
                 </picture>
                     </div>
-        <section class="action-bar" data="Original" ff="closed">
+        <section class="action-bar" data="Original" ff="open">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                                             à¸¿90.00
@@ -3355,7 +3418,7 @@ View
                                         <div class="photo u-photo b-lazy" data-src="https://images.deliveryhero.io/image/fd-th/Products/8750325.jpg?width=302"></div>
                 </picture>
                     </div>
-        <section class="action-bar" data="Original" ff="closed">
+        <section class="action-bar" data="Original" ff="open">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                                             à¸¿90.00
@@ -3391,7 +3454,7 @@ View
                                         <div class="photo u-photo b-lazy" data-src="https://images.deliveryhero.io/image/fd-th/Products/8750323.jpg?width=302"></div>
                 </picture>
                     </div>
-        <section class="action-bar" data="Original" ff="closed">
+        <section class="action-bar" data="Original" ff="open">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                                             à¸¿20.00
@@ -3427,7 +3490,7 @@ View
                                         <div class="photo u-photo b-lazy" data-src="https://images.deliveryhero.io/image/fd-th/Products/8750322.jpg?width=302"></div>
                 </picture>
                     </div>
-        <section class="action-bar" data="Original" ff="closed">
+        <section class="action-bar" data="Original" ff="open">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                                             à¸¿20.00
@@ -3463,7 +3526,7 @@ View
                                         <div class="photo u-photo b-lazy" data-src="https://images.deliveryhero.io/image/fd-th/Products/8750319.jpg?width=302"></div>
                 </picture>
                     </div>
-        <section class="action-bar" data="Original" ff="closed">
+        <section class="action-bar" data="Original" ff="open">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                                             à¸¿20.00
@@ -3499,7 +3562,7 @@ View
                                         <div class="photo u-photo b-lazy" data-src="https://images.deliveryhero.io/image/fd-th/Products/8750326.jpg?width=302"></div>
                 </picture>
                     </div>
-        <section class="action-bar" data="Original" ff="closed">
+        <section class="action-bar" data="Original" ff="open">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                                             à¸¿25.00
@@ -3538,7 +3601,7 @@ View
                                         <div class="photo u-photo b-lazy" data-src="https://images.deliveryhero.io/image/fd-th/Products/8750328.jpg?width=302"></div>
                 </picture>
                     </div>
-        <section class="action-bar" data="Original" ff="closed">
+        <section class="action-bar" data="Original" ff="open">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                                             à¸¿80.00
@@ -3577,7 +3640,7 @@ View
                                         <div class="photo u-photo b-lazy" data-src="https://images.deliveryhero.io/image/fd-th/Products/8750324.jpg?width=302"></div>
                 </picture>
                     </div>
-        <section class="action-bar" data="Original" ff="closed">
+        <section class="action-bar" data="Original" ff="open">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                                             à¸¿70.00
@@ -3618,7 +3681,7 @@ View
 
                             </div>
                     </div>
-        <section class="action-bar" data="Original" ff="closed">
+        <section class="action-bar" data="Original" ff="open">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                                             à¸¿10.00
@@ -3651,7 +3714,7 @@ View
 
                             </div>
                     </div>
-        <section class="action-bar" data="Original" ff="closed">
+        <section class="action-bar" data="Original" ff="open">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                                             à¸¿15.00
@@ -3684,7 +3747,7 @@ View
 
                             </div>
                     </div>
-        <section class="action-bar" data="Original" ff="closed">
+        <section class="action-bar" data="Original" ff="open">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                                             à¸¿10.00
@@ -3741,9 +3804,6 @@ View
                                 </div>
                             </section>
                         </div>
-                                                    <div class="menu-disabled"></div>
-                            <div id="vendor-closed-root"></div>
-                            <div id="vendor-closed-modal"></div>
                                                 <div id="alcohol-disclaimer-root"></div>
                         <div id="alcohol-disclaimer-modal"></div>
                         <div id="react-cart-modal"></div>
@@ -3890,7 +3950,7 @@ View
                  data-is-vat-included-in-product-price="">
                 <div class="desktop-cart mobile-cart__hidden"
                      data-minimum_order_amount="0"
-                     data-vendor-is-open="closed"
+                     data-vendor-is-open="open"
                      data-vendor-master-category-ids="[]">
                                     </div>
             </div>
@@ -4101,7 +4161,7 @@ View
                         <h3 class="desktop-cart__title" data-testid="cartlib-cart-title">
                 Your order from <span>Somtam Mae Ja</span>            </h3>
                                     <p class="desktop-cart_order__message">
-                                    The restaurant is closed
+                                    You havenât added anything to your cart yet! Start adding your favourite dishes 
                             </p>
         </div>
         <!-- Actual Cart -->
@@ -4291,9 +4351,24 @@ View
 </script>
 
 <script type="text/template" id="template-cart-checkout-button">
-                
-<button class="button full button--disabled disabled" data-vendor-code="r1nc">CURRENTLY UNAVAILABLE</button>
-        <div class="error-message full desktop-cart__error__below-minimum-amount hide" id="" >
+            
+<button class="button full btn-upsell btn-checkout hide" data-vendor-code="r1nc">Go to checkout</button>
+
+        
+<button class="button full btn-confirm-below-minimum-amount btn-checkout hide" data-vendor-code="r1nc">Go to checkout</button>
+
+        
+<button class="button full btn-checkout btn-to-checkout hide" data-vendor-code="r1nc"data-captcha-container=captcha-container-cart>Go to checkout</button>
+
+        
+<button class="button full btn-below-minimum-amount button--disabled btn-checkout disabled hide" data-vendor-code="r1nc"data-captcha-container=captcha-container-cart>Go to checkout</button>
+
+        
+<button class="button full btn-confirm-preorder btn-checkout hide" data-vendor-code="r1nc"data-captcha-container=captcha-container-cart>Go to checkout</button>
+
+        
+<button class="button full js-payment-disabled button--disabled btn-checkout disabled hide" data-vendor-code="r1nc"data-captcha-container=captcha-container-cart>Go to checkout</button>
+            <div class="error-message full desktop-cart__error__below-minimum-amount hide" id="" >
     You need to add more items to be able to checkout
 </div>
 
@@ -5342,8 +5417,8 @@ Write comments in case you are allergic to ingredients or want to exclude some."
 </svg>
         </span>
         <span class="rating"><strong>4.6</strong>/5</span>
-        <span class="count" data-count="(128)">
-            128
+        <span class="count" data-count="(140)">
+            140
         </span>
     </div>
                                             </div>
@@ -5360,8 +5435,7 @@ Write comments in case you are allergic to ingredients or want to exclude some."
                     <div class="opening-time">
                         
     
-            <span class="line-wrapper">Available for preorder</span>
-        <span>Friday</span>
+            <span class="green-class">Open</span>
     
 <span class="schedule-times">
            10:00 AM - 5:30 PM    </span>
@@ -5752,7 +5826,7 @@ Write comments in case you are allergic to ingredients or want to exclude some."
             error: false
         },
         onError: function (payload, error) {
-            var requestId = '0e0edb2848162c65a06019d48bccfe9c';
+            var requestId = '4bc5c82a197f6ec902c1cdc6a3f42e4c';
             var appVersion = '9fbbae4';
             var appVersionName = 'master';
             var featureFlags;
@@ -6166,5 +6240,5 @@ Write comments in case you are allergic to ingredients or want to exclude some."
     </span>
 </script>
 
-        <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam-cell.nr-data.net","licenseKey":"f77b1abc66","applicationID":"66674442,97495756,49764655","transactionName":"bldXNUJYXhAABxBZDVcddhRDTV8OTjILXA1ldEcOXk1VDQUmEV4GVVdpIl9XRBEOCAhVEGVkUA9UVkIgDgoQQg1VXlATCgNGBg8AC0IjWkZcDl4=","queueTime":1,"applicationTime":1958,"atts":"QhBUQwpCTR4=","errorBeacon":"bam-cell.nr-data.net","agent":""}</script></body>
+        <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam-cell.nr-data.net","licenseKey":"f77b1abc66","applicationID":"66674442,97495756,49764655","transactionName":"bldXNUJYXhAABxBZDVcddhRDTV8OTjILXA1ldEcOXk1VDQUmEV4GVVdpIl9XRBEOCAhVEGVkUA9UVkIgDgoQQg1VXlATCgNGBg8AC0IjWkZcDl4=","queueTime":1502,"applicationTime":1089,"atts":"QhBUQwpCTR4=","errorBeacon":"bam-cell.nr-data.net","agent":""}</script></body>
 </html>

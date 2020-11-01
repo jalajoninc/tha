@@ -5,7 +5,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge"><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"f77b1abc66",applicationID:"66674442"};window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var i=t[n]={exports:{}};e[n][0].call(i.exports,function(t){var i=e[n][1][t];return r(i||t)},i,i.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(e,t,n){function r(){}function i(e,t,n){return function(){return o(e,[u.now()].concat(c(arguments)),t?null:this,n),t?void 0:this}}var o=e("handle"),a=e(6),c=e(7),f=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(e,t){s[t]=i(p+t,!0,"api")}),s.addPageAction=i(p+"addPageAction",!0),s.setCurrentRouteName=i(p+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,i="function"==typeof t;return o(l+"tracer",[u.now(),e,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return t.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],n),e}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=i(l+t)}),newrelic.noticeError=function(e,t){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,t])}},{}],2:[function(e,t,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=e(8);t.exports=r,t.exports.offset=a,t.exports.getLastTimestamp=i},{}],3:[function(e,t,n){function r(e,t){var n=e.getEntries();n.forEach(function(e){"first-paint"===e.name?d("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&d("timing",["fcp",Math.floor(e.startTime)])})}function i(e,t){var n=e.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(e){e.getEntries().forEach(function(e){e.hadRecentInput||d("cls",[e])})}function a(e){if(e instanceof m&&!g){var t=Math.round(e.timeStamp),n={type:e.type};t<=p.now()?n.fid=p.now()-t:t>p.offset&&t<=Date.now()?(t-=p.offset,n.fid=p.now()-t):t=p.now(),g=!0,d("timing",["fi",t,n])}}function c(e){d("pageHide",[p.now(),e])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var f,u,s,d=e("handle"),p=e("loader"),l=e(5),m=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){f=new PerformanceObserver(r);try{f.observe({entryTypes:["paint"]})}catch(v){}u=new PerformanceObserver(i);try{u.observe({entryTypes:["largest-contentful-paint"]})}catch(v){}s=new PerformanceObserver(o);try{s.observe({type:"layout-shift",buffered:!0})}catch(v){}}if("addEventListener"in document){var g=!1,y=["click","keydown","mousedown","pointerdown","touchstart"];y.forEach(function(e){document.addEventListener(e,a,!1)})}l(c)}},{}],4:[function(e,t,n){function r(e,t){if(!i)return!1;if(e!==i)return!1;if(!t)return!0;if(!o)return!1;for(var n=o.split("."),r=t.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}t.exports={agent:i,version:o,match:r}},{}],5:[function(e,t,n){function r(e){function t(){e(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,t,!1)}t.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],6:[function(e,t,n){function r(e,t){var n=[],r="",o=0;for(r in e)i.call(e,r)&&(n[o]=t(r,e[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],7:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,i=n-t||0,o=Array(i<0?0:i);++r<i;)o[r]=e[t+r];return o}t.exports=r},{}],8:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function i(e){function t(e){return e&&e instanceof r?e:e?f(e,c,o):o()}function n(n,r,i,o){if(!p.aborted||o){e&&e(n,r,i);for(var a=t(i),c=v(n),f=c.length,u=0;u<f;u++)c[u].apply(a,r);var d=s[w[n]];return d&&d.push([b,n,r,a]),a}}function l(e,t){h[e]=v(e).concat(t)}function m(e,t){var n=h[e];if(n)for(var r=0;r<n.length;r++)n[r]===t&&n.splice(r,1)}function v(e){return h[e]||[]}function g(e){return d[e]=d[e]||i(n)}function y(e,t){u(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var h={},w={},b={on:l,addEventListener:l,removeEventListener:m,emit:n,get:g,listeners:v,context:t,buffer:y,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var c="nr@context",f=e("gos"),u=e(6),s={},d={},p=t.exports=i();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(i.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[t]=r,r}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){i.buffer([e],r),i.emit(e,t,n)}var i=e("ee").get("handle");t.exports=r,r.ee=i},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!E++){var e=b.info=NREUM.info,t=p.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return u.abort();f(h,function(t,n){e[t]||(e[t]=n)});var n=a();c("mark",["onload",n+b.offset],null,"api"),c("timing",["load",n]);var r=p.createElement("script");r.src="https://"+e.agent,t.parentNode.insertBefore(r,t)}}function i(){"complete"===p.readyState&&o()}function o(){c("mark",["domContent",a()+b.offset],null,"api")}var a=e(2),c=e("handle"),f=e(6),u=e("ee"),s=e(4),d=window,p=d.document,l="addEventListener",m="attachEvent",v=d.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:v,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var y=""+location,h={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1184.min.js"},w=v&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),b=t.exports={offset:a.getLastTimestamp(),now:a,origin:y,features:{},xhrWrappable:w,userAgent:s};e(1),e(3),p[l]?(p[l]("DOMContentLoaded",o,!1),d[l]("load",r,!1)):(p[m]("onreadystatechange",i),d[m]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var E=0},{}],"wrap-function":[function(e,t,n){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(7),a="nr@original",c=Object.prototype.hasOwnProperty,f=!1;t.exports=function(e,t){function n(e,t,n,i){function nrWrapper(){var r,a,c,f;try{a=this,r=o(arguments),c="function"==typeof n?n(r,a):n||{}}catch(u){p([u,"",[r,a,i],c])}s(t+"start",[r,a,i],c);try{return f=e.apply(a,r)}catch(d){throw s(t+"err",[r,a,d],c),d}finally{s(t+"end",[r,a,f],c)}}return r(e)?e:(t||(t=""),nrWrapper[a]=e,d(e,nrWrapper),nrWrapper)}function u(e,t,i,o){i||(i="");var a,c,f,u="-"===i.charAt(0);for(f=0;f<t.length;f++)c=t[f],a=e[c],r(a)||(e[c]=n(a,u?c+i:i,o,c))}function s(n,r,i){if(!f||t){var o=f;f=!0;try{e.emit(n,r,i,t)}catch(a){p([a,n,r,i])}f=o}}function d(e,t){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(e);return n.forEach(function(n){Object.defineProperty(t,n,{get:function(){return e[n]},set:function(t){return e[n]=t,t}})}),t}catch(r){p([r])}for(var i in e)c.call(e,i)&&(t[i]=e[i]);return t}function p(t){try{e.emit("internal-error",t)}catch(n){}}return e||(e=i),n.inPlace=u,n.flag=a,n}},{}]},{},["loader"]);</script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
-        <title>                Aiya Shabu delivery near you in Satun | foodpanda
+        <title>                Aiya Shabu Halal delivery near you in Satun | foodpanda
     </title>
 
                                                 
@@ -31,18 +31,18 @@
         <meta name="msapplication-square310x310logo" content="https://assets.foodora.com/9fbbae4/img/favicon/foodpanda/square310x310logo.png?9fbbae4">
         <meta name="msapplication-wide310x150logo" content="https://assets.foodora.com/9fbbae4/img/favicon/foodpanda/wide310x150logo.png?9fbbae4">
 
-            <link rel="canonical" href="https://www.foodpanda.co.th/restaurant/m5vw/aiya-shabu" />
+            <link rel="canonical" href="https://www.foodpanda.co.th/restaurant/m5vw/aiya-shabu-halal" />
 <meta name="robots" content="index, follow" />
 
 
-                <meta name="description" content="Order your food from Aiya Shabu â Delivery to your home or office â Check full menu  â Safe &amp; easy payment options">
+                <meta name="description" content="Order your food from Aiya Shabu Halal â Delivery to your home or office â Check full menu  â Safe &amp; easy payment options">
     
     
 
             
         <link rel="stylesheet" href="https://assets.foodora.com/9fbbae4/css/dist/th-menu-page.css?9fbbae4" />
 
-            <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+            <link href="https://micro-assets.foodora.com/fonts/MuseoSans.css" rel="stylesheet">
     
                     
                 
@@ -52,7 +52,7 @@
         "@context": "http://schema.org",
         "@type": "Restaurant",
         "@id": "https://www.foodpanda.co.th/restaurant/m5vw",
-        "name": "Aiya Shabu",
+        "name": "Aiya Shabu Halal",
         "address": {
             "@type": "PostalAddress",
             "streetAddress": "959 Big C Satun Klongkut Muang Satun",
@@ -65,14 +65,14 @@
             "latitude": 6.63881668,
             "longitude": 100.0698094
         },
-        "url": "https://www.foodpanda.co.th/restaurant/m5vw/aiya-shabu",
+        "url": "https://www.foodpanda.co.th/restaurant/m5vw/aiya-shabu-halal",
         "telephone": "",
-        "menu": "https://www.foodpanda.co.th/restaurant/m5vw/aiya-shabu",
+        "menu": "https://www.foodpanda.co.th/restaurant/m5vw/aiya-shabu-halal",
         "potentialAction": {
             "@type": "OrderAction",
             "target": {
                 "@type": "EntryPoint",
-                "urlTemplate": "https://www.foodpanda.co.th/restaurant/m5vw/aiya-shabu?utm_source=google&amp;utm_medium=organic&amp;utm_campaign=google_place_order_action",
+                "urlTemplate": "https://www.foodpanda.co.th/restaurant/m5vw/aiya-shabu-halal?utm_source=google&amp;utm_medium=organic&amp;utm_campaign=google_place_order_action",
                 "inLanguage": "en",
                 "actionPlatform": [
                     "http://schema.org/DesktopWebPlatform",
@@ -112,11 +112,11 @@
             "@type": "ListItem",
             "position": 3,
             "name": "Restaurant",
-            "item": "https://www.foodpanda.co.th/restaurant/m5vw/aiya-shabu"
+            "item": "https://www.foodpanda.co.th/restaurant/m5vw/aiya-shabu-halal"
         },{
             "@type": "ListItem",
             "position": 4,
-            "name": "Aiya Shabu"
+            "name": "Aiya Shabu Halal"
         }]
     }
 </script>
@@ -307,21 +307,21 @@ View
         <div class="language-switch">
                                                     
         <a class="active"
-           href="/restaurant/m5vw/aiya-shabu"
+           href="/restaurant/m5vw/aiya-shabu-halal"
 
            data-locale="en">
             en
         </a>
                                                     
         <a class=""
-           href="/th/restaurant/m5vw/aiya-shabu"
+           href="/th/restaurant/m5vw/aiya-shabu-halal"
 
            data-locale="th">
             th
         </a>
                                                     
         <a class=""
-           href="/ja/restaurant/m5vw/aiya-shabu"
+           href="/ja/restaurant/m5vw/aiya-shabu-halal"
 
            data-locale="ja">
             ja
@@ -627,7 +627,7 @@ View
 
     <div class="facebook-button-wrapper js-facebook-button-wrapper" data-msg-no-email="Sorry, your account with facebook cannot be registered because an email address is missing.">
         
-<button class="facebook-button button " data-target-path="&#x2F;restaurant&#x2F;m5vw&#x2F;aiya-shabu"><span class="facebook-button__content">
+<button class="facebook-button button " data-target-path="&#x2F;restaurant&#x2F;m5vw&#x2F;aiya-shabu-halal"><span class="facebook-button__content">
                           <span class="facebook-button__logo">Facebook login</span></span></button>
     </div>
     <div class="login-separator">Or</div>
@@ -640,8 +640,8 @@ View
       data-server-errors="&quot;{}&quot;"
       novalidate
 >
-    <input type="hidden" name="_csrf_token" value="1603976799:KsgYR6ZHcf13175k0+fVMMFUTnIzfYHNxMCaGjvjAv8bCo8kNKNyxQ7RzL6hKoHZLW7Nncprh8VVbIVivUod+A==:ltiQNUAcKGofw4eqH1W2ROF0QBUfuEACGi/jIhNC1ii25vMcibJCWmSxZRO30hBi8z5TSTDHIEddWbJFjmOhWw==" >
-    <input type="hidden" name="_target_path" value="/restaurant/m5vw/aiya-shabu" >
+    <input type="hidden" name="_csrf_token" value="1604203691:Q/jnc7OJCU8mZR5j5pT78wszoDtVwqjJQh6ljAoDn7w6LNcbQKS81OQJ/kIqbne5FvsfB+X6tbMDs4F+a8nn/A==:Av7elurdg4Z6ouROCTb9D2fvUung6sUNVYYwLMrnP54J8HNzAcuPt9vlPwrNfj5r2qQENVqJfQ39J8+AWEvHig==" >
+    <input type="hidden" name="_target_path" value="/restaurant/m5vw/aiya-shabu-halal" >
 
     
 <div class="input-box js-input-box ">
@@ -676,7 +676,7 @@ View
 
     <div class="facebook-button-wrapper" data-msg-no-email="Sorry, your account with facebook cannot be registered because an email address is missing.">
         
-<button class="facebook-button button full " data-target-path="&#x2F;restaurant&#x2F;m5vw&#x2F;aiya-shabu"><span class="facebook-button__content">
+<button class="facebook-button button full " data-target-path="&#x2F;restaurant&#x2F;m5vw&#x2F;aiya-shabu-halal"><span class="facebook-button__content">
                         <span class="facebook-button__logo">Register with Facebook</span></span></button>
     </div>
     <div class="login-separator">Or</div>
@@ -725,7 +725,7 @@ View
         
 <button class="button full " type="submit"data-captcha-container=captcha-register>Register</button>
 
-    <input type="hidden" name="_target_path" value="/restaurant/m5vw/aiya-shabu" >
+    <input type="hidden" name="_target_path" value="/restaurant/m5vw/aiya-shabu-halal" >
 </form>
         <div class="text-center login-registration-link">You have an account? <a class="login-link">Login</a></div>
     </div>
@@ -992,8 +992,8 @@ View
 
         VOLO.configuration = VOLO.configuration || {};
         VOLO.configuration.features = {
-            user: {"key":"184.22.177.204","ip":"184.22.177.204","custom":{"country_code":"th","platform":"b2c","cookie_key":"184.22.146.94"},"anonymous":true},
-            flags: {"reviews":"On","yum":"na","self-service":true,"verticals":"[      {          \u0022id\u0022: \u0022restaurants\u0022,          \u0022title_key\u0022: \u0022NEXTGEN_RESTAURANT_ENTRY_TAB\u0022, \t\t          \u0022title_key_web\u0022: \u0022restaurants.entry_tab\u0022,           \u0022vertical_types\u0022: [\u0022restaurants\u0022],         \t          \u0022title_icon_res\u0022: \u0022ic_vert_restaurants\u0022      \t                },            {          \u0022id\u0022: \u0022shop\u0022,          \u0022title_key\u0022: \u0022NEXTGEN_SHOPS_ENTRY_TAB\u0022, \t          \u0022title_key_web\u0022: \u0022shops.entry_tab\u0022,                 \u0022vertical_types\u0022: [\u0022shop\u0022],                   \u0022title_icon_res\u0022: \u0022ic_vert_shops\u0022      \t           }  ]","best-price":false,"sameday-preorder-popup":true,"df":"On","use-optimizely":false,"react-map":"yes","show-darkstore-tile":true,"address-snapping-tooltip":"na","cashier-sdk":false,"cs-menu":"On","global-search-rdp":false,"restaurant-chat":false,"always-display-item-modifier":false,"rider-map":true,"subPlans":true,"login-registration-tabs":true,"otp-horizontal-progressbar":2,"preorder-popup-on-rdp":false,"subscriptions":"NA","payment-tokens":true,"check-2":true,"rating":"On","time-range-on-otp":false,"verticals-feed-config":"config-1","vendor-tile-extra-info":true,"voucher-wallet":true,"ratings-reviews":true,"search-suggests":"On","mc":"Variant","quick-reorder-in-rdp":"quick-reorder-off","where-component":true,"ab-test-flags":"cs-cart,alan-hc,search-config,self-service,verticals,react-map,show-wallet,apple-login,otp-time-format","cartapi":true,"no-delivery-time-on-rlp-rdp-checkout":false,"subscriptions-new-card":true,"verticals-fork":"Variant1","otp-rewards":false,"new-vendor-tile":"Variant","when-component":true,"item-counter":false,"darkstores-web-ui":false,"show-price-from-with-non-zero-topping-price":true,"perimeterx":true,"should-check-for-app-updates":false,"newcart":false,"delay-gmap":"after-load","otp-audience":false,"rdp-recommendation":"Variant","menu-platform-specific-products":false,"promo-banner":true,"vendor-sorting":true,"autocomplete-config":"Variant2","time-range":"NA","add-address":"n\/a","show-subtitles-on-otp":false,"always-map":"n\/a","show-cutlery-toggle":true,"ignore-events":true,"new-search-flow":"NA","disable-rider-banner":false,"should-use-mapped-toppings":true,"checkout_map":"Variant","challenges":false,"tracking-card-web":true,"enable-alfred":false,"wsb":"On","mov":"Off","sold-out-items":false,"rectify-where-component":true,"reward-challenge-enabled":false,"showIM":"Original","should-confirm-preorder":"2","cs-cart":"all-items","vendor-dh-recommendation":"recommendations-off","welcome-to-verticals":false,"establishment-as-building":true,"deals":true,"eta-range-otp":0,"brand":"foodpanda","tr-card-revamp":"true","index-secondary-language":true,"help-center-access":false,"separate-vendor-chain-meta":true,"using-sherlock-as-api":true,"search-config":"Variant6","mbl-google-address-variant":"Variant","group-order-split-allowance":true,"cs-backend":"default","dd-logs":false,"otp-revamp":true,"favorites":"Variant","redirect-chain-vendors":true,"multi-tags":"2","mbl-google-address":false,"dish-detailed-information":false,"rewards-back-office-write-access":false,"use-atlas-proxy-get-by-id-endpoint":false,"cookies-banner":false,"klarna-in-microfrontend":false,"city-page-limit":500,"ds":"vendors_only","cancellation-button":false,"bottom-bar":"NA","characteristics":"Variant","new-payment-selector":true,"check-1":true,"verticals-autocomplete-config":"config-1","archimedes-fwf-enabled":false,"free-scroll-in-swimlanes":true,"address-tooltip":2,"new-city-page":true,"out-of-stock-verticals":[],"variations-line-rdp":false,"get-direction":true,"product-listing-verticals":false,"ios-hs":"On","saved-address":true,"dps":"Original","show-vipps":false,"new-credit-card-form-react":false,"cselling":"multiple-variations","sorting":"Original","rlp-to-mf":"Variant","ios-app-reviews":true,"alcohol-verticals":true,"preorder":true,"item-modifier-redesign":"v1","mBanner":1,"cancel-cap-limit":5,"upsell-drinks":true,"x-sell-otp-nv":"off","parallel-calls-rlp":"NA","mbl-dynamic-fields":"Original","timed-menus":true,"swimlanes":"Original","vendor-dh-reco":false,"new-nav-flow":"Control","alco-rest":true,"location-lib":false,"distance-on-pickup":true,"zopim-chat":true,"hero-image":false,"rewards-feature-variation":"na","campaign-service":"campaign-service","shadow":"NA","loyalty":true,"cuisines":"Original","download-personal-data":false,"darkstores-landing-page-config":"dark-stores-config-2","rdp-dialog":"1","ios-app-reviews-not-after-first":true,"x-sell-placement":"control","raf-migration":true,"payios":false,"react-cart":true,"chained-place-order":false,"closed-on-rlp":"Label_center","exposed-filters":"Off","additional-information-on-checkout":false,"override-flags":false,"get-direction-otp":true,"ab_test_flags":"vendor-tile-extra-info,swimlanes,upsell-drinks,self-service,when-component,apple-pay-inline-setup,rider-map,ds","organicList":"Variant1","verticals-out-of-stock":"[{\u0022text\u0022:\u0022NEXTGEN_SoldOutOptions_Refund\u0022,\u0022option\u0022:\u0022REFUND\u0022,\u0022default\u0022:true},{\u0022text\u0022:\u0022NEXTGEN_SoldOutOptions_Cancel\u0022,\u0022option\u0022:\u0022CANCEL\u0022,\u0022default\u0022:false}]","apple-pay-inline-setup":false,"flexiadd":true,"nv-entry-point-config":1,"joker":"on","quick-filters":true,"always-open-item-modifier-foo":false,"df-info-icon":false,"new-authentication-flow":true,"px":true,"address-snapping-tooltip-radius":200,"show-restaurant-contact-information":false,"challenge-special-provider-enabled":["pickup","vendor_delivery"],"self-reference-canonical":true,"od-vd-rlp":"NA","x-sell-discounts":"variant","auto-apply":true,"variations":true,"groupie":true,"show-wallet":false,"web-lists":"Variant1","alan-hc":true,"disable-migration-banner":true,"pagination":true,"disable-smartphone-banner":false,"out-of-stock-component":"Off","budget":"Variant","rdp-reco":true,"aggregate-regions":false,"global-search-rlp":false,"customer-rider-chat":{"apiKey":"FF804081-D96C-48F4-ADCE-C3BB82782434","isEnabled":true,"localesMapping":{"en":"en","ja":"ja","th":"th"}},"address-book-mf":true,"address-snapping-tooltip-a":"Variation1","address-snapping-tooltip-b":"Variation1","address-snapping-tooltip-d":"Variation1","address-svc-use-geolocator-find-city":false,"alfred-performance-adjustment":true,"allergenspdf":false,"apple-login":false,"archimedes-enable-offer-voucher-validation":true,"archimedes-use-discount-data-from-watson":true,"b2b-landing":false,"block-preorders":"disabled","cache-vendor-from-watson":true,"campaign-shop-carousel":true,"carousel-ui-style":"carousel_listview","cart-service-circuit-breaker-enabled":true,"cart-service-enable-djini":false,"cart-to-checkout-cta":"Control","cashier-token-sync":false,"catalog-service-disable-database-writes":false,"catalog-service-enable-rdp-call-customer-option":true,"catalog-service-out-of-stock":false,"catalog-service-rdp-use-circuit-breaker":true,"catalog-service-send-non-restaurants-product-update-on-dedicated-sns":false,"checkout-during-events":"Allow if shrinking","checkout-request-invoice":false,"city-in-checkout":true,"closing-soon":"Control","contactless-delivery":false,"corporate-self-signup":true,"custom-rider-icon":"true","customer-active-consent":"Control","darkstore-category-discovery1":"Control","darkstore-category-scroll1":"Control","darkstore-limit-items-per-sku":"Control","darkstore-past-order":"Control","darkstore-search-entry1":"Variation1","darkstore-search-redesign1":"Variation1","darkstore-tile-variant":"variant","darkstores-show-low-in-stock":false,"disable-cutlery-for-vd":false,"discount-title-as-tag":true,"dynamic-pricing-indicator":"Original","enable-archimedes-request-logging":false,"enable-cod-with-rider-tip":false,"enable-df-address-notifier":true,"enable-df-address-svc-worker":true,"enable-search-populator-long-closure":true,"expose-current-location":"Original","favorites-shops":false,"filter-ux-revamp":"Variation1","filters-shops":false,"first-name-last-name-order":true,"force-enroll-internal-users":false,"fork-dismiss-btn":"Original","geolocator-enable-df-ingest":true,"geolocator-enable-tpl-cache":true,"geolocator-providers-ab-testing-experimental":"Control","geolocator-use-city-service":true,"geolocator-use-country-service":true,"gps-timeout":"3000","help-center":"global-hc","is-beta-enabled":true,"is-internal-beta-enabled":true,"locate-me":"Variant2","location-read-city-from-vendor-in-checkout":false,"max-change-country-address-svc-worker":"2000","mbl_google_address":true,"merge-cashback":"Control","modular-subscription":"NA","nested-products":"Off","nested-products-ab":"Control","nested-products-shops":"Variation1","new-authentication-web":true,"new-checkout-flow-ab":"Control","new-customer-validation":true,"new-homepage":"Control","open-sans":"Variation1","order-summary-checkout":"Control","organic-list":"Original","otp-microfrontend":"Variation1","otp-time-format":"Control","out-of-stock":false,"passwordless-account":false,"patch-device-token":false,"payment_code_adyen_applepay":false,"payment_code_adyen_creditcard":true,"payment_code_adyen_googlepay":false,"payment_code_antfinancial_bkash":true,"payment_code_antfinancial_gcash":false,"payment_code_antfinancial_truemoney":false,"payment_code_cybersource_creditcard":false,"payment_code_paypal":true,"payment_code_spreedly_creditcard":true,"pickup-awareness-on-checkout":false,"pickup-map-config":"{\u0022isEnabled\u0022:false}","pickup-rlp-banner-config":{"backgroundColor":"#F7BDD1","description":"NEXTGEN_PICKUP_BANNER_DESCRIPTION","imageUrl":"https:\/\/images.deliveryhero.io\/image\/fd-th\/pickup\/pickup_banner.png","isEnabled":true,"title":"NEXTGEN_PICKUP_BANNER_TITLE"},"pickup-swimlane":"pickup-control","prevent-duplicated-orders":true,"process-by-country-address-svc-worker":true,"promoted-on-rlp":true,"quantity_stepper_animation":"Control","recent-searches":"Variation1","referral-flow":"Control","referral-links":"Variant2","return-closed-vendors":true,"rewards-back-office-global-user":false,"rewards-communication-challenge-rewarded":false,"rewards-data-stream":true,"rewards-feature":"Control","rewards-flash-challenges":"Control","rewards-multi-step-challenges":false,"rider-chat-alert":"Variation1","rider-chat-new-msg":true,"rider-tip":false,"rlp-address-map":"Variation1","search-closed-vendor-restaurants":"Variation1","search-closed-vendor-shops":"Variation1","search-populator-process-events":true,"search-suggests-shops":"Off","share-rdp":false,"shops-swimlanes":"shops-variant","shops_maxsales_parameter":true,"show-free-delivery-tag-on-zero-delivery-fee":true,"show-pickup-tooltip":true,"show-skinny-banner":false,"show-wallet-setting":true,"show-wallet-setting-refund-destination":true,"showim":"Original","simplify-cart-calculation":{"*":2,"auto-apply-voucher_delivery":2,"auto-apply-voucher_delivery_rider-tip":2,"auto-apply-voucher_delivery_voucher":2,"auto-apply-voucher_pickup":2,"auto-apply-voucher_pickup_voucher":2,"delivery":2,"delivery_rider-tip":2,"delivery_rider-tip_voucher":2,"delivery_voucher":2,"pickup":2,"pickup_voucher":2},"static-map-checkout":"Control","stm-on-otp":"Control","subscribe-with-new-card":true,"subscription-payment-through-saved-card":true,"two-factor-authentication":false,"use-midas-boost-on-watson":false,"use-new-sorting":false,"use-tes-for-ddt":true,"use-watson-integration":true,"uxcam-sdk":false,"vcb-rlp":"Control","vendor-service-block-db-writes":true,"vendor-service-enable-logistics-offset":true,"vertical-inline-add-to-cart":"Control","verticals-dish-portal":false,"verticals-listing-search-filters":"Control","verticals-new-cart":false,"verticals-oos-default":"refund","verticals-shop-categories":"original","verticals-show-delivery-fee":false,"verticals-vendor-disclaimers":true,"watson-apply-discounts-on-watson":true,"watson-dynamodb-rdp":true,"watson-forward-listing-to-disco":true,"watson-show-vendor-legal-information":false,"watson-use-dynamic-pricing":true,"watson-use-offers-service-to-fetch-discount":true,"watson-use-vendor-service-timepicker":true,"x-sell-pdp-dmarts":"Control"},
+            user: {"key":"184.22.65.157","ip":"184.22.65.157","custom":{"country_code":"th","platform":"b2c","cookie_key":"184.22.146.94"},"anonymous":true},
+            flags: {"reviews":"On","yum":"na","self-service":true,"best-price":false,"verticals":"[      {          \u0022id\u0022: \u0022restaurants\u0022,          \u0022title_key\u0022: \u0022NEXTGEN_RESTAURANT_ENTRY_TAB\u0022, \t\t          \u0022title_key_web\u0022: \u0022restaurants.entry_tab\u0022,           \u0022vertical_types\u0022: [\u0022restaurants\u0022],         \t          \u0022title_icon_res\u0022: \u0022ic_vert_restaurants\u0022      \t                },            {          \u0022id\u0022: \u0022shop\u0022,          \u0022title_key\u0022: \u0022NEXTGEN_SHOPS_ENTRY_TAB\u0022, \t          \u0022title_key_web\u0022: \u0022shops.entry_tab\u0022,                 \u0022vertical_types\u0022: [\u0022shop\u0022],                   \u0022title_icon_res\u0022: \u0022ic_vert_shops\u0022      \t           }  ]","sameday-preorder-popup":true,"df":"On","use-optimizely":false,"react-map":"yes","show-darkstore-tile":true,"address-snapping-tooltip":"na","cashier-sdk":false,"global-search-rdp":false,"cs-menu":"On","restaurant-chat":false,"always-display-item-modifier":false,"rider-map":true,"login-registration-tabs":true,"subPlans":true,"preorder-popup-on-rdp":false,"otp-horizontal-progressbar":2,"subscriptions":"NA","payment-tokens":true,"check-2":true,"rating":"On","time-range-on-otp":false,"verticals-feed-config":"config-1","vendor-tile-extra-info":true,"voucher-wallet":true,"ratings-reviews":true,"search-suggests":"On","mc":"Variant","quick-reorder-in-rdp":"quick-reorder-off","where-component":true,"ab-test-flags":"cs-cart,alan-hc,search-config,self-service,verticals,react-map,show-wallet,apple-login,otp-time-format","cartapi":true,"no-delivery-time-on-rlp-rdp-checkout":false,"subscriptions-new-card":true,"verticals-fork":"Variant1","new-vendor-tile":"Variant","otp-rewards":false,"when-component":true,"item-counter":false,"darkstores-web-ui":false,"show-price-from-with-non-zero-topping-price":true,"perimeterx":true,"should-check-for-app-updates":false,"newcart":false,"delay-gmap":"after-load","otp-audience":false,"rdp-recommendation":"Variant","menu-platform-specific-products":false,"promo-banner":true,"vendor-sorting":true,"autocomplete-config":"Variant2","add-address":"n\/a","time-range":"NA","show-subtitles-on-otp":false,"always-map":"n\/a","show-cutlery-toggle":true,"new-search-flow":"NA","ignore-events":true,"disable-rider-banner":false,"should-use-mapped-toppings":true,"checkout_map":"Variant","challenges":false,"tracking-card-web":true,"wsb":"On","enable-alfred":false,"mov":"Off","sold-out-items":false,"rectify-where-component":true,"reward-challenge-enabled":false,"showIM":"Original","cs-cart":"off","should-confirm-preorder":"2","vendor-dh-recommendation":"recommendations-off","establishment-as-building":true,"welcome-to-verticals":false,"deals":true,"brand":"foodpanda","eta-range-otp":0,"tr-card-revamp":"true","index-secondary-language":true,"help-center-access":false,"separate-vendor-chain-meta":true,"using-sherlock-as-api":true,"search-config":"Variant6","mbl-google-address-variant":"Variant","group-order-split-allowance":true,"cs-backend":"default","dd-logs":false,"otp-revamp":true,"favorites":"Variant","redirect-chain-vendors":true,"multi-tags":"2","mbl-google-address":false,"dish-detailed-information":false,"rewards-back-office-write-access":false,"use-atlas-proxy-get-by-id-endpoint":false,"cookies-banner":false,"klarna-in-microfrontend":false,"city-page-limit":500,"cancellation-button":false,"ds":"vendors_only","bottom-bar":"NA","characteristics":"Variant","new-payment-selector":true,"check-1":true,"verticals-autocomplete-config":"config-1","archimedes-fwf-enabled":false,"free-scroll-in-swimlanes":true,"address-tooltip":2,"new-city-page":true,"out-of-stock-verticals":[],"get-direction":true,"variations-line-rdp":false,"product-listing-verticals":false,"saved-address":true,"dps":"Original","ios-hs":"On","show-vipps":false,"new-credit-card-form-react":false,"cselling":"multiple-variations","sorting":"Original","rlp-to-mf":"Variant","ios-app-reviews":true,"alcohol-verticals":true,"preorder":true,"item-modifier-redesign":"v1","mBanner":1,"cancel-cap-limit":5,"upsell-drinks":true,"x-sell-otp-nv":"off","parallel-calls-rlp":"NA","mbl-dynamic-fields":"Variant","timed-menus":true,"swimlanes":"Variant","vendor-dh-reco":false,"new-nav-flow":"Control","location-lib":false,"alco-rest":true,"distance-on-pickup":true,"zopim-chat":true,"campaign-service":"campaign-service","hero-image":false,"rewards-feature-variation":"na","loyalty":true,"shadow":"NA","cuisines":"Original","download-personal-data":false,"darkstores-landing-page-config":"dark-stores-config-2","rdp-dialog":"1","ios-app-reviews-not-after-first":true,"x-sell-placement":"control","raf-migration":true,"payios":false,"react-cart":true,"chained-place-order":false,"closed-on-rlp":"Label_center","exposed-filters":"Off","override-flags":false,"additional-information-on-checkout":false,"get-direction-otp":true,"ab_test_flags":"vendor-tile-extra-info,swimlanes,upsell-drinks,self-service,when-component,apple-pay-inline-setup,rider-map,ds","verticals-out-of-stock":"[{\u0022text\u0022:\u0022NEXTGEN_SoldOutOptions_Refund\u0022,\u0022option\u0022:\u0022REFUND\u0022,\u0022default\u0022:true},{\u0022text\u0022:\u0022NEXTGEN_SoldOutOptions_Cancel\u0022,\u0022option\u0022:\u0022CANCEL\u0022,\u0022default\u0022:false}]","organicList":"Variant1","apple-pay-inline-setup":false,"flexiadd":true,"nv-entry-point-config":1,"joker":"on","quick-filters":true,"df-info-icon":false,"always-open-item-modifier-foo":false,"new-authentication-flow":true,"px":true,"address-snapping-tooltip-radius":200,"show-restaurant-contact-information":false,"challenge-special-provider-enabled":["pickup","vendor_delivery"],"self-reference-canonical":true,"od-vd-rlp":"NA","x-sell-discounts":"variant","auto-apply":true,"variations":true,"groupie":true,"show-wallet":false,"disable-migration-banner":true,"web-lists":"Variant1","alan-hc":true,"pagination":true,"out-of-stock-component":"Off","disable-smartphone-banner":false,"budget":"Variant","rdp-reco":true,"customer-rider-chat":{"apiKey":"FF804081-D96C-48F4-ADCE-C3BB82782434","isEnabled":true,"localesMapping":{"en":"en","ja":"ja","th":"th"}},"global-search-rlp":false,"aggregate-regions":false,"address-book-mf":true,"address-snapping-tooltip-a":"Variation1","address-snapping-tooltip-b":"Variation1","address-snapping-tooltip-d":"Variation1","address-svc-use-geolocator-find-city":false,"alfred-performance-adjustment":true,"allergenspdf":false,"apple-login":false,"archimedes-enable-offer-voucher-validation":true,"archimedes-use-discount-data-from-watson":true,"b2b-landing":false,"block-preorders":"disabled","cache-vendor-from-watson":true,"campaign-shop-carousel":true,"carousel-ui-style":"carousel_listview","cart-service-circuit-breaker-enabled":true,"cart-service-enable-djini":false,"cart-to-checkout-cta":"Control","cashier-token-sync":false,"catalog-service-disable-database-writes":false,"catalog-service-enable-rdp-call-customer-option":true,"catalog-service-out-of-stock":false,"catalog-service-rdp-use-circuit-breaker":true,"catalog-service-send-non-restaurants-product-update-on-dedicated-sns":false,"checkout-during-events":"Allow if shrinking","checkout-request-invoice":false,"city-in-checkout":true,"closing-soon":"Control","contactless-delivery":false,"corporate-self-signup":true,"custom-rider-icon":"true","customer-active-consent":"Control","darkstore-category-discovery1":"Control","darkstore-category-scroll1":"Control","darkstore-limit-items-per-sku":"Control","darkstore-past-order":"Control","darkstore-search-entry1":"Variation1","darkstore-search-redesign1":"Variation1","darkstore-tile-variant":"variant","darkstores-show-low-in-stock":false,"disable-cutlery-for-vd":false,"discount-title-as-tag":true,"dynamic-pricing-indicator":"Original","enable-archimedes-request-logging":false,"enable-cod-with-rider-tip":false,"enable-df-address-notifier":true,"enable-df-address-svc-worker":true,"enable-search-populator-long-closure":true,"expose-current-location":"Original","favorites-shops":false,"filter-ux-revamp":"Control","filters-shops":false,"first-name-last-name-order":true,"force-enroll-internal-users":false,"fork-dismiss-btn":"Original","geolocator-enable-df-ingest":true,"geolocator-enable-tpl-cache":true,"geolocator-providers-ab-testing-experimental":"Control","geolocator-use-city-service":true,"geolocator-use-country-service":true,"gps-timeout":"3000","help-center":"global-hc","is-beta-enabled":true,"is-internal-beta-enabled":true,"locate-me":"Variant2","location-read-city-from-vendor-in-checkout":false,"max-change-country-address-svc-worker":"2000","mbl_google_address":true,"merge-cashback":"Control","modular-subscription":"NA","nested-products":"Off","nested-products-ab":"Control","nested-products-shops":"Variation1","new-authentication-web":true,"new-checkout-flow-ab":"Control","new-customer-validation":true,"new-homepage":"Control","open-sans":"Control","order-summary-checkout":"Control","organic-list":"Original","otp-microfrontend":"Variation1","otp-time-format":"Variation3","out-of-stock":false,"passwordless-account":false,"patch-device-token":false,"payment_code_adyen_applepay":false,"payment_code_adyen_creditcard":true,"payment_code_adyen_googlepay":false,"payment_code_antfinancial_bkash":true,"payment_code_antfinancial_gcash":false,"payment_code_antfinancial_truemoney":false,"payment_code_cybersource_creditcard":false,"payment_code_paypal":true,"payment_code_spreedly_creditcard":true,"pickup-awareness-on-checkout":false,"pickup-map-config":"{\u0022isEnabled\u0022:false}","pickup-rlp-banner-config":{"backgroundColor":"#F7BDD1","description":"NEXTGEN_PICKUP_BANNER_DESCRIPTION","imageUrl":"https:\/\/images.deliveryhero.io\/image\/fd-th\/pickup\/pickup_banner.png","isEnabled":true,"title":"NEXTGEN_PICKUP_BANNER_TITLE"},"pickup-swimlane":"pickup-control","prevent-duplicated-orders":true,"process-by-country-address-svc-worker":true,"promoted-on-rlp":true,"quantity_stepper_animation":"Control","recent-searches":"Variation1","referral-flow":"Control","referral-links":"Variant2","return-closed-vendors":true,"rewards-back-office-global-user":false,"rewards-communication-challenge-rewarded":false,"rewards-data-stream":true,"rewards-feature":"Control","rewards-flash-challenges":"Control","rewards-multi-step-challenges":false,"rider-chat-alert":"Variation1","rider-chat-new-msg":true,"rider-tip":false,"rlp-address-map":"Variation1","search-closed-vendor-restaurants":"Variation1","search-closed-vendor-shops":"Variation1","search-populator-process-events":true,"search-suggests-shops":"Off","share-rdp":false,"shops-swimlanes":"shops-variant","shops_maxsales_parameter":true,"show-free-delivery-tag-on-zero-delivery-fee":true,"show-pickup-tooltip":true,"show-skinny-banner":false,"show-wallet-setting":true,"show-wallet-setting-refund-destination":true,"showim":"Original","simplify-cart-calculation":{"*":2,"auto-apply-voucher_delivery":2,"auto-apply-voucher_delivery_rider-tip":2,"auto-apply-voucher_delivery_voucher":2,"auto-apply-voucher_pickup":2,"auto-apply-voucher_pickup_voucher":2,"delivery":2,"delivery_rider-tip":2,"delivery_rider-tip_voucher":2,"delivery_voucher":2,"pickup":2,"pickup_voucher":2},"static-map-checkout":"Control","stm-on-otp":"Control","subscribe-with-new-card":true,"subscription-payment-through-saved-card":true,"two-factor-authentication":false,"use-midas-boost-on-watson":false,"use-new-sorting":false,"use-tes-for-ddt":true,"use-watson-integration":true,"uxcam-sdk":false,"vcb-rlp":"Control","vendor-service-block-db-writes":true,"vendor-service-enable-logistics-offset":true,"vertical-inline-add-to-cart":"Control","verticals-dish-portal":false,"verticals-listing-search-filters":"Control","verticals-new-cart":false,"verticals-oos-default":"refund","verticals-shop-categories":"original","verticals-show-delivery-fee":false,"verticals-vendor-disclaimers":true,"watson-apply-discounts-on-watson":true,"watson-dynamodb-rdp":true,"watson-forward-listing-to-disco":true,"watson-show-vendor-legal-information":false,"watson-use-dynamic-pricing":true,"watson-use-offers-service-to-fetch-discount":true,"watson-use-vendor-service-timepicker":true,"x-sell-pdp-dmarts":"Control"},
             clientId: "588b668dd61cf00908688c6f"
         };
 
@@ -1012,7 +1012,7 @@ View
         VOLO.configuration.sessionId = '';
         VOLO.configuration.dpsSessionIdCookieName = "dps-session-id";
         VOLO.configuration.dpsSessionIdDelimiter = "_";
-        VOLO.configuration.dpsClientIP = '184.22.177.204';
+        VOLO.configuration.dpsClientIP = '184.22.65.157';
         VOLO.configuration.isDpsEnabled = 0;
         VOLO.configuration.dpsSessionExpiry = '1800';
         VOLO.configuration.googleTagManagerContainerId = 'GTM-N9RJXV';
@@ -1109,7 +1109,7 @@ View
     <div class="page-container">
         <section 
             class="vendor-section"
-            data-vendor='{"id":162632,"name":"Aiya Shabu","code":"m5vw","category":"Thai","is_active":true,"timezone":"Asia\/Bangkok","available_in":"2020-10-30T09:00:00+0700","city_id":1358323,"latitude":6.63881668,"longitude":100.0698094,"is_pickup_available":true,"is_delivery_available":true,"url_key":"aiya-shabu","ddt":0,"chain":{"id":0,"name":null,"url_key":null,"is_accepting_global_vouchers":false,"code":null,"main_vendor_code":""},"rating":0,"review_number":0,"minOrder":0,"deliveryFee":0,"is_promoted":false,"is_premium":false,"toppings":[],"accepts_instructions":true,"category_quantity":1,"loyalty_program_enabled":false,"loyalty_percentage_amount":0,"has_delivery_provider":true,"vertical":"restaurants","is_preorder_enabled":true,"is_vat_visible":true}'
+            data-vendor='{"id":162632,"name":"Aiya Shabu Halal","code":"m5vw","category":"Thai","is_active":true,"timezone":"Asia\/Bangkok","available_in":null,"city_id":1358323,"latitude":6.63881668,"longitude":100.0698094,"is_pickup_available":true,"is_delivery_available":true,"url_key":"aiya-shabu-halal","ddt":0,"chain":{"id":0,"name":null,"url_key":null,"is_accepting_global_vouchers":false,"code":null,"main_vendor_code":""},"rating":5,"review_number":2,"minOrder":0,"deliveryFee":0,"is_promoted":false,"is_premium":false,"toppings":[],"accepts_instructions":true,"category_quantity":1,"loyalty_program_enabled":false,"loyalty_percentage_amount":0,"has_delivery_provider":true,"vertical":"restaurants","is_preorder_enabled":true,"is_vat_visible":true}'
         >
                             <aside class="top-skinny-banner-container">
                     <div id="skinny-banner-react-root-vendor-page"></div>
@@ -1231,13 +1231,24 @@ View
                                 <div class="postal-index-form-overlay"></div>
                 
 <div class="vendor-info-container">
-    <div class="vendor-info-main ">         <div class="vendor-info-main-headline item" data-toggle="modal" data-target="#rich-description">             <h1 class="fn">Aiya Shabu</h1>
+    <div class="vendor-info-main hreview-aggregate">         <div class="vendor-info-main-headline item" data-toggle="modal" data-target="#rich-description">             <h1 class="fn">Aiya Shabu Halal</h1>
         </div>
         <div class="vendor-tag-ratings-percentage">
             <div class="vendor-tag-ratings">
                                                                 
                 
-                                                                </div>
+                                            <div class="ratings-component" data-toggle="modal" data-target="#rich-description">
+        <span class="stars">
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="11">
+    <path d="M9 7.02L9.7 11 6 9.12 2.3 11 3 7.02 0 4.2l4.14-.58L6 0l1.86 3.62L12 4.2z"/>
+</svg>
+        </span>
+        <span class="rating"><strong>5</strong>/5</span>
+        <span class="count" data-count="(2)">
+            2
+        </span>
+    </div>
+                            </div>
 
                             <div id="loyalty-percentage-rdp-react-root" class="loyalty-percentage-wrapper" data-toggle="modal" data-target="#rich-description"></div>
                     </div>
@@ -1283,8 +1294,8 @@ View
                 <div class="menu__blocks">
                     <div class="menu__list-wrapper"
                          data-user-id='anonymous'
-                         data-vendor-is-open="closed"
-                         data-vendor-next-available="Fri 09:00 AM">
+                         data-vendor-is-open="open"
+                         data-vendor-next-available="Sun 11:08 AM">
                                                      <section class="vendor-lane-section" id="vendor-quick-reorder"></section>
                             <div id="quick-reorder-overview-provider"></div>
                             <div id="quick-reorder-modal"></div>
@@ -1365,7 +1376,7 @@ View
                     </p>
                             </div>
                     </div>
-        <section class="action-bar" data="Original" ff="closed">
+        <section class="action-bar" data="Original" ff="open">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                                             à¸¿10.00
@@ -1401,7 +1412,43 @@ View
                     </p>
                             </div>
                     </div>
-        <section class="action-bar" data="Original" ff="closed">
+        <section class="action-bar" data="Original" ff="open">
+            <div class='action-bar-content'>
+                                                                                                                                                                    <span class="price p-price">
+                                                                            à¸¿10.00
+                                            </span>
+                
+                            </div>
+                    </section>
+            </div>
+</li>
+                            
+                    
+<li class="dish-card h-product menu__item "
+     data-object='{"is_half_type_available":false,"id":10677537,"name":"Chicken Fillet","code":"657b619f-cc1e-49b7-9629-912e5734d786","description":"1 stick","file_path":"","logo_path":"","half_type":"","is_alcoholic_item":false,"product_variations":[{"id":11897366,"code":"6fcbc6c7-11dd-4322-bf7b-4620bfaef8c2","name":null,"price":10,"price_before_discount":null,"container_price":0,"choices":[],"toppings":[],"topping_ids":[]}],"master_category_id":4,"is_prepacked_item":false,"exclude_dish_information":false,"has_dish_information":null,"is_sold_out":false,"additives":[],"sold_out_options":[{"default":true,"option":"REFUND","text":"NEXTGEN_SoldOutOptions_Refund"},{"default":false,"option":"CANCEL","text":"NEXTGEN_SoldOutOptions_Cancel"},{"default":false,"option":"CALL_CUSTOMER","text":"NEXTGEN_SoldOutOptions_CALL_CUSTOMER"}]}'
+     data-menu-category='Mains'
+     data-variation-id='11897366'
+     data-product-id='10677537'
+     data-has-priced-topping='false'
+     ontouchstart=""
+     data-menu-id='243880'
+     data-menu-category-id='1284244'
+     >
+    <div class="item-react-root">
+        <div class='dish-info-container '>
+            <div class="dish-info">
+                <h3 class="dish-name fn p-name">
+                    <span>Chicken Fillet</span>
+
+                    
+                                    </h3>
+
+                                    <p class="dish-description e-description">
+                        1 stick
+                    </p>
+                            </div>
+                    </div>
+        <section class="action-bar" data="Original" ff="open">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                                             à¸¿10.00
@@ -1437,7 +1484,43 @@ View
                     </p>
                             </div>
                     </div>
-        <section class="action-bar" data="Original" ff="closed">
+        <section class="action-bar" data="Original" ff="open">
+            <div class='action-bar-content'>
+                                                                                                                                                                    <span class="price p-price">
+                                                                            à¸¿10.00
+                                            </span>
+                
+                            </div>
+                    </section>
+            </div>
+</li>
+                            
+                    
+<li class="dish-card h-product menu__item "
+     data-object='{"is_half_type_available":false,"id":10677539,"name":"Squid","code":"ffda29aa-a454-4022-8752-ef0e1eb35588","description":"1 stick","file_path":"","logo_path":"","half_type":"","is_alcoholic_item":false,"product_variations":[{"id":11897365,"code":"52d62472-59c4-44e3-ae67-408d2fa46050","name":null,"price":10,"price_before_discount":null,"container_price":0,"choices":[],"toppings":[],"topping_ids":[]}],"master_category_id":4,"is_prepacked_item":false,"exclude_dish_information":false,"has_dish_information":null,"is_sold_out":false,"additives":[],"sold_out_options":[{"default":true,"option":"REFUND","text":"NEXTGEN_SoldOutOptions_Refund"},{"default":false,"option":"CANCEL","text":"NEXTGEN_SoldOutOptions_Cancel"},{"default":false,"option":"CALL_CUSTOMER","text":"NEXTGEN_SoldOutOptions_CALL_CUSTOMER"}]}'
+     data-menu-category='Mains'
+     data-variation-id='11897365'
+     data-product-id='10677539'
+     data-has-priced-topping='false'
+     ontouchstart=""
+     data-menu-id='243880'
+     data-menu-category-id='1284244'
+     >
+    <div class="item-react-root">
+        <div class='dish-info-container '>
+            <div class="dish-info">
+                <h3 class="dish-name fn p-name">
+                    <span>Squid</span>
+
+                    
+                                    </h3>
+
+                                    <p class="dish-description e-description">
+                        1 stick
+                    </p>
+                            </div>
+                    </div>
+        <section class="action-bar" data="Original" ff="open">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                                             à¸¿10.00
@@ -1473,7 +1556,7 @@ View
                     </p>
                             </div>
                     </div>
-        <section class="action-bar" data="Original" ff="closed">
+        <section class="action-bar" data="Original" ff="open">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                                             à¸¿10.00
@@ -1509,7 +1592,43 @@ View
                     </p>
                             </div>
                     </div>
-        <section class="action-bar" data="Original" ff="closed">
+        <section class="action-bar" data="Original" ff="open">
+            <div class='action-bar-content'>
+                                                                                                                                                                    <span class="price p-price">
+                                                                            à¸¿10.00
+                                            </span>
+                
+                            </div>
+                    </section>
+            </div>
+</li>
+                            
+                    
+<li class="dish-card h-product menu__item "
+     data-object='{"is_half_type_available":false,"id":10677542,"name":"Shrimp","code":"88234c70-a43d-4748-b767-800944aa706e","description":"1 stick","file_path":"","logo_path":"","half_type":"","is_alcoholic_item":false,"product_variations":[{"id":11897369,"code":"db9144dd-7425-489a-b40b-b30202da4a38","name":null,"price":10,"price_before_discount":null,"container_price":0,"choices":[],"toppings":[],"topping_ids":[]}],"master_category_id":4,"is_prepacked_item":false,"exclude_dish_information":false,"has_dish_information":null,"is_sold_out":false,"additives":[],"sold_out_options":[{"default":true,"option":"REFUND","text":"NEXTGEN_SoldOutOptions_Refund"},{"default":false,"option":"CANCEL","text":"NEXTGEN_SoldOutOptions_Cancel"},{"default":false,"option":"CALL_CUSTOMER","text":"NEXTGEN_SoldOutOptions_CALL_CUSTOMER"}]}'
+     data-menu-category='Mains'
+     data-variation-id='11897369'
+     data-product-id='10677542'
+     data-has-priced-topping='false'
+     ontouchstart=""
+     data-menu-id='243880'
+     data-menu-category-id='1284244'
+     >
+    <div class="item-react-root">
+        <div class='dish-info-container '>
+            <div class="dish-info">
+                <h3 class="dish-name fn p-name">
+                    <span>Shrimp</span>
+
+                    
+                                    </h3>
+
+                                    <p class="dish-description e-description">
+                        1 stick
+                    </p>
+                            </div>
+                    </div>
+        <section class="action-bar" data="Original" ff="open">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                                             à¸¿10.00
@@ -1545,7 +1664,7 @@ View
                     </p>
                             </div>
                     </div>
-        <section class="action-bar" data="Original" ff="closed">
+        <section class="action-bar" data="Original" ff="open">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                                             à¸¿10.00
@@ -1558,10 +1677,10 @@ View
                             
                     
 <li class="dish-card h-product menu__item "
-     data-object='{"is_half_type_available":false,"id":10677546,"name":"Eringi Mushroom","code":"c78cb2e2-090f-4099-a098-8d4a4da5f08e","description":"1 stick","file_path":"","logo_path":"","half_type":"","is_alcoholic_item":false,"product_variations":[{"id":11897374,"code":"f461c14b-20fa-4737-aadb-aeb4d708342c","name":null,"price":10,"price_before_discount":null,"container_price":0,"choices":[],"toppings":[],"topping_ids":[]}],"master_category_id":4,"is_prepacked_item":false,"exclude_dish_information":false,"has_dish_information":null,"is_sold_out":false,"additives":[],"sold_out_options":[{"default":true,"option":"REFUND","text":"NEXTGEN_SoldOutOptions_Refund"},{"default":false,"option":"CANCEL","text":"NEXTGEN_SoldOutOptions_Cancel"},{"default":false,"option":"CALL_CUSTOMER","text":"NEXTGEN_SoldOutOptions_CALL_CUSTOMER"}]}'
+     data-object='{"is_half_type_available":false,"id":10677545,"name":"Golden Needle Mushroom","code":"c7a69779-95f7-447c-b34e-ee08dd4ad2b9","description":"1 stick","file_path":"","logo_path":"","half_type":"","is_alcoholic_item":false,"product_variations":[{"id":11897372,"code":"97ce32c5-7377-4f09-9433-6da2c309685e","name":null,"price":10,"price_before_discount":null,"container_price":0,"choices":[],"toppings":[],"topping_ids":[]}],"master_category_id":4,"is_prepacked_item":false,"exclude_dish_information":false,"has_dish_information":null,"is_sold_out":false,"additives":[],"sold_out_options":[{"default":true,"option":"REFUND","text":"NEXTGEN_SoldOutOptions_Refund"},{"default":false,"option":"CANCEL","text":"NEXTGEN_SoldOutOptions_Cancel"},{"default":false,"option":"CALL_CUSTOMER","text":"NEXTGEN_SoldOutOptions_CALL_CUSTOMER"}]}'
      data-menu-category='Mains'
-     data-variation-id='11897374'
-     data-product-id='10677546'
+     data-variation-id='11897372'
+     data-product-id='10677545'
      data-has-priced-topping='false'
      ontouchstart=""
      data-menu-id='243880'
@@ -1571,7 +1690,7 @@ View
         <div class='dish-info-container '>
             <div class="dish-info">
                 <h3 class="dish-name fn p-name">
-                    <span>Eringi Mushroom</span>
+                    <span>Golden Needle Mushroom</span>
 
                     
                                     </h3>
@@ -1581,7 +1700,7 @@ View
                     </p>
                             </div>
                     </div>
-        <section class="action-bar" data="Original" ff="closed">
+        <section class="action-bar" data="Original" ff="open">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                                             à¸¿10.00
@@ -1617,7 +1736,7 @@ View
                     </p>
                             </div>
                     </div>
-        <section class="action-bar" data="Original" ff="closed">
+        <section class="action-bar" data="Original" ff="open">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                                             à¸¿10.00
@@ -1653,7 +1772,40 @@ View
                     </p>
                             </div>
                     </div>
-        <section class="action-bar" data="Original" ff="closed">
+        <section class="action-bar" data="Original" ff="open">
+            <div class='action-bar-content'>
+                                                                                                                                                                    <span class="price p-price">
+                                                                            à¸¿10.00
+                                            </span>
+                
+                            </div>
+                    </section>
+            </div>
+</li>
+                            
+                    
+<li class="dish-card h-product menu__item "
+     data-object='{"is_half_type_available":false,"id":11400532,"name":"Fish Ball","code":"d1b1e69e-3a45-45a6-bcc1-008cbe54eabe","description":"","file_path":"","logo_path":"","half_type":"","is_alcoholic_item":false,"product_variations":[{"id":12625216,"code":"9503b717-bb87-42a1-b551-471c6247dbaf","name":null,"price":10,"price_before_discount":null,"container_price":0,"choices":[],"toppings":[],"topping_ids":[]}],"master_category_id":4,"is_prepacked_item":false,"exclude_dish_information":false,"has_dish_information":null,"is_sold_out":false,"additives":[],"sold_out_options":[{"default":true,"option":"REFUND","text":"NEXTGEN_SoldOutOptions_Refund"},{"default":false,"option":"CANCEL","text":"NEXTGEN_SoldOutOptions_Cancel"},{"default":false,"option":"CALL_CUSTOMER","text":"NEXTGEN_SoldOutOptions_CALL_CUSTOMER"}]}'
+     data-menu-category='Mains'
+     data-variation-id='12625216'
+     data-product-id='11400532'
+     data-has-priced-topping='false'
+     ontouchstart=""
+     data-menu-id='243880'
+     data-menu-category-id='1284244'
+     >
+    <div class="item-react-root">
+        <div class='dish-info-container '>
+            <div class="dish-info">
+                <h3 class="dish-name fn p-name">
+                    <span>Fish Ball</span>
+
+                    
+                                    </h3>
+
+                            </div>
+                    </div>
+        <section class="action-bar" data="Original" ff="open">
             <div class='action-bar-content'>
                                                                                                                                                                     <span class="price p-price">
                                                                             à¸¿10.00
@@ -1856,7 +2008,7 @@ View
                  data-is-vat-included-in-product-price="">
                 <div class="desktop-cart mobile-cart__hidden"
                      data-minimum_order_amount="0"
-                     data-vendor-is-open="closed"
+                     data-vendor-is-open="open"
                      data-vendor-master-category-ids="[]">
                                     </div>
             </div>
@@ -2065,7 +2217,7 @@ View
         <div class="desktop-cart-container">
                                 <div class="desktop-cart__header">
                         <h3 class="desktop-cart__title" data-testid="cartlib-cart-title">
-                Your order from <span>Aiya Shabu</span>            </h3>
+                Your order from <span>Aiya Shabu Halal</span>            </h3>
                                     <p class="desktop-cart_order__message">
                                     You havenât added anything to your cart yet! Start adding your favourite dishes 
                             </p>
@@ -3315,8 +3467,19 @@ Write comments in case you are allergic to ingredients or want to exclude some."
                 <div class="infos">
                     
                     <div class="info-headline">
-                        <h1 class="vendor-name">Aiya Shabu</h1>
-                                                                                                </div>
+                        <h1 class="vendor-name">Aiya Shabu Halal</h1>
+                                                            <div class="ratings-component" data-toggle="modal" data-target="#rich-description">
+        <span class="stars">
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="11">
+    <path d="M9 7.02L9.7 11 6 9.12 2.3 11 3 7.02 0 4.2l4.14-.58L6 0l1.86 3.62L12 4.2z"/>
+</svg>
+        </span>
+        <span class="rating"><strong>5</strong>/5</span>
+        <span class="count" data-count="(2)">
+            2
+        </span>
+    </div>
+                                            </div>
 
                     <ul class="vendor-cuisines">
                         <li>
@@ -3330,8 +3493,7 @@ Write comments in case you are allergic to ingredients or want to exclude some."
                     <div class="opening-time">
                         
     
-            <span class="line-wrapper">Available for preorder</span>
-        <span>Friday</span>
+            <span class="green-class">Open</span>
     
 <span class="schedule-times">
            9:00 AM - 7:00 PM    </span>
@@ -3497,9 +3659,9 @@ Write comments in case you are allergic to ingredients or want to exclude some."
                     
 <div class="footer__wrapper__middle">
                                     
-<a class="button-ghost footer__language-switch" href="/th/restaurant/m5vw/aiya-shabu?r=1">à¹à¸à¸¢</a>
+<a class="button-ghost footer__language-switch" href="/th/restaurant/m5vw/aiya-shabu-halal?r=1">à¹à¸à¸¢</a>
                                 
-<a class="button-ghost footer__language-switch" href="/ja/restaurant/m5vw/aiya-shabu?r=1">æ¥æ¬èª</a>
+<a class="button-ghost footer__language-switch" href="/ja/restaurant/m5vw/aiya-shabu-halal?r=1">æ¥æ¬èª</a>
             
     <nav class="footer__nav">
     <ul>
@@ -3544,7 +3706,7 @@ Write comments in case you are allergic to ingredients or want to exclude some."
             error: false
         },
         onError: function (payload, error) {
-            var requestId = 'e3f2063f4d7dffe4bbd2e13d831fc6c2';
+            var requestId = '6b3b0947fcc4ae4f4600eec0283d8978';
             var appVersion = '9fbbae4';
             var appVersionName = 'master';
             var featureFlags;
@@ -3788,7 +3950,7 @@ Write comments in case you are allergic to ingredients or want to exclude some."
             "label.cart_minimum_order": "Minimum order",
             "label.cart_difference_to_minimum": "Difference to minimum",
             "cart.total_note": "(Incl. VAT)",
-            "title.cart_order_summary <span>%name%</span>": "Your order from <span>Aiya Shabu</span>",
+            "title.cart_order_summary <span>%name%</span>": "Your order from <span>Aiya Shabu Halal</span>",
             "shops.fee_next_step": "Calculated in the next step",
             "shops.popup_cart_is_full": "Sorry, you can't add more products to your cart because it's full",
             "shops.popup_cart_is_full_button": "OK",
@@ -3958,5 +4120,5 @@ Write comments in case you are allergic to ingredients or want to exclude some."
     </span>
 </script>
 
-        <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam-cell.nr-data.net","licenseKey":"f77b1abc66","applicationID":"66674442,97495756,49764655","transactionName":"bldXNUJYXhAABxBZDVcddhRDTV8OTjILXA1ldEcOXk1VDQUmEV4GVVdpIl9XRBEOCAhVEGVkUA9UVkIgDgoQQg1VXlATCgNGBg8AC0IjWkZcDl4=","queueTime":1,"applicationTime":483,"atts":"QhBUQwpCTR4=","errorBeacon":"bam-cell.nr-data.net","agent":""}</script></body>
+        <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam-cell.nr-data.net","licenseKey":"f77b1abc66","applicationID":"66674442,97495756,49764655","transactionName":"bldXNUJYXhAABxBZDVcddhRDTV8OTjILXA1ldEcOXk1VDQUmEV4GVVdpIl9XRBEOCAhVEGVkUA9UVkIgDgoQQg1VXlATCgNGBg8AC0IjWkZcDl4=","queueTime":1,"applicationTime":1393,"atts":"QhBUQwpCTR4=","errorBeacon":"bam-cell.nr-data.net","agent":""}</script></body>
 </html>
